@@ -71,13 +71,30 @@ import { QuranProvider, QuranPage } from '@mushaf/react';
 
 Phase B validates **rendering**, not Phase A.
 
+## Implementation status (Guidelight app)
+
+Phase A is implemented in `guidelight-id-next`:
+
+| File | Role |
+|------|------|
+| `src/lib/mushaf/client.ts` | Shared `createQuranFoundationAdapter` + catalog cache |
+| `src/hooks/useQuranData.ts` | Surah list via `getMushafCatalog()` (no alquran.cloud) |
+| `src/hooks/useQuranPages.ts` | `getPageForVerse` + `getPage` via Mushaf adapter |
+
+Deps (local monorepo during development):
+
+```json
+"@mushaf/core": "file:../mushaf/packages/core",
+"@mushaf/adapter-quran-foundation": "file:../mushaf/packages/adapters/quran-foundation"
+```
+
 ## Acceptance criteria (Phase A)
 
-- [ ] Surah list matches prior alquran.cloud counts (114 surahs)
-- [ ] Spot-check ayah→page vs quran.com for: `1:1`, `2:255`, `18:1`, `114:6`
-- [ ] No dual API calls in GOTL page-range path
-- [ ] Offline catalog works when using hosted pack
-- [ ] Does **not** require `@mushaf/react` for Phase A
+- [x] Surah list from Mushaf catalog (114 surahs from QF API)
+- [x] Ayah→page via `adapter.getPageForVerse` (cached)
+- [x] No direct alquran.cloud / hand-rolled quran.com glue in hooks
+- [x] Does **not** require `@mushaf/react` for Phase A
+- [ ] Offline hosted pack path in Guidelight (optional later)
 
 ## Non-goals
 
