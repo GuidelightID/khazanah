@@ -5,26 +5,35 @@ on:
     branches: [main, master]
   pull_request:
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Uses package.json "packageManager" (pnpm@9.15.0) — do not also set version:
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
+
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
+
       - name: Install Playwright Chromium
         run: pnpm exec playwright install --with-deps chromium
+
       - name: Visual / e2e tests
         run: pnpm test:e2e
+
       - name: Upload Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v4

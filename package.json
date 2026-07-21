@@ -9,6 +9,22 @@
   "engines": {
     "node": ">=20"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/mushaf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GuidelightID/mushaf/issues"
+  },
+  "homepage": "https://github.com/GuidelightID/mushaf#readme",
+  "keywords": [
+    "quran",
+    "mushaf",
+    "react",
+    "nextjs",
+    "arabic",
+    "renderer"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",

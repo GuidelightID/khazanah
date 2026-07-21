@@ -1,8 +1,13 @@
 # Mushaf
 
+[![CI](https://github.com/GuidelightID/mushaf/actions/workflows/ci.yml/badge.svg)](https://github.com/GuidelightID/mushaf/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 **Layout-faithful Madinah Mushaf renderer for React & Next.js** — a library, not an app.
 
 Mushaf aims to be the default embeddable engine for Quran page rendering on the web (similar to how `react-markdown` standardized Markdown). It is TypeScript-first, offline-capable, SSR-friendly, and adapter-driven.
+
+**Repo:** [github.com/GuidelightID/mushaf](https://github.com/GuidelightID/mushaf)
 
 > **Status:** early **0.x** scaffolding. APIs may change. Real Madinah fonts/geometry are **dual-distributed** (not silently MIT) — see [`LICENSES/matrix.md`](./LICENSES/matrix.md).
 
