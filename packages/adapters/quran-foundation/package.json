@@ -8,10 +8,13 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": ["dist", "README.md"],
   "scripts": {
@@ -21,9 +24,10 @@
     "lint": "tsc -p tsconfig.json --noEmit",
     "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "@mushaf/core": "workspace:*"
+  "peerDependencies": {
+    "@mushaf/core": ">=0.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"

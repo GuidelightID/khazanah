@@ -26,9 +26,10 @@
     "lint": "tsc -p tsconfig.json --noEmit",
     "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "@mushaf/core": "workspace:*"
+  "peerDependencies": {
+    "@mushaf/core": ">=0.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "jsdom": "^25.0.1",
     "typescript": "^5.7.2",
