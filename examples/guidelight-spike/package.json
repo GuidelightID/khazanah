@@ -1,0 +1,13 @@
+{
+  "name": "@mushaf/example-guidelight-spike",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "parity": "node ./parity-check.mjs"
+  },
+  "dependencies": {
+    "@mushaf/adapter-quran-foundation": "workspace:*",
+    "@mushaf/core": "workspace:*"
+  }
+}

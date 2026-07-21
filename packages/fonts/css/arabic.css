@@ -1,0 +1,13 @@
+/**
+ * Open Arabic reading stack for unicode_bbox demos.
+ * Does not include restricted Madinah page fonts.
+ */
+:root {
+  --mushaf-font-arabic: Amiri, "Scheherazade New", "Noto Naskh Arabic",
+    "Times New Roman", serif;
+}
+
+.mushaf-font-arabic {
+  font-family: var(--mushaf-font-arabic);
+  font-feature-settings: "liga" 1, "calt" 1;
+}

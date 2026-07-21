@@ -1,0 +1,7 @@
+packages:
+  - "packages/*"
+  - "packages/adapters/*"
+  - "tooling/*"
+  - "examples/*"
+  - "examples/vite-react"
+  - "examples/guidelight-spike"

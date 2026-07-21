@@ -1,0 +1,117 @@
+import type { MushafPageIR } from '../types/ir.js';
+
+/** Minimal synthetic page for tests (MIT). Not a real Madinah plate. */
+export const fixturePage1: MushafPageIR = {
+  version: 1,
+  page: 1,
+  metrics: {
+    width: 1000,
+    height: 1550,
+    contentInsets: { top: 80, right: 60, bottom: 80, left: 60 },
+    lineCount: 2,
+    mushaf: 'fixture',
+    script: 'uthmani',
+    fontModel: 'unicode_bbox',
+  },
+  lines: [
+    {
+      index: 1,
+      bbox: { x: 60, y: 100, w: 880, h: 90 },
+      wordKeys: ['1:1:1', '1:1:2', '1:1:3', '1:1:4'],
+      isBismillah: true,
+    },
+    {
+      index: 2,
+      bbox: { x: 60, y: 200, w: 880, h: 90 },
+      wordKeys: ['1:2:1', '1:2:2', '1:2:3', '1:2:4'],
+    },
+  ],
+  words: {
+    '1:1:1': {
+      key: '1:1:1',
+      verseKey: '1:1',
+      text: 'بِسْمِ',
+      line: 1,
+      bbox: { x: 780, y: 100, w: 120, h: 90 },
+      glyphs: [],
+      charType: 'bismillah',
+    },
+    '1:1:2': {
+      key: '1:1:2',
+      verseKey: '1:1',
+      text: 'ٱللَّهِ',
+      line: 1,
+      bbox: { x: 640, y: 100, w: 120, h: 90 },
+      glyphs: [],
+    },
+    '1:1:3': {
+      key: '1:1:3',
+      verseKey: '1:1',
+      text: 'ٱلرَّحْمَٰنِ',
+      line: 1,
+      bbox: { x: 480, y: 100, w: 140, h: 90 },
+      glyphs: [],
+    },
+    '1:1:4': {
+      key: '1:1:4',
+      verseKey: '1:1',
+      text: 'ٱلرَّحِيمِ',
+      line: 1,
+      bbox: { x: 320, y: 100, w: 140, h: 90 },
+      glyphs: [],
+    },
+    '1:2:1': {
+      key: '1:2:1',
+      verseKey: '1:2',
+      text: 'ٱلْحَمْدُ',
+      line: 2,
+      bbox: { x: 760, y: 200, w: 140, h: 90 },
+      glyphs: [],
+    },
+    '1:2:2': {
+      key: '1:2:2',
+      verseKey: '1:2',
+      text: 'لِلَّهِ',
+      line: 2,
+      bbox: { x: 620, y: 200, w: 120, h: 90 },
+      glyphs: [],
+    },
+    '1:2:3': {
+      key: '1:2:3',
+      verseKey: '1:2',
+      text: 'رَبِّ',
+      line: 2,
+      bbox: { x: 500, y: 200, w: 100, h: 90 },
+      glyphs: [],
+    },
+    '1:2:4': {
+      key: '1:2:4',
+      verseKey: '1:2',
+      text: 'ٱلْعَٰلَمِينَ',
+      line: 2,
+      bbox: { x: 320, y: 200, w: 160, h: 90 },
+      glyphs: [],
+    },
+  },
+  verses: [
+    {
+      verseKey: '1:1',
+      surah: 1,
+      ayah: 1,
+      wordKeys: ['1:1:1', '1:1:2', '1:1:3', '1:1:4'],
+      bboxes: [{ x: 320, y: 100, w: 580, h: 90 }],
+    },
+    {
+      verseKey: '1:2',
+      surah: 1,
+      ayah: 2,
+      wordKeys: ['1:2:1', '1:2:2', '1:2:3', '1:2:4'],
+      bboxes: [{ x: 320, y: 200, w: 580, h: 90 }],
+    },
+  ],
+  surahStarts: [{ surah: 1, line: 1 }],
+  meta: {
+    source: 'fixture',
+    licenseSpdx: 'MIT',
+  },
+};

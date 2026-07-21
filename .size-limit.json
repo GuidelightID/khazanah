@@ -1,0 +1,8 @@
+[
+  {
+    "name": "@mushaf/core (dist index)",
+    "path": "packages/core/dist/index.js",
+    "limit": "25 kB",
+    "gzip": true
+  }
+]

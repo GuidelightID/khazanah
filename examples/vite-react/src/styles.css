@@ -1,0 +1,80 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  color: #1a1208;
+  background: #f3efe6;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header h1 {
+  margin: 0 0 0.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.muted {
+  color: #5c5346;
+  margin: 0 0 1rem;
+}
+
+.row {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.toolbar button {
+  border: 1px solid #cfc4b0;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.toolbar button.active,
+.toolbar button:hover {
+  background: #1a1208;
+  color: #faf6ef;
+  border-color: #1a1208;
+}
+
+.toolbar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.click {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9rem;
+}
+
+.mushaf-page-host {
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.mushaf-viewer {
+  background: #ebe4d6;
+}
+
+.mushaf-viewer-item .mushaf-page-host {
+  margin-inline: auto;
+}

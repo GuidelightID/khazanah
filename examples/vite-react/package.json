@@ -1,0 +1,31 @@
+{
+  "name": "@mushaf/example-vite-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "preview": "vite preview",
+    "pull-data": "node ../../packages/cli/dist/cli.js data pull --source fixture --out ./public/mushaf"
+  },
+  "dependencies": {
+    "@mushaf/adapter-custom": "workspace:*",
+    "@mushaf/adapter-kfgqpc": "workspace:*",
+    "@mushaf/annotations": "workspace:*",
+    "@mushaf/audio": "workspace:*",
+    "@mushaf/core": "workspace:*",
+    "@mushaf/react": "workspace:*",
+    "@mushaf/tajwid": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.6"
+  }
+}
