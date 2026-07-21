@@ -59,18 +59,22 @@ const adapter = createHostedMadinahAdapter({ baseUrl: '/mushaf' });
 
 ## Phase B (optional)
 
-Only if product wants a reader UI:
+Implemented in Guidelight GOTL:
+
+| File | Role |
+|------|------|
+| `src/components/gotl/GotlMushafReader.tsx` | Dialog with `QuranProvider` + `QuranPage` |
+| Today focus / murojaah timeline | “Baca mushaf” opens page + highlights range |
 
 ```tsx
 import { QuranProvider, QuranPage } from '@mushaf/react';
 
 <QuranProvider adapter={adapter}>
-  <QuranPage page={page} />
+  <QuranPage page={page} highlightedAyahs={['2:255']} />
 </QuranProvider>
 ```
 
-Phase B validates **rendering**, not Phase A.
-
+Phase B validates **rendering** (unicode_bbox via QF adapter), not plate-perfect Madinah.
 ## Implementation status (Guidelight app)
 
 Phase A is implemented in `guidelight-id-next`:
