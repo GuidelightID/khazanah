@@ -94,7 +94,7 @@ Deps (local monorepo during development):
 - [x] Ayah→page via `adapter.getPageForVerse` (cached)
 - [x] No direct alquran.cloud / hand-rolled quran.com glue in hooks
 - [x] Does **not** require `@mushaf/react` for Phase A
-- [ ] Offline hosted pack path in Guidelight (optional later)
+- [x] Offline catalog + verse-index bundled in Guidelight (`src/data/mushaf`, regenerate with `npm run mushaf:generate-offline`)
 
 ## Non-goals
 
