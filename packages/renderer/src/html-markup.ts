@@ -24,6 +24,16 @@ function resolveTheme(theme: RenderFrame['theme']): 'light' | 'dark' {
   return theme;
 }
 
+/** Fraction of line box height used as font-size (room for harakat). */
+const FONT_FILL = 0.58;
+
+function medianLineHeight(page: MushafPageIR): number {
+  const hs = page.lines.map((l) => l.bbox.h).filter((h) => h > 0);
+  if (!hs.length) return 92;
+  const sorted = [...hs].sort((a, b) => a - b);
+  return sorted[Math.floor(sorted.length / 2)]!;
+}
+
 /**
  * Pure function of frame → HTML (ADR-015 hydration contract).
  * Structure keys: data-word, data-line, data-page.
@@ -34,7 +44,6 @@ export function renderPageToStaticMarkup(frame: RenderFrame): string {
   const { width: lw, height: lh } = page.metrics;
   const styles = resolveWordStyles(page, frame.highlights);
 
-  // Selection overlay as highlight-like style
   if (selection && selection.page === page.page) {
     const keys = page.lines.flatMap((l) => l.wordKeys);
     const from = keys.indexOf(selection.from);
@@ -58,6 +67,15 @@ export function renderPageToStaticMarkup(frame: RenderFrame): string {
 
   const linesHtml = page.lines
     .map((line) => {
+      const lineClasses = [
+        'mushaf-line',
+        line.isCentered ? 'mushaf-line--centered' : '',
+        line.isBismillah ? 'mushaf-line--bismillah' : '',
+        line.isSurahHeader ? 'mushaf-line--surah-header' : '',
+      ]
+        .filter(Boolean)
+        .join(' ');
+
       const wordsHtml = line.wordKeys
         .map((key) => {
           const word = page.words[key];
@@ -71,22 +89,32 @@ export function renderPageToStaticMarkup(frame: RenderFrame): string {
             ? `background:${st.background};`
             : '';
           const underline = st?.underline ? 'text-decoration:underline;' : '';
-          const cls = ['mushaf-word', st?.className].filter(Boolean).join(' ');
+          const charType = word.charType ?? 'word';
+          const cls = [
+            'mushaf-word',
+            `mushaf-word--${charType}`,
+            st?.className,
+          ]
+            .filter(Boolean)
+            .join(' ');
           const label = escapeHtml(`${word.verseKey} ${word.text}`);
           return (
             `<span role="button" tabindex="-1" class="${cls}" data-word="${escapeHtml(key)}" ` +
+            `data-char-type="${escapeHtml(charType)}" ` +
             `aria-label="${label}" ` +
             `style="position:absolute;left:${left};top:${top};width:${w};height:${h};` +
-            `display:flex;align-items:center;justify-content:center;${bg}${underline}">` +
+            `display:flex;align-items:baseline;justify-content:center;` +
+            `box-sizing:border-box;padding-top:0.12em;overflow:visible;` +
+            `white-space:nowrap;line-height:1;${bg}${underline}">` +
             `${escapeHtml(word.text)}</span>`
           );
         })
         .join('');
 
       return (
-        `<div class="mushaf-line" data-line="${line.index}" ` +
+        `<div class="${lineClasses}" data-line="${line.index}" ` +
         `style="position:absolute;left:${pct(line.bbox.x, lw)};top:${pct(line.bbox.y, lh)};` +
-        `width:${pct(line.bbox.w, lw)};height:${pct(line.bbox.h, lh)};">` +
+        `width:${pct(line.bbox.w, lw)};height:${pct(line.bbox.h, lh)};overflow:visible;">` +
         `${wordsHtml}</div>`
       );
     })
@@ -109,6 +137,7 @@ export function renderPageToStaticMarkup(frame: RenderFrame): string {
   const scale = viewMatrix.scale;
   const ox = viewMatrix.offsetX;
   const oy = viewMatrix.offsetY;
+  const fontSizePx = Math.max(12, medianLineHeight(page) * scale * FONT_FILL);
 
   return (
     `<div class="mushaf-page mushaf-theme-${theme}" role="document" dir="rtl" lang="ar" ` +
@@ -118,8 +147,13 @@ export function renderPageToStaticMarkup(frame: RenderFrame): string {
     `font-family:${escapeHtml(fontFamily)};user-select:none;overflow:hidden;">` +
     `<div class="mushaf-surface" data-mushaf-surface ` +
     `style="position:absolute;left:${ox}px;top:${oy}px;width:${lw * scale}px;height:${lh * scale}px;` +
-    `font-size:${Math.max(12, 48 * scale)}px;">` +
-    `<div class="mushaf-logical" style="position:absolute;inset:0;width:100%;height:100%;">` +
+    `font-size:${fontSizePx}px;">` +
+    `<style>` +
+    `.mushaf-word--end_marker{font-size:0.85em;opacity:0.92;}` +
+    `.mushaf-line--bismillah .mushaf-word,.mushaf-line--surah-header .mushaf-word{font-weight:600;}` +
+    `.mushaf-line--surah-header .mushaf-word{letter-spacing:0.02em;}` +
+    `</style>` +
+    `<div class="mushaf-logical" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;">` +
     `${linesHtml}` +
     `</div>` +
     `<div data-mushaf-overlay-root style="position:absolute;inset:0;pointer-events:none;"></div>` +

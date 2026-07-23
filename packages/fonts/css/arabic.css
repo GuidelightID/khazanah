@@ -9,5 +9,28 @@
 
 .mushaf-font-arabic {
   font-family: var(--mushaf-font-arabic);
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.mushaf-page {
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.mushaf-word {
   font-feature-settings: "liga" 1, "calt" 1;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.mushaf-line--bismillah .mushaf-word,
+.mushaf-line--surah-header .mushaf-word {
+  font-weight: 600;
+}
+
+.mushaf-word--end_marker {
+  opacity: 0.92;
 }

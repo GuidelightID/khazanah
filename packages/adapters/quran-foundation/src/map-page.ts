@@ -6,23 +6,27 @@ import type {
   WordKey,
   VerseKey,
 } from '@mushaf/core';
+import {
+  UNICODE_PAGE,
+  layoutLineRtl,
+  isBismillahText,
+} from '@mushaf/core';
 import type { QfVerse } from './types.js';
 import { mapCharType } from './map-char-type.js';
 
-const LOGICAL_W = 1000;
-const LOGICAL_H = 1550;
-const INSET = { top: 80, right: 60, bottom: 80, left: 60 };
-const LINE_HEIGHT = 90;
+const LOGICAL_W = UNICODE_PAGE.width;
+const LOGICAL_H = UNICODE_PAGE.height;
+const INSET = { ...UNICODE_PAGE.inset };
+const LINE_HEIGHT = UNICODE_PAGE.lineHeight;
 
 /**
  * Convert QF verses-by-page payload into MushafPageIR (unicode_bbox).
- * Bboxes are derived by packing words onto lines (not official plate coordinates).
+ * Bboxes use measured RTL packing (not official plate coordinates).
  */
 export function mapVersesToPageIR(page: number, verses: QfVerse[]): MushafPageIR {
   const words: Record<string, WordIR> = {};
   const verseSpans: VerseSpanIR[] = [];
 
-  // Group words by line_number (fallback: sequential packing)
   type Pending = {
     key: WordKey;
     verseKey: VerseKey;
@@ -79,12 +83,11 @@ export function mapVersesToPageIR(page: number, verses: QfVerse[]): MushafPageIR
         surah,
         ayah,
         wordKeys,
-        bboxes: [], // filled after layout
+        bboxes: [],
       });
     }
   }
 
-  // Layout per line (RTL: first word on the right)
   const byLine = new Map<number, Pending[]>();
   for (const p of pending) {
     const list = byLine.get(p.line) ?? [];
@@ -99,14 +102,34 @@ export function mapVersesToPageIR(page: number, verses: QfVerse[]): MushafPageIR
   for (const lineIndex of lineIndexes) {
     const items = byLine.get(lineIndex) ?? [];
     const y = INSET.top + (lineIndex - 1) * LINE_HEIGHT;
-    const n = Math.max(1, items.length);
-    const slot = contentWidth / n;
+
+    const forceCentered = items.some(
+      (it) =>
+        it.charType === 'bismillah' ||
+        it.charType === 'header' ||
+        isBismillahText(it.text),
+    );
+    const isHeader = items.some((it) => it.charType === 'header');
+    const isBismillah =
+      !isHeader &&
+      items.some(
+        (it) => it.charType === 'bismillah' || isBismillahText(it.text),
+      );
+
+    const { bboxes, centered } = layoutLineRtl(
+      items.map((it) => ({ text: it.text, charType: it.charType })),
+      {
+        contentWidth,
+        y,
+        lineHeight: LINE_HEIGHT,
+        contentLeft: INSET.left,
+        centered: forceCentered,
+      },
+    );
 
     const wordKeys: WordKey[] = [];
     items.forEach((item, i) => {
-      // RTL: index 0 is rightmost
-      const x = INSET.left + contentWidth - (i + 1) * slot;
-      const bbox = { x, y, w: slot * 0.92, h: LINE_HEIGHT * 0.9 };
+      const bbox = bboxes[i]!;
       words[item.key] = {
         key: item.key,
         verseKey: item.verseKey,
@@ -130,10 +153,12 @@ export function mapVersesToPageIR(page: number, verses: QfVerse[]): MushafPageIR
         h: LINE_HEIGHT,
       },
       wordKeys,
+      isCentered: centered || undefined,
+      isSurahHeader: isHeader || undefined,
+      isBismillah: isBismillah || undefined,
     });
   }
 
-  // Verse bboxes = union of word bboxes on this page
   for (const span of verseSpans) {
     const boxes = span.wordKeys
       .map((k) => words[k]?.bbox)

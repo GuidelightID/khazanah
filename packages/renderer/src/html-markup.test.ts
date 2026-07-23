@@ -56,4 +56,12 @@ describe('renderPageToStaticMarkup', () => {
     const b = renderPageToStaticMarkup(frame());
     expect(a).toBe(b);
   });
+
+  it('honors line flags and char types in markup', () => {
+    const html = renderPageToStaticMarkup(frame());
+    expect(html).toContain('mushaf-line--bismillah');
+    expect(html).toContain('data-char-type=');
+    expect(html).toContain('align-items:baseline');
+    expect(html).not.toMatch(/font-size:48/);
+  });
 });

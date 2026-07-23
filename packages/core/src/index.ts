@@ -8,6 +8,7 @@ export * from './plugin.js';
 export * from './pointer.js';
 export * from './runtime.js';
 export * from './adapter.js';
+export * from './layout-unicode.js';
 
 export type * from './types/ir.js';
 export type * from './types/catalog.js';

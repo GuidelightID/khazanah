@@ -6,16 +6,21 @@ import type {
   WordKey,
   VerseKey,
 } from '@mushaf/core';
+import {
+  UNICODE_PAGE,
+  layoutLineRtl,
+  isBismillahText,
+} from '@mushaf/core';
 import type { TanzilVerse } from './types.js';
 
-const LOGICAL_W = 1000;
-const LOGICAL_H = 1550;
+const LOGICAL_W = UNICODE_PAGE.width;
+const LOGICAL_H = UNICODE_PAGE.height;
 const INSET = { top: 100, right: 70, bottom: 100, left: 70 };
 const LINE_H = 95;
 const WORDS_PER_LINE = 6;
 
 /**
- * Flow Arabic words into a simple multi-line page (RTL slots).
+ * Flow Arabic words into a simple multi-line page (RTL measured packing).
  * Not Madinah plate geometry.
  */
 export function layoutVersesOnPage(page: number, verses: TanzilVerse[]): MushafPageIR {
@@ -51,13 +56,21 @@ export function layoutVersesOnPage(page: number, verses: TanzilVerse[]): MushafP
     const y = INSET.top + (lineIndex - 1) * LINE_H;
     if (y + LINE_H > LOGICAL_H - INSET.bottom) break;
 
-    const n = Math.max(1, chunk.length);
-    const slot = contentW / n;
-    const wordKeys: WordKey[] = [];
+    const forceCentered = chunk.some((it) => isBismillahText(it.text));
+    const { bboxes, centered } = layoutLineRtl(
+      chunk.map((it) => ({ text: it.text, charType: 'word' as const })),
+      {
+        contentWidth: contentW,
+        y,
+        lineHeight: LINE_H,
+        contentLeft: INSET.left,
+        centered: forceCentered,
+      },
+    );
 
+    const wordKeys: WordKey[] = [];
     chunk.forEach((item, j) => {
-      const x = INSET.left + contentW - (j + 1) * slot;
-      const bbox = { x, y, w: slot * 0.9, h: LINE_H * 0.85 };
+      const bbox = bboxes[j]!;
       words[item.key] = {
         key: item.key,
         verseKey: item.verseKey,
@@ -74,6 +87,8 @@ export function layoutVersesOnPage(page: number, verses: TanzilVerse[]): MushafP
       index: lineIndex,
       bbox: { x: INSET.left, y, w: contentW, h: LINE_H },
       wordKeys,
+      isCentered: centered || undefined,
+      isBismillah: forceCentered || undefined,
     });
     lineIndex += 1;
   }

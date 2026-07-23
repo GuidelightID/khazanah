@@ -43,6 +43,31 @@ const sampleVerses: QfVerse[] = [
   },
 ];
 
+const bismillahTyped: QfVerse[] = [
+  {
+    id: 1,
+    verse_key: '1:1',
+    verse_number: 1,
+    page_number: 1,
+    words: [
+      {
+        id: 1,
+        position: 1,
+        text_uthmani: 'بِسْمِ',
+        line_number: 1,
+        char_type_name: 'basmallah',
+      },
+      {
+        id: 2,
+        position: 2,
+        text_uthmani: 'ٱللَّهِ',
+        line_number: 1,
+        char_type_name: 'basmallah',
+      },
+    ],
+  },
+];
+
 describe('mapVersesToPageIR', () => {
   it('builds unicode_bbox IR with word keys and lines', () => {
     const ir = mapVersesToPageIR(1, sampleVerses);
@@ -54,6 +79,39 @@ describe('mapVersesToPageIR', () => {
     expect(ir.lines.some((l) => l.index === 2)).toBe(true);
     expect(ir.verses[0]?.verseKey).toBe('1:1');
     expect(ir.meta?.source).toContain('quran-foundation');
+  });
+
+  it('uses unequal proportional widths (not equal slots)', () => {
+    const ir = mapVersesToPageIR(1, sampleVerses);
+    const line = ir.lines.find((l) => l.index === 2)!;
+    const widths = line.wordKeys.map((k) => ir.words[k]!.bbox.w);
+    expect(widths[0]).not.toBeCloseTo(widths[2]!, 0);
+    expect(widths[2]!).toBeGreaterThan(widths[0]!);
+  });
+
+  it('places words RTL (first word rightmost)', () => {
+    const ir = mapVersesToPageIR(1, sampleVerses);
+    const a = ir.words['1:1:1']!.bbox;
+    const b = ir.words['1:1:2']!.bbox;
+    expect(a.x).toBeGreaterThan(b.x);
+  });
+
+  it('centers bismillah-typed lines', () => {
+    const ir = mapVersesToPageIR(1, bismillahTyped);
+    const line = ir.lines.find((l) => l.index === 1)!;
+    expect(line.isBismillah).toBe(true);
+    expect(line.isCentered).toBe(true);
+    const boxes = line.wordKeys.map((k) => ir.words[k]!.bbox);
+    const minX = Math.min(...boxes.map((b) => b.x));
+    const maxX = Math.max(...boxes.map((b) => b.x + b.w));
+    const mid = (minX + maxX) / 2;
+    const contentMid = ir.metrics.contentInsets.left + line.bbox.w / 2;
+    expect(Math.abs(mid - contentMid)).toBeLessThan(3);
+  });
+
+  it('keeps word keys and order stable', () => {
+    const ir = mapVersesToPageIR(1, sampleVerses);
+    expect(ir.lines[0]?.wordKeys).toEqual(['1:1:1', '1:1:2', '1:1:3', '1:1:4']);
   });
 });
 
@@ -121,7 +179,6 @@ describe('createQuranFoundationAdapter', () => {
     const p1b = await adapter.getPage(1);
     expect(p1.page).toBe(1);
     expect(p1b.words['1:1:1']?.text).toBe('بِسْمِ');
-    // second getPage should not re-fetch (cache)
     const pageCalls = calls;
     await adapter.getPage(1);
     expect(calls).toBe(pageCalls);
