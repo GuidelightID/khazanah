@@ -44,7 +44,18 @@ jobs:
           TAG_VERSION="${GITHUB_REF_NAME#mushaf-corpus-v}"
           PKG_VERSION="$(node -p "require('./packages/mushaf-corpus/package.json').version")"
           if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
-            echo "Tag $GITHUB_REF_NAME does not match package version $PKG_VERSION" >&2
+            echo "::error::Tag $GITHUB_REF_NAME says $TAG_VERSION but packages/mushaf-corpus/package.json says $PKG_VERSION." >&2
+            echo "" >&2
+            echo "The tag must be created AFTER the version bump is committed, and must" >&2
+            echo "match it exactly. To fix, from a clean tree on main:" >&2
+            echo "" >&2
+            echo "  git tag -d $GITHUB_REF_NAME" >&2
+            echo "  git push origin :refs/tags/$GITHUB_REF_NAME" >&2
+            echo "  # then either tag the version that is actually committed:" >&2
+            echo "  git tag mushaf-corpus-v$PKG_VERSION && git push origin mushaf-corpus-v$PKG_VERSION" >&2
+            echo "  # or bump, commit, and tag in one step, which cannot disagree:" >&2
+            echo "  cd packages/mushaf-corpus && npm version $TAG_VERSION --tag-version-prefix=mushaf-corpus-v" >&2
+            echo "  git push --follow-tags" >&2
             exit 1
           fi
 

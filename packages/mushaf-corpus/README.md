@@ -105,15 +105,31 @@ The token is a classic PAT with the `read:packages` scope.
 
 ## Releasing
 
+The tag and the `version` field must agree, and CI refuses to publish when they
+do not. The ordering is the easy thing to get wrong: **bump and commit first,
+tag second.**
+
+The safest way is to let npm do both at once, so they cannot disagree:
+
 ```bash
-# from the monorepo root
 pnpm --filter @guidelightid/mushaf-corpus test
-# bump "version" in packages/mushaf-corpus/package.json, then:
-git tag mushaf-corpus-v0.1.0 && git push origin mushaf-corpus-v0.1.0
+
+cd packages/mushaf-corpus
+npm version patch --tag-version-prefix=mushaf-corpus-v   # bumps, commits, tags
+cd ../..
+git push --follow-tags
+```
+
+Doing it by hand works too, as long as the bump is committed before the tag:
+
+```bash
+# edit "version" in packages/mushaf-corpus/package.json, commit it, then:
+git tag mushaf-corpus-v0.1.1 && git push origin mushaf-corpus-v0.1.1
 ```
 
 `publish-mushaf-corpus.yml` verifies the tag matches the package version, runs
-typecheck and tests, then publishes.
+typecheck and tests, then publishes. A version that already exists on the
+registry can never be republished — bump to a new one instead.
 
 ## Regenerating the corpus
 
