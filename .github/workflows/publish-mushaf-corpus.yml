@@ -1,9 +1,9 @@
-# Menerbitkan @guidelightid/mushaf-corpus ke GitHub Packages.
+# Publishes @guidelightid/mushaf-corpus to GitHub Packages.
 #
-# Dipicu tag `mushaf-corpus-v*` (mis. mushaf-corpus-v0.1.0), bukan setiap push ke main:
-# repo ini berisi banyak paket, dan versi paket ini harus naik dengan sengaja.
-# GITHUB_TOKEN bawaan sudah cukup — tidak perlu PAT — selama job punya izin
-# `packages: write`.
+# Triggered by a `mushaf-corpus-v*` tag (e.g. mushaf-corpus-v0.1.0), not by every
+# push to main: this repo holds many packages, and this one's version should only
+# move deliberately. The default GITHUB_TOKEN is enough — no PAT needed — as long
+# as the job has `packages: write`.
 name: Publish @guidelightid/mushaf-corpus
 
 on:
@@ -33,18 +33,18 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # Gerbang mutu: paket ini memuat teks Al-Qur'an, jadi tesnya wajib hijau
-      # sebelum apa pun terbit.
+      # Quality gate: this package carries Quran text, so its tests must be green
+      # before anything ships.
       - run: pnpm --filter @guidelightid/mushaf-corpus typecheck
       - run: pnpm --filter @guidelightid/mushaf-corpus test
       - run: pnpm --filter @guidelightid/mushaf-corpus build
 
-      - name: Pastikan versi paket cocok dengan tag
+      - name: Ensure the package version matches the tag
         run: |
           TAG_VERSION="${GITHUB_REF_NAME#mushaf-corpus-v}"
           PKG_VERSION="$(node -p "require('./packages/mushaf-corpus/package.json').version")"
           if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
-            echo "Tag $GITHUB_REF_NAME tidak cocok dengan versi paket $PKG_VERSION" >&2
+            echo "Tag $GITHUB_REF_NAME does not match package version $PKG_VERSION" >&2
             exit 1
           fi
 

@@ -1,7 +1,8 @@
 /**
- * Entry aman untuk klien: katalog surah (~87 KB), peta juz, tipe, dan utilitas
- * rentang ayat. Teks ayat lengkap ada di `@guidelightid/mushaf-corpus/ayahs` dan
- * sengaja dipisah supaya tidak ikut terkirim ke browser.
+ * Client-safe entry: the surah catalog (~87 KB), the juz table, types, and
+ * passage helpers. The full verse text lives in
+ * `@guidelightid/mushaf-corpus/ayahs` and is kept separate so it never reaches
+ * the browser.
  */
 export type { PassageSelection, QuranAyah, QuranSurah } from './types.js';
 export { getSurah, getSurahs, totalAyahs } from './surahs.js';

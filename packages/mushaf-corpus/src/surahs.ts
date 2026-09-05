@@ -10,7 +10,7 @@ for (const surah of SURAHS) {
   bySlug.set(surah.slug, surah);
 }
 
-/** Nama alternatif yang mungkin diketik atau ditautkan; slug kanonik tetap. */
+/** Alternate spellings people type or link to; canonical slugs stay put. */
 const ALIASES: Record<string, string> = {
   'ash-sharh': 'al-insyirah',
   'alam-nasyrah': 'al-insyirah',
@@ -32,7 +32,7 @@ export function getSurah(value: number | string): QuranSurah | undefined {
   return alias ? bySlug.get(alias) : undefined;
 }
 
-/** Total ayat seluruh mushaf; 6236 pada korpus ini. */
+/** Ayahs in the whole mushaf; 6236 in this corpus. */
 export function totalAyahs(): number {
   return SURAHS.reduce((sum, surah) => sum + surah.total_ayahs, 0);
 }

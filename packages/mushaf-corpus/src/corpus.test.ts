@@ -13,48 +13,48 @@ import type { QuranSurah } from './types.js';
 
 const SURAHS = surahsData as QuranSurah[];
 
-describe('korpus', () => {
-  it('memuat 114 surah dan 6236 ayat dengan id berurutan', () => {
+describe('corpus', () => {
+  it('holds 114 surahs and 6236 ayahs with contiguous ids', () => {
     expect(getSurahs()).toHaveLength(114);
     expect(totalAyahs()).toBe(6236);
     const stats = getCorpusStats();
     expect(stats).toEqual({ surahs: 114, ayahs: 6236 });
   });
 
-  it('setiap surah punya ayat 1..n tanpa bolong', () => {
+  it('numbers every surah 1..n with no gaps', () => {
     for (const surah of SURAHS) {
       const numbers = getSurahAyahs(surah.id).map((a) => a.ayah_number);
       expect(numbers).toEqual(Array.from({ length: surah.total_ayahs }, (_, i) => i + 1));
     }
   });
 
-  it('mempertahankan teks Arab, terjemahan, dan transliterasi apa adanya', () => {
+  it('preserves Arabic, translation, and transliteration verbatim', () => {
     const [first] = getPassageAyahs({ surah_id: 96, start_ayah: 1, end_ayah: 1 });
     expect(first?.arabic_text).toContain('قْرَأْ');
     expect(first?.translation.length).toBeGreaterThan(0);
     expect(first?.transliteration.length).toBeGreaterThan(0);
   });
 
-  it('menolak rentang di luar jangkauan surah', () => {
+  it('rejects ranges outside the surah', () => {
     expect(getPassageAyahs({ surah_id: 96, start_ayah: 1, end_ayah: 999 })).toEqual([]);
     expect(getPassageAyahs({ surah_id: 96, start_ayah: 10, end_ayah: 1 })).toEqual([]);
   });
 });
 
-describe('surah & rentang', () => {
-  it('mencari surah lewat nomor, slug, dan alias', () => {
+describe('surahs and passages', () => {
+  it('finds surahs by number, slug, and alias', () => {
     expect(getSurah(96)?.slug).toBe('al-alaq');
     expect(getSurah('al-alaq')?.id).toBe(96);
     expect(getSurah('ash-sharh')?.id).toBe(94);
     expect(getSurah('tidak-ada')).toBeUndefined();
   });
 
-  it('memberi label rentang dan ayat tunggal', () => {
+  it('labels both ranges and single ayahs', () => {
     expect(passageLabel({ surah_id: 96, start_ayah: 1, end_ayah: 10 })).toBe("QS. Al-'Alaq: 1–10");
     expect(passageLabel({ surah_id: 96, start_ayah: 7, end_ayah: 7 })).toBe("QS. Al-'Alaq: 7");
   });
 
-  it('menormalkan pencarian dan mengurai rentang', () => {
+  it('normalizes search input and parses ranges', () => {
     expect(normalizeQuranSearch("Al-'Alaq")).toBe('al-alaq');
     expect(normalizeQuranSearch('Al ‘Alaq')).toBe('al alaq');
     expect(parseAyahRange('1-10', 19)).toEqual({ start_ayah: 1, end_ayah: 10 });
@@ -65,7 +65,7 @@ describe('surah & rentang', () => {
     expect(parseAyahRange('20', 19)).toBeNull();
   });
 
-  it('membersihkan HTML dari deskripsi surah', () => {
+  it('strips HTML from the surah description', () => {
     expect(plainSurahDescription('Surat <i>Al Faatihah</i><br>yang<br/>dibuka.')).toBe(
       'Surat Al Faatihah yang dibuka.',
     );
@@ -74,13 +74,13 @@ describe('surah & rentang', () => {
 });
 
 describe('juz — Standar Mushaf Indonesia', () => {
-  it('mencakup seluruh mushaf tepat satu kali', () => {
+  it('covers the whole mushaf exactly once', () => {
     expect(getJuzList()).toHaveLength(30);
     expect(juzCoverageTotal()).toBe(totalAyahs());
     expect(juzCoverageTotal()).toBe(6236);
   });
 
-  it('bersambung tanpa celah maupun tumpang tindih', () => {
+  it('runs contiguously with no gaps or overlaps', () => {
     let prev: { surah_id: number; ayah_number: number } | null = null;
     for (const juz of getJuzList()) {
       expect(juz.ranges.length).toBeGreaterThan(0);
@@ -98,9 +98,9 @@ describe('juz — Standar Mushaf Indonesia', () => {
     expect(prev).toEqual({ surah_id: 114, ayah_number: 6 });
   });
 
-  it('memakai batas Indonesia, bukan Madinah', () => {
-    // Pembeda paling terkenal: juz 23 dibuka Yasin 22 di mushaf Indonesia,
-    // Yasin 28 di mushaf Madinah.
+  it('uses the Indonesian boundaries, not the Madinah ones', () => {
+    // The best-known difference: juz 23 opens at Yasin 22 in the Indonesian
+    // mushaf and at Yasin 28 in the Madinah one.
     expect(juzOfAyah(36, 22)).toBe(23);
     expect(juzOfAyah(36, 21)).toBe(22);
     expect(juzOfAyah(1, 1)).toBe(1);
@@ -109,13 +109,13 @@ describe('juz — Standar Mushaf Indonesia', () => {
     expect(juzOfSurah(2)).toEqual([1, 2, 3]);
   });
 
-  it('menolak nomor juz di luar 1..30', () => {
+  it('rejects juz numbers outside 1..30', () => {
     expect(getJuz(0)).toBeUndefined();
     expect(getJuz(31)).toBeUndefined();
     expect(getJuz(1.5)).toBeUndefined();
   });
 
-  it('menyusun ayat juz berurutan lintas surah', () => {
+  it('assembles a juz in order across surah boundaries', () => {
     const juz30 = getJuz(30);
     const ayahs = getJuzAyahs(30);
     expect(ayahs).toHaveLength(juz30?.total_ayahs ?? -1);

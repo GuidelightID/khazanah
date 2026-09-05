@@ -1,20 +1,20 @@
-// Importer korpus @guidelightid/mushaf-corpus — equran.id sebagai satu-satunya
-// sumber kanonik.
+// Corpus importer for @guidelightid/mushaf-corpus — equran.id is the single
+// canonical source.
 //
-// Pemakaian: node scripts/import-corpus.mjs [--write]
-//   tanpa --write : mengambil data provider, memvalidasi di memori, cetak ringkasan
-//   dengan --write: menulis src/data/*.json dan CORPUS.md
+// Usage: node scripts/import-corpus.mjs [--write]
+//   without --write: fetch provider data, validate in memory, print a summary
+//   with --write   : write src/data/*.json and CORPUS.md
 //
-// Paket ini adalah rumah tunggal korpus. Migrasi seed SQL untuk basis data
-// Guidelight digenerate terpisah di aplikasi, dari paket ini — lihat
-// guidelight-id-next/scripts/generate-quran-seed.mjs.
+// This package is the corpus's only home. The SQL seed migration for
+// Guidelight's database is generated separately in the application, from this
+// package — see guidelight-id-next/scripts/generate-quran-seed.mjs.
 //
 // Source: https://equran.id/api/v2/surat (+ /surat/{nomor} per-surah details)
 //   - Arabic (teksArab), Indonesian translation (teksIndonesia, Kemenag),
 //     transliteration (teksLatin), surah metadata (nama, namaLatin, arti,
 //     tempatTurun, deskripsi, jumlahAyat), all from one provider so the three
 //     texts can never drift out of alignment.
-// - Ketentuan provider diperiksa manual; lihat CORPUS.md.
+// - Provider terms checked manually; see CORPUS.md.
 import { createHash } from 'node:crypto'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -197,7 +197,7 @@ if (!SHOULD_WRITE) {
   process.exit(0)
 }
 
-// --- Tulis berkas data ---
+// --- Write data files ---
 const dataDir = join(pkgRoot, 'src/data')
 mkdirSync(dataDir, { recursive: true })
 writeFileSync(join(dataDir, 'surahs.json'), `${JSON.stringify(surahs, null, 2)}\n`)
@@ -208,56 +208,55 @@ writeFileSync(
     {
       generated_at: new Date().toISOString(),
       source: 'https://equran.id/api/v2/surat (+ /surat/{nomor})',
-      note: 'Sumber kanonik tunggal: Arab (teksArab), terjemahan Kemenag (teksIndonesia), transliterasi (teksLatin), metadata surah (nama, namaLatin, arti, tempatTurun, deskripsi). Kolom juz/page mengikuti pembagian mushaf Madinah bawaan provider.',
+      note: 'Single canonical source: Arabic (teksArab), Kemenag translation (teksIndonesia), transliteration (teksLatin), surah metadata (nama, namaLatin, arti, tempatTurun, deskripsi). The juz/page columns carry the provider\'s own Madinah division.',
       equran_sha256: eqHash,
       equran_bytes: rawBytes,
       counts: { surahs: 114, ayahs: 6236 },
-      attribution: 'Teks Arab, terjemahan Kemenag & transliterasi: equran.id.',
+      attribution: 'Arabic text, Kemenag translation & transliteration: equran.id.',
     },
     null,
     2,
   )}\n`,
 )
 
-// --- Dokumen provenance ---
+// --- Provenance document ---
 writeFileSync(
   join(pkgRoot, 'CORPUS.md'),
   [
-    '# Provenance korpus',
+    '# Corpus provenance',
     '',
-    `Digenerate: ${new Date().toISOString()}`,
+    `Generated: ${new Date().toISOString()}`,
     '',
-    'Berkas ini ditulis oleh `scripts/import-corpus.mjs`. **Jangan disunting tangan** —',
-    'suntingan akan hilang saat impor berikutnya. Catatan yang perlu bertahan',
-    'ditulis di `README.md`.',
+    'Written by `scripts/import-corpus.mjs`. **Do not hand-edit** — edits are lost',
+    'on the next import. Notes meant to survive belong in `README.md`.',
     '',
-    '- Sumber tunggal: equran.id `/api/v2/surat` (+ `/surat/{nomor}` per surah).',
-    '- Arab: `teksArab` per ayat (basmalah terpisah, tidak menempel di ayat 1).',
-    '- Terjemahan: `teksIndonesia` (Kemenag).',
-    '- Transliterasi: `teksLatin`, sebaris dari sumber yang sama sehingga tidak perlu penyelarasan dua provider.',
-    '- Metadata surah: `nama`, `namaLatin`, `arti`, `tempatTurun`, `deskripsi` (memuat HTML), `jumlahAyat`.',
-    '- Kolom `juz`/`page`: pembagian mushaf **Madinah** bawaan provider.',
-    '  Penelusuran per juz TIDAK memakainya — lihat catatan batas juz di `README.md`.',
-    '- Diverifikasi saat impor: 114 surah, 6236 ayat, id global berurutan 1..6236.',
+    '- Single source: equran.id `/api/v2/surat` (+ `/surat/{number}` per surah).',
+    '- Arabic: `teksArab` per ayah (Basmalah stands alone, never glued to ayah 1).',
+    '- Translation: `teksIndonesia` (Kemenag).',
+    '- Transliteration: `teksLatin`, from the same source, so no cross-provider alignment is needed.',
+    '- Surah metadata: `nama`, `namaLatin`, `arti`, `tempatTurun`, `deskripsi` (contains HTML), `jumlahAyat`.',
+    '- The `juz`/`page` columns carry the provider\'s own **Madinah** division.',
+    '  Juz navigation does NOT use them — see the juz note in `README.md`.',
+    '- Verified at import: 114 surahs, 6236 ayahs, contiguous global ids 1..6236.',
     '',
-    '## Hash respons mentah provider',
+    '## Raw provider response hashes',
     '',
-    `- equran.id sha256 (114 detail surah digabung): \`${eqHash}\` (${rawBytes} bytes)`,
+    `- equran.id sha256 (114 surah details concatenated): \`${eqHash}\` (${rawBytes} bytes)`,
     '',
-    'Hash respons mentah bisa berubah kalau serialisasi provider berubah; yang',
-    'dijaga adalah isi kanoniknya (teks surah/ayat), dan itu diuji terpisah.',
+    'Raw-response hashes may shift if the provider changes its serialization; what',
+    'is guarded is the canonical content (surah/ayah text), tested separately.',
     '',
-    '## Regenerasi',
+    '## Regenerating',
     '',
     '```bash',
     'node scripts/import-corpus.mjs --write',
     'pnpm test',
     '```',
     '',
-    'Periksa diff `src/data/*` sebelum commit, lalu naikkan versi paket dan',
-    'terbitkan — aplikasi mengambil korpus dari rilis, bukan dari repo ini.',
+    'Review the diff to `src/data/*` before committing, then bump the package',
+    'version and publish — consumers take the corpus from a release, not this repo.',
     '',
   ].join('\n'),
 )
 
-console.log('Menulis src/data/{surahs,ayahs,provenance}.json dan CORPUS.md')
+console.log('Wrote src/data/{surahs,ayahs,provenance}.json and CORPUS.md')

@@ -3,13 +3,31 @@
 [![CI](https://github.com/GuidelightID/mushaf/actions/workflows/ci.yml/badge.svg)](https://github.com/GuidelightID/mushaf/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-**Layout-faithful Madinah Mushaf renderer for React & Next.js** — a library, not an app.
-
-Mushaf aims to be the default embeddable engine for Quran page rendering on the web (similar to how `react-markdown` standardized Markdown). It is TypeScript-first, offline-capable, SSR-friendly, and adapter-driven.
+Quran libraries for React & Next.js — libraries, not an app.
 
 **Repo:** [github.com/GuidelightID/mushaf](https://github.com/GuidelightID/mushaf)
 
-> **Status:** early **0.x** scaffolding. APIs may change. Real Madinah fonts/geometry are **dual-distributed** (not silently MIT) — see [`LICENSES/matrix.md`](./LICENSES/matrix.md).
+This monorepo holds two things that share a home but not a purpose. Read this
+before adding a package, because they publish to different registries:
+
+| | `@mushaf/*` — the renderer | `@guidelightid/mushaf-corpus` — the corpus |
+|---|---|---|
+| Does | Renders layout-faithful **Madinah** mushaf pages | Ships the Indonesian **Kemenag** corpus + juz map. Renders nothing |
+| Data | KFGQPC plates, adapter-driven | equran.id, frozen as JSON |
+| Status | early **0.x** scaffolding, unpublished | `0.1.0`, tested, **not yet published** |
+| Registry | public npm (scope not yet claimed) | **GitHub Packages** — scope must be `@guidelightid` |
+| Used by | nothing yet | `guidelight-id-next` depends on it (Al-Qur'an & Tadabbur) |
+
+The renderer aims to be the default embeddable engine for Quran page rendering
+on the web (similar to how `react-markdown` standardized Markdown):
+TypeScript-first, offline-capable, SSR-friendly, adapter-driven.
+
+> **Status:** the `@mushaf/*` renderer is early **0.x** scaffolding; APIs may
+> change and nothing is published yet. Real Madinah fonts/geometry are
+> **dual-distributed** (not silently MIT) — see
+> [`LICENSES/matrix.md`](./LICENSES/matrix.md).
+> `@guidelightid/mushaf-corpus` is separate: it carries no restricted assets,
+> and its first release is tagged `mushaf-corpus-v0.1.0`.
 
 ## What works today
 
@@ -26,6 +44,7 @@ Mushaf aims to be the default embeddable engine for Quran page rendering on the 
 | Text-flow (not plate-faithful) | `@mushaf/adapter-tanzil` |
 | Next font/CSP helpers | `@mushaf/next` |
 | Guidelight catalog spike notes | [`examples/guidelight-spike`](./examples/guidelight-spike) |
+| **Indonesian corpus + Standar Mushaf Indonesia juz map** | **`@guidelightid/mushaf-corpus`** — see its [README](./packages/mushaf-corpus/README.md) |
 
 ## Quick start
 
@@ -115,8 +134,21 @@ import { QuranProvider, QuranPage } from '@mushaf/react';
 | `@mushaf/adapter-kfgqpc` | Hosted Madinah pack adapter |
 | `@mushaf/adapter-quran-foundation` | API v4 → IR (approx) |
 | `@mushaf/adapter-tanzil` | Text-flow fallback |
+| `@guidelightid/mushaf-corpus` | Indonesian Kemenag corpus, juz map, passage helpers — no UI |
 
-npm scope: prefer `@mushaf/*` (fallback `@mushaf-js/*` — see [`docs/npm-scope.md`](./docs/npm-scope.md)).
+### Naming and registries
+
+Two scopes, because the registries force it:
+
+- **`@mushaf/*`** targets public npm. The scope is not claimed yet — see
+  [`docs/npm-scope.md`](./docs/npm-scope.md).
+- **`@guidelightid/*`** targets **GitHub Packages**, which requires the npm
+  scope to match the repository owner. Anything published from
+  `github.com/GuidelightID/…` must carry that scope; `@mushaf/*` can never go
+  there under its current name.
+
+So a new package's name follows its destination. For GitHub Packages, use
+`@guidelightid/mushaf-<name>`.
 
 ## Development
 

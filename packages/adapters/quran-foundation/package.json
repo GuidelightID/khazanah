@@ -16,19 +16,23 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "lint": "tsc -p tsconfig.json --noEmit",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "peerDependencies": {
     "@mushaf/core": ">=0.0.0"
   },
   "dependencies": {},
   "devDependencies": {
+    "@mushaf/core": "workspace:*",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },

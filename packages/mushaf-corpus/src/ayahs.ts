@@ -1,10 +1,9 @@
 /**
- * Entry terpisah untuk korpus ayat lengkap (~3,9 MB).
+ * Separate entry for the full verse corpus (~3.9 MB).
  *
- * Sengaja TIDAK diekspor dari `index.ts`: entry utama dipakai juga di sisi
- * klien, dan menariknya ke sana akan mengirim seluruh mushaf ke browser.
- * Impor dari `@guidelightid/mushaf-corpus/ayahs` hanya di kode yang berjalan di
- * server.
+ * Deliberately NOT re-exported from `index.ts`: the main entry is used on the
+ * client too, and pulling this in there would ship the whole mushaf to the
+ * browser. Import `@guidelightid/mushaf-corpus/ayahs` only from server code.
  */
 import ayahsData from './data/ayahs.json' with { type: 'json' };
 import { getJuz } from './juz.js';
@@ -41,8 +40,8 @@ export function getPassageAyahs(passage: PassageSelection): QuranAyah[] {
 }
 
 /**
- * Seluruh ayat sebuah juz, berurutan dan menyeberangi batas surah.
- * Batas juz mengikuti Standar Mushaf Indonesia (lihat `juz.ts`).
+ * Every ayah in a juz, in order and across surah boundaries.
+ * Boundaries follow the Standar Mushaf Indonesia (see `juz.ts`).
  */
 export function getJuzAyahs(juzNumber: number): QuranAyah[] {
   const juz = getJuz(juzNumber);

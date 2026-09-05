@@ -1,7 +1,7 @@
 import { getSurah } from './surahs.js';
 import type { PassageSelection } from './types.js';
 
-/** "QS. Al-'Alaq: 1–10" untuk rentang, "QS. Al-'Alaq: 7" untuk ayat tunggal. */
+/** "QS. Al-'Alaq: 1–10" for a range, "QS. Al-'Alaq: 7" for a single ayah. */
 export function passageLabel(passage: PassageSelection): string {
   const surah = getSurah(passage.surah_id);
   const name = surah ? surah.name_latin : `Surah ${passage.surah_id}`;
@@ -9,7 +9,7 @@ export function passageLabel(passage: PassageSelection): string {
   return `QS. ${name}: ${passage.start_ayah}–${passage.end_ayah}`;
 }
 
-/** Menyeragamkan kapital, diakritik, apostrof keriting, dan tanda hubung. */
+/** Folds case, diacritics, curly apostrophes, and dash variants. */
 export function normalizeQuranSearch(value: string): string {
   return value
     .toLowerCase()
@@ -22,8 +22,8 @@ export function normalizeQuranSearch(value: string): string {
 }
 
 /**
- * Menerima "1", "1-10", "1–10" (en dash), dan "1 - 10".
- * Mengembalikan null bila di luar jangkauan surah.
+ * Accepts "1", "1-10", "1–10" (en dash), and "1 - 10".
+ * Returns null when the range falls outside the surah.
  */
 export function parseAyahRange(
   value: string,
@@ -50,9 +50,9 @@ export function parseAyahRange(
 }
 
 /**
- * Deskripsi surah dari equran.id memuat HTML sederhana (`<i>`, `<br>`).
- * Teks ini dipakai sebagai prosa biasa, jadi tag dibuang dan entitas dasar
- * dikembalikan — tidak ada HTML yang perlu disuntikkan ke halaman.
+ * equran.id's surah description carries light HTML (`<i>`, `<br>`). The text is
+ * used as plain prose, so tags are stripped and basic entities decoded — no
+ * HTML ever needs to be injected into a page.
  */
 export function plainSurahDescription(html: string | undefined): string {
   if (!html) return '';

@@ -2,11 +2,11 @@ import { getSurah } from './surahs.js';
 import type { PassageSelection } from './types.js';
 
 /**
- * Batas juz mengikuti **Standar Mushaf Indonesia** (Kemenag), bukan pembagian
- * mushaf Madinah. Keduanya berbeda di 13 juz — misalnya juz 23 mulai di
- * Yasin 22 (Indonesia) dan Yasin 28 (Madinah). Kolom `juz` pada tiap ayat di
- * korpus equran.id mengikuti pembagian Madinah, jadi tabel inilah yang dipakai
- * sebagai sumber batas juz supaya cocok dengan mushaf cetak Indonesia.
+ * Juz boundaries follow the **Standar Mushaf Indonesia** (Kemenag), not the
+ * Madinah division. The two differ at 13 juz — juz 23 opens at Yasin 22 in the
+ * Indonesian mushaf and at Yasin 28 in the Madinah one. Each ayah's own `juz`
+ * field in the equran.id corpus follows the Madinah division, so this table is
+ * the source of truth instead, matching the printed Indonesian mushaf.
  */
 const JUZ_BOUNDS: Record<number, { start: [number, number]; end: [number, number] }> = {
   1: { start: [1, 1], end: [2, 141] },
@@ -41,7 +41,7 @@ const JUZ_BOUNDS: Record<number, { start: [number, number]; end: [number, number
   30: { start: [78, 1], end: [114, 6] },
 };
 
-/** Nama juz mengikuti kata pembuka, sebagaimana lazim di mushaf Indonesia. */
+/** Juz names follow their opening words, as printed Indonesian mushafs do. */
 const JUZ_NAMES: Record<number, string> = {
   1: 'Alif Lam Mim',
   2: 'Sayaqul',
@@ -78,7 +78,7 @@ const JUZ_NAMES: Record<number, string> = {
 export interface JuzSurahRange extends PassageSelection {
   surah_slug: string;
   surah_name: string;
-  /** True saat juz memuat surah ini dari ayat pertama sampai ayat terakhir. */
+  /** True when the juz covers this surah from its first ayah to its last. */
   complete: boolean;
 }
 
@@ -89,13 +89,13 @@ export interface JuzInfo {
   end: { surah_id: number; ayah_number: number };
   ranges: JuzSurahRange[];
   total_ayahs: number;
-  /** Label ringkas dari surah pembuka sampai surah penutup. */
+  /** Compact label from the opening surah to the closing one. */
   span: string;
 }
 
 function buildJuz(number: number): JuzInfo {
   const bounds = JUZ_BOUNDS[number];
-  if (!bounds) throw new Error(`Juz ${number} tidak ada dalam tabel batas.`);
+  if (!bounds) throw new Error(`Juz ${number} is absent from the boundary table.`);
   const [startSurah, startAyah] = bounds.start;
   const [endSurah, endAyah] = bounds.end;
 
@@ -118,7 +118,7 @@ function buildJuz(number: number): JuzInfo {
   const total = ranges.reduce((sum, r) => sum + (r.end_ayah - r.start_ayah + 1), 0);
   const first = ranges[0];
   const last = ranges[ranges.length - 1];
-  if (!first || !last) throw new Error(`Juz ${number} tidak memuat satu pun surah.`);
+  if (!first || !last) throw new Error(`Juz ${number} covers no surah at all.`);
 
   return {
     number,
@@ -145,7 +145,7 @@ export function getJuz(number: number): JuzInfo | undefined {
   return JUZ_LIST[number - 1];
 }
 
-/** Juz tempat sebuah ayat berada, memakai batas Standar Mushaf Indonesia. */
+/** The juz an ayah belongs to, per the Standar Mushaf Indonesia. */
 export function juzOfAyah(surahId: number, ayahNumber: number): number {
   for (const juz of JUZ_LIST) {
     const afterStart =
@@ -159,7 +159,7 @@ export function juzOfAyah(surahId: number, ayahNumber: number): number {
   return 1;
 }
 
-/** Daftar juz yang disentuh sebuah surah, untuk label ringkas di kartu. */
+/** The juz a surah spans, for compact labels on cards. */
 export function juzOfSurah(surahId: number): number[] {
   const surah = getSurah(surahId);
   if (!surah) return [];
@@ -170,7 +170,7 @@ export function juzOfSurah(surahId: number): number[] {
   return list;
 }
 
-/** Total ayat yang tercakup 30 juz; harus sama dengan total mushaf. */
+/** Ayahs covered by all 30 juz; must equal the mushaf total. */
 export function juzCoverageTotal(): number {
   return JUZ_LIST.reduce((sum, juz) => sum + juz.total_ayahs, 0);
 }

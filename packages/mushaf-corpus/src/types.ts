@@ -5,9 +5,9 @@ export interface QuranSurah {
   name_arabic: string;
   name_latin: string;
   name_translation: string;
-  /** "Mekah" | "Madinah" — dari `tempatTurun` equran.id. */
+  /** "Mekah" | "Madinah", from equran.id's `tempatTurun`. */
   revelation?: string;
-  /** Deskripsi surah equran.id; memuat HTML sederhana. */
+  /** equran.id's surah description; contains light HTML. */
   description?: string;
   total_ayahs: number;
 }
@@ -20,9 +20,9 @@ export interface QuranAyah {
   transliteration: string;
   translation: string;
   /**
-   * Nomor juz bawaan korpus equran.id, yang mengikuti pembagian mushaf
-   * Madinah. Untuk penelusuran per juz gunakan `juzOfAyah()`, yang memakai
-   * batas Standar Mushaf Indonesia dan berbeda di 13 juz.
+   * equran.id's own juz number, which follows the Madinah division. For juz
+   * navigation use `juzOfAyah()` instead: it applies the Standar Mushaf
+   * Indonesia boundaries, which differ at 13 juz.
    */
   juz: number;
   page: number;
