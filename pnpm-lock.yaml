@@ -123,7 +123,7 @@ importers:
   packages/adapters/quran-foundation:
     dependencies:
       '@mushaf/core':
-        specifier: workspace:*
+        specifier: '>=0.0.0'
         version: link:../../core
     devDependencies:
       typescript:
@@ -203,6 +203,15 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
+  packages/mushaf-corpus:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vitest:
+        specifier: ^2.1.8
+        version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
+
   packages/next:
     dependencies:
       next:
@@ -228,10 +237,10 @@ importers:
   packages/react:
     dependencies:
       '@mushaf/core':
-        specifier: workspace:*
+        specifier: '>=0.0.0'
         version: link:../core
       '@mushaf/renderer':
-        specifier: workspace:*
+        specifier: '>=0.0.0'
         version: link:../renderer
       '@mushaf/search':
         specifier: workspace:*
@@ -268,7 +277,7 @@ importers:
   packages/renderer:
     dependencies:
       '@mushaf/core':
-        specifier: workspace:*
+        specifier: '>=0.0.0'
         version: link:../core
     devDependencies:
       jsdom:

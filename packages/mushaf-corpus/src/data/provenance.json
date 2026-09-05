@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-09-05T11:05:11.148Z",
+  "source": "https://equran.id/api/v2/surat (+ /surat/{nomor})",
+  "note": "Single canonical source: Arab (teksArab), Indonesian Kemenag translation (teksIndonesia), transliteration (teksLatin), surah metadata (nama, namaLatin, arti, tempatTurun, deskripsi). juz/page carried from the canonical Madinah mapping.",
+  "equran_sha256": "be6108cfad7f6facdbc4e52d1b6c90eaa9d4b5e1626ecf2b6da378fff4341f5c",
+  "equran_bytes": 5832424,
+  "counts": {
+    "surahs": 114,
+    "ayahs": 6236
+  },
+  "attribution": "Teks Arab, terjemahan Kemenag & transliterasi: equran.id."
+}
