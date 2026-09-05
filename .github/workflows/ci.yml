@@ -13,12 +13,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      # Uses package.json "packageManager" (pnpm@9.15.0) — do not also set version:
-      - uses: pnpm/action-setup@v4
+      # Uses package.json "packageManager" (pnpm@9.15.0) — do not also set version.
+      # Majors here target the Node 24 runtime; Node 20 leaves the runners on
+      # 2026-09-23, so pinning older majors would break CI outright.
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -36,7 +38,7 @@ jobs:
 
       - name: Upload Playwright report on failure
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-report
           path: |
