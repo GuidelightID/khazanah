@@ -1,7 +1,7 @@
 {
   "name": "@guidelightid/mushaf-corpus",
-  "version": "0.1.0",
-  "description": "Korpus Al-Qur'an Indonesia (equran.id / Kemenag) beserta peta juz Standar Mushaf Indonesia dan utilitas rentang ayat — tanpa tampilan",
+  "version": "0.1.1",
+  "description": "Indonesian Quran corpus (equran.id / Kemenag) with the Standar Mushaf Indonesia juz table and passage helpers \u2014 no UI",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -16,7 +16,8 @@
       "import": "./dist/ayahs.js",
       "default": "./dist/ayahs.js"
     },
-    "./provenance": "./dist/data/provenance.json"
+    "./provenance": "./dist/data/provenance.json",
+    "./package.json": "./package.json"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -42,7 +43,7 @@
     "vitest": "^2.1.8"
   },
   "publishConfig": {
-    "access": "restricted",
+    "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
   "repository": {
