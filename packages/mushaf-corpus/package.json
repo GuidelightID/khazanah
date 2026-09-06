@@ -1,7 +1,7 @@
 {
   "name": "@guidelightid/mushaf-corpus",
-  "version": "0.1.1",
-  "description": "Indonesian Quran corpus (equran.id / Kemenag) with the Standar Mushaf Indonesia juz table and passage helpers \u2014 no UI",
+  "version": "0.1.2",
+  "description": "Indonesian Quran corpus (equran.id / Kemenag) with the Standar Mushaf Indonesia juz table and passage helpers — no UI",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
