@@ -18,7 +18,7 @@ production. Contributions are welcome.
 | [`@guidelightid/almatsurat`](./packages/almatsurat) | Dzikir Al-Ma'tsurat, sugro & kubro, pagi & petang | 0.1.0 |
 | [`@guidelightid/quran`](./packages/quran) | 114-surah index, Standar Mushaf Indonesia juz table, passage helpers, and an adapter that loads verse text & Indonesian translation from EQuran.id via its official SDK | 0.2.0 |
 | [`@guidelightid/mushaf-*`](./packages/mushaf) | Madinah mushaf page renderer for React & Next.js: core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli and data adapters | early 0.0.x, **not published yet** |
-| `@guidelightid/doa` | collections of doa | planned |
+| [`@guidelightid/doa`](./packages/doa) | Doa & dzikir: morning/evening dhikr, daily dua, selected dua, dhikr after salah, in Indonesian and English | 0.1.0 |
 
 ```ts
 import { getAlMatsurat } from '@guidelightid/almatsurat';
@@ -47,6 +47,7 @@ Code and content have different owners, so this repo keeps them apart:
 ```
 packages/
 ├── almatsurat/          @guidelightid/almatsurat
+├── doa/                 @guidelightid/doa
 ├── quran/               @guidelightid/quran
 └── mushaf/              @guidelightid/mushaf-* (renderer family)
     ├── core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli
@@ -84,7 +85,7 @@ Details and one-time setup: [docs/releasing.md](./docs/releasing.md).
 
 ## Adding a content package
 
-For example `@guidelightid/doa`:
+For example a new `@guidelightid/<name>` package:
 
 1. Add a row for the source to `LICENSES/matrix.md`. If redistribution through
    npm is not clearly allowed, mark it ⬜ and keep the package `"private": true`.

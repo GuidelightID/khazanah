@@ -9,6 +9,7 @@ This table is the **normative gate** for redistributing fonts, page IR, Quran te
 | QPC / KFGQPC fonts | vendor | vendor site | n/a | n/a | yes | **often no** | often no | CLI pull only | ⬜ counsel |
 | Community open IR (TBD) | TBD | TBD | TBD | TBD | TBD | per row | per row | npm or CLI | ⬜ |
 | aliifam/almatsurat — Al-Ma'tsurat sugro/kubro, pagi/petang (Arabic, transliteration, Indonesian translation) | MIT | https://github.com/aliifam/almatsurat | yes | n/a | n/a | yes (keep copyright notice) | yes | `@guidelightid/almatsurat` | ✅ |
+| fitrahive/dua-dhikr — doa & dzikir collections, Indonesian and English (Arabic, transliteration, translation, hadith references) | MIT | https://github.com/fitrahive/dua-dhikr | yes | n/a | n/a | yes (keep copyright notice) | yes | `@guidelightid/doa` | ✅ |
 | EQuran.id API v2 — Arabic text, Indonesian translation, transliteration, surah descriptions (Kemenag/LPMQ) | EQuran.id terms: Arabic text free to use; translations © (share with credit, not for sale) | https://equran.id/terms | via API | n/a | n/a | **not bundled**: consumers fetch it at runtime with the `equran` SDK | no | `@guidelightid/quran/equran` (adapter only) | ✅ not redistributed |
 | Surah index (number, slug, Latin/Arabic name, ayah count, revelation) | first-party, MIT (structural facts) | in-repo | n/a | n/a | n/a | yes | yes | `@guidelightid/quran` | ✅ |
 

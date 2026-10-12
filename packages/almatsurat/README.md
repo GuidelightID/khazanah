@@ -20,6 +20,19 @@ for (const item of pagi.data) {
 }
 ```
 
+### Smaller bundles
+
+The main entry loads all four collections. In a browser bundle, import only
+the variant you use:
+
+```ts
+import { getAlMatsuratSugro } from '@guidelightid/almatsurat/sugro';
+
+const petang = getAlMatsuratSugro('petang');
+```
+
+`@guidelightid/almatsurat/kubro` works the same way (`getAlMatsuratKubro`).
+
 ## API
 
 | Export | Purpose |
@@ -27,6 +40,7 @@ for (const item of pagi.data) {
 | `getAlMatsurat(variant, time)` | one collection: `variant` is `'sugro' \| 'kubro'`, `time` is `'pagi' \| 'petang'` |
 | `ALMATSURAT_VARIANTS`, `ALMATSURAT_TIMES` | the allowed values, for building selectors |
 | `isAlMatsuratVariant(s)`, `isAlMatsuratTime(s)` | narrow a string (e.g. a URL param) |
+| `@guidelightid/almatsurat/sugro`, `/kubro` | one variant only: `ALMATSURAT_SUGRO` / `getAlMatsuratSugro(time)`, and the kubro equivalents |
 | `@guidelightid/almatsurat/provenance` | source repo, commit and SHA-256 of each file |
 
 Types: `AlMatsuratCollection`, `AlMatsuratItem` (`type: 'single' \| 'parent'`;

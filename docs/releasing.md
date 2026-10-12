@@ -5,7 +5,8 @@ Public packages publish to **npmjs.com** under the **`@guidelightid`** scope
 changelogs, and **npm trusted publishing** (OIDC from GitHub Actions) to
 publish: no npm token is stored anywhere. Provenance is added automatically.
 
-Currently published: `@guidelightid/almatsurat`, `@guidelightid/quran`.
+Published: `@guidelightid/almatsurat`, `@guidelightid/quran`, `@guidelightid/doa`.
+Each new package's first version is published by hand (see below).
 The `@guidelightid/mushaf-*` renderer packages are `"private": true` until the
 renderer leaves its 0.0.x scaffolding (they also depend on each other through
 `workspace:*`, which `npm publish` does not rewrite).

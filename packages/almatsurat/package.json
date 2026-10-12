@@ -11,6 +11,16 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
+    "./sugro": {
+      "types": "./dist/sugro.d.ts",
+      "import": "./dist/sugro.js",
+      "default": "./dist/sugro.js"
+    },
+    "./kubro": {
+      "types": "./dist/kubro.d.ts",
+      "import": "./dist/kubro.js",
+      "default": "./dist/kubro.js"
+    },
     "./provenance": "./dist/data/provenance.json",
     "./package.json": "./package.json"
   },

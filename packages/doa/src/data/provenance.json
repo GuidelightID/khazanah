@@ -1,0 +1,110 @@
+{
+  "source": "https://github.com/fitrahive/dua-dhikr",
+  "commit": "f42f895f914319a844c3e3c2279483cae060ea19",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2023 Fitrahive",
+  "imported_at": "2026-10-12",
+  "modifications": [
+    "null fields replaced with empty strings",
+    "daily-dua (id) item 0 translation: duplicated word 'dan dan' -> 'dan'",
+    "English files: field 'benefits' renamed to 'fawaid' (upstream mixes both, even within daily-dua.en.json), so every item has the same 7 fields"
+  ],
+  "files": {
+    "morning-dhikr.id.json": {
+      "upstream_path": "data/dua-dhikr/morning-dhikr/id.json",
+      "upstream_sha256": "fbfa70978bb039d458d44e370361b9e7bbb2904a7807411f1da7cc29daa9b211",
+      "items": 19
+    },
+    "morning-dhikr.en.json": {
+      "upstream_path": "data/dua-dhikr/morning-dhikr/en.json",
+      "upstream_sha256": "67af9c7660426394ebfa31c62f32ab11dd64248732963223a847e0e8509dd06b",
+      "items": 19
+    },
+    "evening-dhikr.id.json": {
+      "upstream_path": "data/dua-dhikr/evening-dhikr/id.json",
+      "upstream_sha256": "9f7330e36a3fe759a485856c90a5f9f05744b2e73cd5a363e0a238f20e1a8806",
+      "items": 19
+    },
+    "evening-dhikr.en.json": {
+      "upstream_path": "data/dua-dhikr/evening-dhikr/en.json",
+      "upstream_sha256": "557a189c2133215e6a947eae1b81b2601eca634b48c5d689cb7803f29fee3d7d",
+      "items": 19
+    },
+    "daily-dua.id.json": {
+      "upstream_path": "data/dua-dhikr/daily-dua/id.json",
+      "upstream_sha256": "e41e64a0ef77817fadd5b5d99abbf6f606abb9ed8eb56860a813056b147f5794",
+      "items": 38
+    },
+    "daily-dua.en.json": {
+      "upstream_path": "data/dua-dhikr/daily-dua/en.json",
+      "upstream_sha256": "ecd0daf95b903df345347855c053a7eea94f70ad5882ac09e2af93d3a32b142c",
+      "items": 38
+    },
+    "selected-dua.id.json": {
+      "upstream_path": "data/dua-dhikr/selected-dua/id.json",
+      "upstream_sha256": "6d9ac504652bd5f9127762b9fc647cc30bbea602494e96f76d844971eaed2a7e",
+      "items": 8
+    },
+    "selected-dua.en.json": {
+      "upstream_path": "data/dua-dhikr/selected-dua/en.json",
+      "upstream_sha256": "23a3ca5cc31102dfb42a1641863d290b200eb3076b000f2ef8f10d7819b0659c",
+      "items": 8
+    },
+    "dhikr-after-salah.id.json": {
+      "upstream_path": "data/dua-dhikr/dhikr-after-salah/id.json",
+      "upstream_sha256": "1dfa828629ceeb0a116d3e2e855d52a548bf5038bbe17d2a415c4acc51aead62",
+      "items": 13
+    },
+    "dhikr-after-salah.en.json": {
+      "upstream_path": "data/dua-dhikr/dhikr-after-salah/en.json",
+      "upstream_sha256": "2a1b54c699a9b12771301abea169ec34e06c62773bc687b611f1c376f3ae95e5",
+      "items": 13
+    }
+  },
+  "categories": {
+    "id": [
+      {
+        "name": "Dzikir Pagi",
+        "slug": "morning-dhikr"
+      },
+      {
+        "name": "Dzikir Petang",
+        "slug": "evening-dhikr"
+      },
+      {
+        "name": "Doa Harian",
+        "slug": "daily-dua"
+      },
+      {
+        "name": "Doa Pilihan",
+        "slug": "selected-dua"
+      },
+      {
+        "name": "Dzikir Setelah Shalat",
+        "slug": "dhikr-after-salah"
+      }
+    ],
+    "en": [
+      {
+        "name": "Morning Dhikr",
+        "slug": "morning-dhikr"
+      },
+      {
+        "name": "Evening Dhikr",
+        "slug": "evening-dhikr"
+      },
+      {
+        "name": "Daily Dua",
+        "slug": "daily-dua"
+      },
+      {
+        "name": "Selected Dua",
+        "slug": "selected-dua"
+      },
+      {
+        "name": "Dhikr After Salah",
+        "slug": "dhikr-after-salah"
+      }
+    ]
+  }
+}

@@ -49,3 +49,16 @@ describe("Al-Ma'tsurat collections", () => {
     expect(isAlMatsuratTime("malam")).toBe(false);
   });
 });
+
+describe("per-variant entry points", () => {
+  it("expose the same collections as the main entry", async () => {
+    const { ALMATSURAT_SUGRO, getAlMatsuratSugro } = await import("./sugro.js");
+    const { ALMATSURAT_KUBRO, getAlMatsuratKubro } = await import("./kubro.js");
+    for (const time of ALMATSURAT_TIMES) {
+      expect(getAlMatsuratSugro(time)).toBe(getAlMatsurat("sugro", time));
+      expect(getAlMatsuratKubro(time)).toBe(getAlMatsurat("kubro", time));
+    }
+    expect(Object.keys(ALMATSURAT_SUGRO)).toEqual(["pagi", "petang"]);
+    expect(ALMATSURAT_KUBRO.pagi.data).toHaveLength(40);
+  });
+});
