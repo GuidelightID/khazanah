@@ -1,4 +1,4 @@
-import type { VerseKey, WordKey } from '@guidelight/mushaf-core';
+import type { VerseKey, WordKey } from '@guidelight.id/mushaf-core';
 
 export interface WordTiming {
   wordKey: WordKey;

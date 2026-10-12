@@ -1,4 +1,4 @@
-import type { MushafPageIR, WordKey } from '@guidelight/mushaf-core';
+import type { MushafPageIR, WordKey } from '@guidelight.id/mushaf-core';
 import type { RenderFrame } from './types.js';
 import { resolveWordStyles } from './highlights.js';
 

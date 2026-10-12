@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight/example-guidelight-spike",
+  "name": "@guidelight.id/example-guidelight-spike",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,7 @@
     "parity": "node ./parity-check.mjs"
   },
   "dependencies": {
-    "@guidelight/mushaf-adapter-quran-foundation": "workspace:*",
-    "@guidelight/mushaf-core": "workspace:*"
+    "@guidelight.id/mushaf-adapter-quran-foundation": "workspace:*",
+    "@guidelight.id/mushaf-core": "workspace:*"
   }
 }

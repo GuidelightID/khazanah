@@ -18,9 +18,9 @@ import type {
   WordIR,
   WordKey,
   WordPointerEvent,
-} from '@guidelight/mushaf-core';
-import { HIGHLIGHT_TIERS, mergeHighlights } from '@guidelight/mushaf-core';
-import { composeFrame, createHtmlBackend, type RendererBackend } from '@guidelight/mushaf-renderer';
+} from '@guidelight.id/mushaf-core';
+import { HIGHLIGHT_TIERS, mergeHighlights } from '@guidelight.id/mushaf-core';
+import { composeFrame, createHtmlBackend, type RendererBackend } from '@guidelight.id/mushaf-renderer';
 import { useQuranContext } from './context.js';
 import { usePage } from './hooks.js';
 

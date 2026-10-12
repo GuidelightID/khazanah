@@ -1,6 +1,7 @@
 {
-  "name": "@guidelight/mushaf-search",
+  "name": "@guidelight.id/mushaf-search",
   "version": "0.0.0",
+  "private": true,
   "description": "Offline Quran search engine for Mushaf (MiniSearch + Arabic normalization)",
   "license": "MIT",
   "type": "module",
@@ -28,7 +29,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight/mushaf-core": "workspace:*",
+    "@guidelight.id/mushaf-core": "workspace:*",
     "minisearch": "^7.1.1"
   },
   "devDependencies": {

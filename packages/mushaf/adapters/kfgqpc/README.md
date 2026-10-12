@@ -1,4 +1,4 @@
-# `@guidelight/mushaf-adapter-kfgqpc`
+# `@guidelight.id/mushaf-adapter-kfgqpc`
 
 Hosted Madinah adapter intended for **KFGQPC / QPC-style** page packs served from your app after:
 
@@ -14,7 +14,7 @@ mushaf data pull --source fixture --out ./public/mushaf
 ```
 
 ```ts
-import { createHostedMadinahAdapter } from '@guidelight/mushaf-adapter-kfgqpc';
+import { createHostedMadinahAdapter } from '@guidelight.id/mushaf-adapter-kfgqpc';
 
 const adapter = createHostedMadinahAdapter({ baseUrl: '/mushaf' });
 ```

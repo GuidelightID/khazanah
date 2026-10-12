@@ -1,6 +1,7 @@
 {
-  "name": "@guidelight/mushaf-adapter-custom",
+  "name": "@guidelight.id/mushaf-adapter-custom",
   "version": "0.0.0",
+  "private": true,
   "description": "Custom and hosted PageLoader adapters for Mushaf",
   "license": "MIT",
   "type": "module",
@@ -26,7 +27,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight/mushaf-core": "workspace:*"
+    "@guidelight.id/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

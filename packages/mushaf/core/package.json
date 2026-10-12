@@ -1,6 +1,7 @@
 {
-  "name": "@guidelight/mushaf-core",
+  "name": "@guidelight.id/mushaf-core",
   "version": "0.0.0",
+  "private": true,
   "description": "Core types, IR, runtime, adapters, and pure utilities for Mushaf",
   "license": "MIT",
   "type": "module",

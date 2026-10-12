@@ -1,6 +1,7 @@
 {
-  "name": "@guidelight/mushaf-audio",
+  "name": "@guidelight.id/mushaf-audio",
   "version": "0.0.0",
+  "private": true,
   "description": "Audio word/ayah highlight plugin for Mushaf",
   "license": "MIT",
   "type": "module",
@@ -26,7 +27,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight/mushaf-core": "workspace:*"
+    "@guidelight.id/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

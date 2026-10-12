@@ -5,7 +5,7 @@ import type {
   SelectionState,
   ViewMatrix,
   WordKey,
-} from '@guidelight/mushaf-core';
+} from '@guidelight.id/mushaf-core';
 
 export interface RenderFrame {
   page: MushafPageIR;

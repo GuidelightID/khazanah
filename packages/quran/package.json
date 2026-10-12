@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight/quran",
+  "name": "@guidelight.id/quran",
   "version": "0.2.0",
   "description": "Quran structure and helpers: 114-surah index, Standar Mushaf Indonesia juz table, passage parsing and labels, plus an EQuran.id adapter for verse text and translation",
   "license": "MIT",

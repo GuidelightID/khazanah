@@ -2,7 +2,7 @@ import {
   clientToLogical,
   hitTestWord,
   type WordKey,
-} from '@guidelight/mushaf-core';
+} from '@guidelight.id/mushaf-core';
 import { listFocusableWordKeys, renderPageToStaticMarkup } from '../html-markup.js';
 import type { RenderFrame, RendererBackend } from '../types.js';
 

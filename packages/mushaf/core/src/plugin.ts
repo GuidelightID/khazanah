@@ -21,7 +21,7 @@ export interface PluginCommand {
 
 /**
  * Framework-agnostic plugin contract (ADR-007).
- * React overlays: extend in @guidelight/mushaf-react via MushafReactPlugin.
+ * React overlays: extend in @guidelight.id/mushaf-react via MushafReactPlugin.
  */
 export interface MushafPlugin {
   name: string;

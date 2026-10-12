@@ -39,7 +39,7 @@ export const PULL_SOURCES: PullSource[] = [
     displayName: 'Quran Foundation API snapshot',
     licenseSpdx: 'LicenseRef-QuranFoundation-ToS',
     allowsNpmRedistribution: false,
-    description: 'Not pulled as redistributable corpus; use @guidelight/mushaf-adapter-quran-foundation at runtime.',
+    description: 'Not pulled as redistributable corpus; use @guidelight.id/mushaf-adapter-quran-foundation at runtime.',
     kind: 'disabled',
     disabledReason: 'Use the online adapter + app cache; do not republish API data via CLI.',
   },

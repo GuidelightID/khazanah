@@ -1,6 +1,7 @@
 {
-  "name": "@guidelight/mushaf-adapter-quran-foundation",
+  "name": "@guidelight.id/mushaf-adapter-quran-foundation",
   "version": "0.0.0",
+  "private": true,
   "description": "Quran Foundation / Quran.com API v4 adapter → MushafPageIR",
   "license": "MIT",
   "type": "module",
@@ -29,11 +30,11 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "peerDependencies": {
-    "@guidelight/mushaf-core": ">=0.0.0"
+    "@guidelight.id/mushaf-core": ">=0.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "@guidelight/mushaf-core": "workspace:*",
+    "@guidelight.id/mushaf-core": "workspace:*",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },

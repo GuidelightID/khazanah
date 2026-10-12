@@ -1,11 +1,11 @@
-# `@guidelight/mushaf-adapter-tanzil`
+# `@guidelight.id/mushaf-adapter-tanzil`
 
 **Text-flow** adapter — not layout-faithful Madinah geometry.
 
 Use when you have Uthmani verse text (Tanzil-style) and need a readable page surface without plate IR.
 
 ```ts
-import { createTanzilAdapter, sampleTanzilCorpus } from '@guidelight/mushaf-adapter-tanzil';
+import { createTanzilAdapter, sampleTanzilCorpus } from '@guidelight.id/mushaf-adapter-tanzil';
 
 const adapter = createTanzilAdapter({ corpus: sampleTanzilCorpus });
 ```

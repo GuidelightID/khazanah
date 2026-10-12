@@ -1,12 +1,12 @@
-# `@guidelight/mushaf-adapter-custom`
+# `@guidelight.id/mushaf-adapter-custom`
 
 Helpers for app-owned Mushaf data:
 
-- `defineAdapter` — re-export from `@guidelight/mushaf-core`
+- `defineAdapter` — re-export from `@guidelight.id/mushaf-core`
 - `createHostedAdapter` — load `pages.manifest.json` + per-page IR from a host/CDN base URL (output of `mushaf data pull`)
 
 ```ts
-import { createHostedAdapter } from '@guidelight/mushaf-adapter-custom';
+import { createHostedAdapter } from '@guidelight.id/mushaf-adapter-custom';
 
 const adapter = createHostedAdapter({
   baseUrl: '/mushaf', // after: mushaf data pull --source fixture --out ./public/mushaf

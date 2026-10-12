@@ -1,9 +1,9 @@
-# `@guidelight/mushaf-audio`
+# `@guidelight.id/mushaf-audio`
 
 Word/ayah highlight sync plugin. **Client-only**. Strict Mode safe (abortable lifecycle).
 
 ```ts
-import { audioPlugin } from '@guidelight/mushaf-audio';
+import { audioPlugin } from '@guidelight.id/mushaf-audio';
 
 const plugin = audioPlugin({
   getAudioUrl: (verseKey) => `/audio/${verseKey}.mp3`,

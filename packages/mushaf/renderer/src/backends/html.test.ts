@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fixturePage1 } from '@guidelight/mushaf-core';
+import { fixturePage1 } from '@guidelight.id/mushaf-core';
 import { composeFrame } from '../pipeline.js';
 import { createHtmlBackend } from './html.js';
 

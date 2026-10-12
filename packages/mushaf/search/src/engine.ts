@@ -1,5 +1,5 @@
 import MiniSearch from 'minisearch';
-import { normalizeArabic, type SearchCorpus, type SearchOptions, type SearchResult } from '@guidelight/mushaf-core';
+import { normalizeArabic, type SearchCorpus, type SearchOptions, type SearchResult } from '@guidelight.id/mushaf-core';
 import type { SearchEngine } from './types.js';
 
 interface Doc {

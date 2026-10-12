@@ -15,13 +15,13 @@ production. Contributions are welcome.
 
 | Package | What it is | Status |
 |---|---|---|
-| [`@guidelight/almatsurat`](./packages/almatsurat) | Dzikir Al-Ma'tsurat, sugro & kubro, pagi & petang | ready for the first release |
-| [`@guidelight/quran`](./packages/quran) | 114-surah index, Standar Mushaf Indonesia juz table, passage helpers, and an adapter that loads verse text & Indonesian translation from EQuran.id via its official SDK | ready for the first release |
-| [`@guidelight/mushaf-*`](./packages/mushaf) | Madinah mushaf page renderer for React & Next.js: core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli and data adapters | early 0.x, APIs may change |
-| `@guidelight/doa` | collections of doa | planned |
+| [`@guidelight.id/almatsurat`](./packages/almatsurat) | Dzikir Al-Ma'tsurat, sugro & kubro, pagi & petang | 0.1.0 |
+| [`@guidelight.id/quran`](./packages/quran) | 114-surah index, Standar Mushaf Indonesia juz table, passage helpers, and an adapter that loads verse text & Indonesian translation from EQuran.id via its official SDK | 0.2.0 |
+| [`@guidelight.id/mushaf-*`](./packages/mushaf) | Madinah mushaf page renderer for React & Next.js: core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli and data adapters | early 0.0.x, **not published yet** |
+| `@guidelight.id/doa` | collections of doa | planned |
 
 ```ts
-import { getAlMatsurat } from '@guidelight/almatsurat';
+import { getAlMatsurat } from '@guidelight.id/almatsurat';
 
 const pagi = getAlMatsurat('sugro', 'pagi');
 pagi.data.forEach((item) => console.log(item.title, `${item.repeat}x`));
@@ -46,9 +46,9 @@ Code and content have different owners, so this repo keeps them apart:
 
 ```
 packages/
-├── almatsurat/          @guidelight/almatsurat
-├── quran/               @guidelight/quran
-└── mushaf/              @guidelight/mushaf-* (renderer family)
+├── almatsurat/          @guidelight.id/almatsurat
+├── quran/               @guidelight.id/quran
+└── mushaf/              @guidelight.id/mushaf-* (renderer family)
     ├── core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli
     └── adapters/        custom, kfgqpc, quran-foundation, tanzil
 examples/                vite-react demo, guidelight-spike
@@ -77,13 +77,14 @@ and published to npmjs.com:
    package.
 2. After merge, the **Release** workflow opens a "chore: release packages" PR
    that bumps versions and writes changelogs.
-3. Merging that PR publishes the new versions to npm, with provenance.
+3. Merging that PR publishes the new versions to npm through npm trusted
+   publishing (no tokens), with provenance.
 
 Details and one-time setup: [docs/releasing.md](./docs/releasing.md).
 
 ## Adding a content package
 
-For example `@guidelight/doa`:
+For example `@guidelight.id/doa`:
 
 1. Add a row for the source to `LICENSES/matrix.md`. If redistribution through
    npm is not clearly allowed, mark it ⬜ and keep the package `"private": true`.

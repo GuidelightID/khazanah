@@ -1,6 +1,6 @@
 import { describe, expect, it, afterEach } from 'vitest';
 import { render, screen, waitFor, fireEvent, cleanup } from '@testing-library/react';
-import { fixtureAdapter } from '@guidelight/mushaf-core';
+import { fixtureAdapter } from '@guidelight.id/mushaf-core';
 import { QuranProvider } from './context.js';
 import { QuranReader } from './QuranReader.js';
 

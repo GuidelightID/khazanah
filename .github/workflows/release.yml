@@ -1,15 +1,15 @@
-# Publishes the public @guidelight/* packages to npmjs.com with Changesets.
+# Publishes the public @guidelight.id/* packages to npmjs.com.
 #
 # On every push to main:
 #   - pending changesets  -> opens/updates a "chore: release packages" PR that
 #                            bumps versions and writes CHANGELOGs
-#   - that PR is merged   -> publishes every package whose new version is not
-#                            on npm yet (with npm provenance)
+#   - that PR is merged   -> scripts/publish.mjs publishes every public package
+#                            whose new version is not on npm yet
 #
-# Requires the NPM_TOKEN repository secret (an npm automation/granular token
-# with publish rights on the @guidelight scope). Packages marked
-# "private": true (the examples) are
-# never published.
+# Authentication is npm trusted publishing (OIDC): no npm token is stored.
+# Each package must list this repository and this workflow file (release.yml)
+# as a trusted publisher on npmjs.com; see docs/releasing.md. Provenance is
+# added automatically. Packages marked "private": true are never published.
 name: Release
 
 on:
@@ -21,7 +21,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 permissions:
   contents: write
   pull-requests: write
-  id-token: write # npm provenance
+  id-token: write # npm trusted publishing (OIDC) + provenance
 
 jobs:
   release:
@@ -32,11 +32,14 @@ jobs:
       # Uses package.json "packageManager" (pnpm@9.15.0) — do not also set version.
       - uses: pnpm/action-setup@v6
 
+      # Node 24 ships npm 11, which trusted publishing requires (>= 11.5.1).
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org
+
+      - run: npm --version
 
       - run: pnpm install --frozen-lockfile
 
@@ -52,6 +55,3 @@ jobs:
           commit: "chore: release packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: "true"

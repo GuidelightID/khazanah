@@ -1,6 +1,7 @@
 {
-  "name": "@guidelight/mushaf-adapter-kfgqpc",
+  "name": "@guidelight.id/mushaf-adapter-kfgqpc",
   "version": "0.0.0",
+  "private": true,
   "description": "Hosted Madinah adapter for KFGQPC/QPC-style packs (dual distribution)",
   "license": "MIT",
   "type": "module",
@@ -26,8 +27,8 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight/mushaf-adapter-custom": "workspace:*",
-    "@guidelight/mushaf-core": "workspace:*"
+    "@guidelight.id/mushaf-adapter-custom": "workspace:*",
+    "@guidelight.id/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

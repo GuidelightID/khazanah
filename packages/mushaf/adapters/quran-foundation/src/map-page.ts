@@ -5,12 +5,12 @@ import type {
   WordIR,
   WordKey,
   VerseKey,
-} from '@guidelight/mushaf-core';
+} from '@guidelight.id/mushaf-core';
 import {
   UNICODE_PAGE,
   layoutLineRtl,
   isBismillahText,
-} from '@guidelight/mushaf-core';
+} from '@guidelight.id/mushaf-core';
 import type { QfVerse } from './types.js';
 import { mapCharType } from './map-char-type.js';
 

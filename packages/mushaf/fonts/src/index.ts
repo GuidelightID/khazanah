@@ -10,4 +10,4 @@ export function googleFontsCssUrl(
 }
 
 export const FONTS_NOTICE =
-  'Restricted KFGQPC/QPC page fonts are not shipped in @guidelight/mushaf-fonts. See NOTICE.md and LICENSES/matrix.md.';
+  'Restricted KFGQPC/QPC page fonts are not shipped in @guidelight.id/mushaf-fonts. See NOTICE.md and LICENSES/matrix.md.';

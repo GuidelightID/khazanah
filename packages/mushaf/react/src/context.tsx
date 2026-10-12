@@ -14,7 +14,7 @@ import {
   type MushafEvent,
   type MushafPlugin,
   type MushafRuntime,
-} from '@guidelight/mushaf-core';
+} from '@guidelight.id/mushaf-core';
 
 export interface QuranProviderProps {
   adapter: MushafAdapter;
