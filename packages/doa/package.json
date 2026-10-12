@@ -1,0 +1,64 @@
+{
+  "name": "@guidelightid/doa",
+  "version": "0.1.0",
+  "description": "Doa and dzikir collections (morning & evening dhikr, daily dua, selected dua, dhikr after salah) in Indonesian and English, with Arabic text, transliteration and hadith references",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./id": {
+      "types": "./dist/id.d.ts",
+      "import": "./dist/id.js",
+      "default": "./dist/id.js"
+    },
+    "./en": {
+      "types": "./dist/en.d.ts",
+      "import": "./dist/en.js",
+      "default": "./dist/en.js"
+    },
+    "./provenance": "./dist/data/provenance.json",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/doa"
+  },
+  "keywords": [
+    "doa",
+    "dua",
+    "dzikir",
+    "dhikr",
+    "islamic",
+    "indonesia",
+    "hadith"
+  ]
+}
