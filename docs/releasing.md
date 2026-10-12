@@ -30,13 +30,12 @@ Actions, workflow `release.yml`) and remove `NPM_TOKEN`.
 
 ## What never publishes
 
-Packages with `"private": true`: the examples, and `@guidelight/quran` until
-its data terms are cleared (see `packages/quran/NOTICE.md` and
-`LICENSES/matrix.md`). To publish `@guidelight/quran` later, remove
-`"private": true` in the same PR that marks its matrix row ✅.
+Packages with `"private": true` (the examples). A content package whose
+source is not ✅ in `LICENSES/matrix.md` must also stay private.
 
 ## First release
 
-- `@guidelight/almatsurat` publishes as `0.1.0` (its version in `package.json`).
+- `@guidelight/almatsurat` publishes as `0.1.0` and `@guidelight/quran` as
+  `0.2.0` (their versions in `package.json`).
 - The `@guidelight/mushaf-*` packages publish as `0.0.1` via the pending
   `initial-scaffold` changeset.

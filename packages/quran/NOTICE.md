@@ -1,35 +1,25 @@
-# NOTICE — data sources and terms
+# NOTICE
 
-Everything in `src/data/` was imported once from the **EQuran.id API v2**
-(`https://equran.id/api/v2/surat`) and frozen as JSON. See
-`src/data/provenance.json` for the exact snapshot (date, SHA-256, counts).
+This package bundles **no Quran text, translation or transliteration**.
 
-EQuran.id names its Quran source as **Kementerian Agama Republik Indonesia**
-(quran.kemenag.go.id).
+What it ships, all first-party (MIT):
 
-| Content | Field(s) | Terms | Status |
-|---|---|---|---|
-| Arabic text (Mushaf Standar Indonesia) | `teksArab` | EQuran.id: "Teks Al-Quran adalah milik umat Islam dan bebas digunakan." | ✅ free to use, with attribution |
-| Indonesian translation | `teksIndonesia` | Kemenag (LPMQ) translation. EQuran.id states that translations, tafsir and audio are protected by copyright; content may be shared **with credit to EQuran.id**, and data from the API **may not be sold**. | ⚠️ no written license for bulk redistribution |
-| Transliteration | `teksLatin` | as above | ⚠️ as above |
-| Surah metadata (names, meaning, place of revelation, description) | `nama`, `namaLatin`, `arti`, `tempatTurun`, `deskripsi` | as above | ⚠️ as above |
-| Juz boundaries (Standar Mushaf Indonesia) | `juz` table in `src/juz.ts` | first-party work, MIT | ✅ |
+- the surah index in `src/surah-index.ts`: number, URL slug, Latin and Arabic
+  surah name, ayah count and place of revelation, i.e. structural facts, not
+  translated or authored content;
+- the Standar Mushaf Indonesia juz boundary table and the helper functions.
 
-## Attribution
+## Content loaded through `@guidelight/quran/equran`
 
-Any use of this data must credit:
+`createEquranSource()` lets your app fetch verse text, the Indonesian
+translation, transliteration and surah descriptions from **EQuran.id** through
+its official SDK ([`equran`](https://www.npmjs.com/package/equran)). That
+content is not part of this package and stays under
+[EQuran.id's terms](https://equran.id/terms): use it via the API, credit the
+source, and do not sell the data. EQuran.id names its Quran source as
+Kementerian Agama Republik Indonesia (quran.kemenag.go.id).
 
-> Teks Al-Qur'an, terjemahan, dan transliterasi: Kementerian Agama Republik
-> Indonesia, melalui EQuran.id (https://equran.id).
+Suggested attribution wherever the content is shown:
 
-The data must not be sold or traded.
-
-## Publication status
-
-Because the translation, transliteration and metadata have no written license
-for bulk redistribution, this package is marked `"private": true` and is **not
-published to npm**. It will be published once EQuran.id (and, if needed,
-Kemenag/LPMQ) confirm in writing that a free, attributed, non-commercial npm
-package is allowed — or the restricted fields are split out.
-
-This is not legal advice.
+> Teks Al-Qur'an, terjemahan, dan transliterasi: Kementerian Agama RI, melalui
+> EQuran.id.

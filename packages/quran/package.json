@@ -1,9 +1,8 @@
 {
   "name": "@guidelight/quran",
-  "version": "0.1.2",
-  "private": true,
-  "description": "Indonesian Quran corpus (Kemenag text and translation via EQuran.id) with the Standar Mushaf Indonesia juz table and passage helpers, no UI",
-  "license": "SEE LICENSE IN LICENSE",
+  "version": "0.2.0",
+  "description": "Quran structure and helpers: 114-surah index, Standar Mushaf Indonesia juz table, passage parsing and labels, plus an EQuran.id adapter for verse text and translation",
+  "license": "MIT",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -12,12 +11,11 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./ayahs": {
-      "types": "./dist/ayahs.d.ts",
-      "import": "./dist/ayahs.js",
-      "default": "./dist/ayahs.js"
+    "./equran": {
+      "types": "./dist/equran.d.ts",
+      "import": "./dist/equran.js",
+      "default": "./dist/equran.js"
     },
-    "./provenance": "./dist/data/provenance.json",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.js",
@@ -26,13 +24,10 @@
     "dist",
     "LICENSE",
     "NOTICE.md",
-    "README.md",
-    "CORPUS.md"
+    "README.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "import": "node scripts/import-corpus.mjs",
-    "import:write": "node scripts/import-corpus.mjs --write",
     "dev": "tsc -p tsconfig.json --watch",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
@@ -54,9 +49,11 @@
   },
   "keywords": [
     "quran",
+    "al-quran",
+    "juz",
+    "mushaf-standar-indonesia",
     "kemenag",
     "equran",
-    "juz",
     "indonesia"
   ]
 }

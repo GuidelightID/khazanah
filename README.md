@@ -16,7 +16,7 @@ production. Contributions are welcome.
 | Package | What it is | Status |
 |---|---|---|
 | [`@guidelight/almatsurat`](./packages/almatsurat) | Dzikir Al-Ma'tsurat, sugro & kubro, pagi & petang | ready for the first release |
-| [`@guidelight/quran`](./packages/quran) | Indonesian Quran corpus (Kemenag text & translation via EQuran.id), Standar Mushaf Indonesia juz map, passage helpers | **not published**: waiting for written permission for the translation ([NOTICE](./packages/quran/NOTICE.md)) |
+| [`@guidelight/quran`](./packages/quran) | 114-surah index, Standar Mushaf Indonesia juz table, passage helpers, and an adapter that loads verse text & Indonesian translation from EQuran.id via its official SDK | ready for the first release |
 | [`@guidelight/mushaf-*`](./packages/mushaf) | Madinah mushaf page renderer for React & Next.js: core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli and data adapters | early 0.x, APIs may change |
 | `@guidelight/doa` | collections of doa | planned |
 

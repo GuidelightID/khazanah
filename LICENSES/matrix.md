@@ -9,8 +9,8 @@ This table is the **normative gate** for redistributing fonts, page IR, Quran te
 | QPC / KFGQPC fonts | vendor | vendor site | n/a | n/a | yes | **often no** | often no | CLI pull only | ⬜ counsel |
 | Community open IR (TBD) | TBD | TBD | TBD | TBD | TBD | per row | per row | npm or CLI | ⬜ |
 | aliifam/almatsurat — Al-Ma'tsurat sugro/kubro, pagi/petang (Arabic, transliteration, Indonesian translation) | MIT | https://github.com/aliifam/almatsurat | yes | n/a | n/a | yes (keep copyright notice) | yes | `@guidelight/almatsurat` | ✅ |
-| EQuran.id API v2 — Arabic text (Kemenag, Mushaf Standar Indonesia) | "bebas digunakan" per EQuran.id terms | https://equran.id/terms | yes | n/a | n/a | yes, with attribution | no (verbatim) | `@guidelight/quran` | ✅ |
-| EQuran.id API v2 — Indonesian translation, transliteration, surah metadata (Kemenag/LPMQ) | © Kemenag / EQuran.id; share with credit, not for sale | https://equran.id/terms | yes | n/a | n/a | **pending written permission** | no | `@guidelight/quran` (`private` until cleared) | ⬜ permission |
+| EQuran.id API v2 — Arabic text, Indonesian translation, transliteration, surah descriptions (Kemenag/LPMQ) | EQuran.id terms: Arabic text free to use; translations © (share with credit, not for sale) | https://equran.id/terms | via API | n/a | n/a | **not bundled**: consumers fetch it at runtime with the `equran` SDK | no | `@guidelight/quran/equran` (adapter only) | ✅ not redistributed |
+| Surah index (number, slug, Latin/Arabic name, ayah count, revelation) | first-party, MIT (structural facts) | in-repo | n/a | n/a | n/a | yes | yes | `@guidelight/quran` | ✅ |
 
 ## Rules
 

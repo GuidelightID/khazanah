@@ -1,11 +1,11 @@
 /**
- * Client-safe entry: the surah catalog (~87 KB), the juz table, types, and
- * passage helpers. The full verse text lives in
- * `@guidelight/quran/ayahs` and is kept separate so it never reaches
- * the browser.
+ * Quran structure and helpers: the 114-surah index, the Standar Mushaf
+ * Indonesia juz table, passage parsing and labels, search normalization.
+ * No verse text is bundled; load it with `@guidelight/quran/equran` (or any
+ * source that produces `QuranAyah`).
  */
 export type { PassageSelection, QuranAyah, QuranSurah } from './types.js';
-export { getSurah, getSurahs, totalAyahs } from './surahs.js';
+export { ayahOffset, getSurah, getSurahs, totalAyahs } from './surahs.js';
 export {
   normalizeQuranSearch,
   parseAyahRange,

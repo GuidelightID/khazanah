@@ -8,7 +8,7 @@
 #
 # Requires the NPM_TOKEN repository secret (an npm automation/granular token
 # with publish rights on the @guidelight scope). Packages marked
-# "private": true (examples, @guidelight/quran until its data is cleared) are
+# "private": true (the examples) are
 # never published.
 name: Release
 

@@ -1,6 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import surahsData from './data/surahs.json';
-import { getCorpusStats, getJuzAyahs, getPassageAyahs, getSurahAyahs } from './ayahs.js';
 import { getJuz, getJuzList, juzCoverageTotal, juzOfAyah, juzOfSurah } from './juz.js';
 import {
   normalizeQuranSearch,
@@ -8,36 +6,33 @@ import {
   passageLabel,
   plainSurahDescription,
 } from './passage.js';
-import { getSurah, getSurahs, totalAyahs } from './surahs.js';
-import type { QuranSurah } from './types.js';
+import { ayahOffset, getSurah, getSurahs, totalAyahs } from './surahs.js';
 
-const SURAHS = surahsData as QuranSurah[];
-
-describe('corpus', () => {
-  it('holds 114 surahs and 6236 ayahs with contiguous ids', () => {
-    expect(getSurahs()).toHaveLength(114);
+describe('surah index', () => {
+  it('lists 114 surahs numbered 1..114 with 6236 ayahs', () => {
+    const surahs = getSurahs();
+    expect(surahs).toHaveLength(114);
+    surahs.forEach((surah, index) => {
+      expect(surah.id).toBe(index + 1);
+      expect(surah.number).toBe(index + 1);
+      expect(surah.total_ayahs).toBeGreaterThan(0);
+      expect(['Mekah', 'Madinah']).toContain(surah.revelation);
+    });
     expect(totalAyahs()).toBe(6236);
-    const stats = getCorpusStats();
-    expect(stats).toEqual({ surahs: 114, ayahs: 6236 });
+    expect(new Set(surahs.map((s) => s.slug)).size).toBe(114);
   });
 
-  it('numbers every surah 1..n with no gaps', () => {
-    for (const surah of SURAHS) {
-      const numbers = getSurahAyahs(surah.id).map((a) => a.ayah_number);
-      expect(numbers).toEqual(Array.from({ length: surah.total_ayahs }, (_, i) => i + 1));
+  it('computes global ayah offsets', () => {
+    expect(ayahOffset(1)).toBe(0);
+    expect(ayahOffset(2)).toBe(7);
+    expect(ayahOffset(114) + 6).toBe(6236);
+  });
+
+  it('bundles no translation or description', () => {
+    for (const surah of getSurahs()) {
+      expect(surah.name_translation).toBeUndefined();
+      expect(surah.description).toBeUndefined();
     }
-  });
-
-  it('preserves Arabic, translation, and transliteration verbatim', () => {
-    const [first] = getPassageAyahs({ surah_id: 96, start_ayah: 1, end_ayah: 1 });
-    expect(first?.arabic_text).toContain('قْرَأْ');
-    expect(first?.translation.length).toBeGreaterThan(0);
-    expect(first?.transliteration.length).toBeGreaterThan(0);
-  });
-
-  it('rejects ranges outside the surah', () => {
-    expect(getPassageAyahs({ surah_id: 96, start_ayah: 1, end_ayah: 999 })).toEqual([]);
-    expect(getPassageAyahs({ surah_id: 96, start_ayah: 10, end_ayah: 1 })).toEqual([]);
   });
 });
 
@@ -113,14 +108,5 @@ describe('juz — Standar Mushaf Indonesia', () => {
     expect(getJuz(0)).toBeUndefined();
     expect(getJuz(31)).toBeUndefined();
     expect(getJuz(1.5)).toBeUndefined();
-  });
-
-  it('assembles a juz in order across surah boundaries', () => {
-    const juz30 = getJuz(30);
-    const ayahs = getJuzAyahs(30);
-    expect(ayahs).toHaveLength(juz30?.total_ayahs ?? -1);
-    expect(ayahs[0]).toMatchObject({ surah_id: 78, ayah_number: 1 });
-    expect(ayahs[ayahs.length - 1]).toMatchObject({ surah_id: 114, ayah_number: 6 });
-    expect(getJuzAyahs(31)).toEqual([]);
   });
 });
