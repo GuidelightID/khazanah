@@ -5,7 +5,7 @@
 
 Islamic content for JavaScript and TypeScript: the Quran, dzikir such as
 **Al-Ma'tsurat**, doa, and a layout-faithful **Mushaf** page renderer. Each piece
-is a separate npm package under the `@guidelight` scope. They ship data, types
+is a separate npm package under the `@guidelightid` scope. They ship data, types
 and helpers, with no app attached.
 
 Maintained by [Guidelight](https://guidelight.id), which uses these packages in
@@ -13,12 +13,12 @@ production. Contributions are welcome.
 
 ## Packages
 
-| Package | What it is | Status |
+| Package | What it is | npm |
 |---|---|---|
-| [`@guidelightid/almatsurat`](./packages/almatsurat) | Dzikir Al-Ma'tsurat, sugro & kubro, pagi & petang | 0.1.0 |
-| [`@guidelightid/quran`](./packages/quran) | 114-surah index, Standar Mushaf Indonesia juz table, passage helpers, and an adapter that loads verse text & Indonesian translation from EQuran.id via its official SDK | 0.2.0 |
+| [`@guidelightid/almatsurat`](./packages/almatsurat) | Dzikir Al-Ma'tsurat, sugro & kubro, pagi & petang | [![npm](https://img.shields.io/npm/v/@guidelightid/almatsurat.svg)](https://www.npmjs.com/package/@guidelightid/almatsurat) |
+| [`@guidelightid/quran`](./packages/quran) | 114-surah index, Standar Mushaf Indonesia juz table, passage helpers, and an adapter that loads verse text & Indonesian translation from EQuran.id via its official SDK | [![npm](https://img.shields.io/npm/v/@guidelightid/quran.svg)](https://www.npmjs.com/package/@guidelightid/quran) |
 | [`@guidelightid/mushaf-*`](./packages/mushaf) | Madinah mushaf page renderer for React & Next.js: core, renderer, react, next, search, tajwid, audio, annotations, fonts, cli and data adapters | early 0.0.x, **not published yet** |
-| [`@guidelightid/doa`](./packages/doa) | Doa & dzikir: morning/evening dhikr, daily dua, selected dua, dhikr after salah, in Indonesian and English | 0.1.0 |
+| [`@guidelightid/doa`](./packages/doa) | Doa & dzikir: morning/evening dhikr, daily dua, selected dua, dhikr after salah, in Indonesian and English | [![npm](https://img.shields.io/npm/v/@guidelightid/doa.svg)](https://www.npmjs.com/package/@guidelightid/doa) |
 
 ```ts
 import { getAlMatsurat } from '@guidelightid/almatsurat';
