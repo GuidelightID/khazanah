@@ -1,0 +1,824 @@
+{
+  "title": "Al-Matsurat Kubro Pagi",
+  "description": "Al-Matsurat Kubro Pagi",
+  "data": [
+    {
+      "title": "Taawudz",
+      "repeat": 1,
+      "type": "single",
+      "arabic": "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+      "latin": "A‘ūdzu billāhi as-samī‘ al-‘alīm min ash-shayṭānir-rajīm",
+      "translation": "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan syaitan yang terkutuk"
+    },
+    {
+      "title": "Surat Al-Fātiḥah",
+      "repeat": 1,
+      "arabic": "الفاتحة",
+      "latin": "Al-Fātiḥah",
+      "translation": "Pembukaan",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ ١",
+          "latin": "Bismi llāhi ar-raḥmāni ar-raḥīm",
+          "translation": "Dengan nama Allah Yang Maha Pengasih, Maha Penyayang"
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ ٢",
+          "latin": "Al-ḥamdu lillāhi rabbi al-‘ālamīn",
+          "translation": "Segala puji bagi Allah, Tuhan semesta alam"
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ٣",
+          "latin": "Ar-raḥmāni ar-raḥīm",
+          "translation": "Yang Maha Pengasih, Maha Penyayang"
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "مَٰلِكِ يَوۡمِ ٱلدِّينِ ٤",
+          "latin": "Māliki yawmi ad-dīn",
+          "translation": "Yang Menguasai di Hari Pembalasan"
+        },
+        {
+          "title": "Ayat 5",
+          "arabic": "إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ ٥",
+          "latin": "Iyyāka na‘budu wa iyyāka nasta‘īn",
+          "translation": "Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami meminta pertolongan"
+        },
+        {
+          "title": "Ayat 6",
+          "arabic": "ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ ٦",
+          "latin": "Ihdinā aṣ-ṣirāṭa al-mustaqīm",
+          "translation": "Tunjukilah kami jalan yang lurus"
+        },
+        {
+          "title": "Ayat 7",
+          "arabic": "صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ ٧",
+          "latin": "Ṣirāṭa alladhīna an‘amta ‘alayhim ghayri al-maghḍūbi ‘alayhim wa laḍ-ḍāllīn",
+          "translation": "Yaitu jalan orang-orang yang telah Engkau beri nikmat kepada mereka; bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) mereka yang sesat"
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Baqarah Ayat 1-5",
+      "repeat": 1,
+      "arabic": "البقرة",
+      "latin": "Al-Baqarah",
+      "translation": "Sapi Betina",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "الٓمٓ ١",
+          "latin": "Alif lām mīm",
+          "translation": "Alif lam mim"
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ ٢",
+          "latin": "Dhālika al-kitābu lā rayba fīh hudan lil-muttaqīn",
+          "translation": "Kitab (Al-Qur'an) ini tidak ada keraguan padanya; petunjuk bagi mereka yang bertakwa"
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "ٱلَّذِينَ يُؤۡمِنُونَ بِٱلۡغَيۡبِ وَيُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقۡنَٰهُمۡ يُنفِقُونَ ۙ ٣",
+          "latin": "Alladhīna yu’minūna bil-ghaybi wa yuqīmūna aṣ-ṣalāta wa mimmā razaqnāhum yunfiqūn",
+          "translation": "Yaitu orang-orang yang beriman kepada yang ghaib, mendirikan shalat, dan menafkahkan sebagian rezeki yang Kami berikan kepada mereka"
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "وَٱلَّذِينَ يُؤۡمِنُونَ بِمَآ أُنزِلَ إِلَيۡكَ وَمَآ أُنزِلَ مِن قَبۡلِكَ وَبِٱلۡأٓخِرَةِ هُمۡ يُوقِنُونَ ٤",
+          "latin": "Wa alladhīna yu’minūna bimā unzila ilayka wa mā unzila min qablika wa bil-ākhirati hum yūqinūn",
+          "translation": "Dan orang-orang yang beriman kepada Al-Qur'an dan kitab-kitab yang terdahulu, mereka yakin akan adanya hari akhir"
+        },
+        {
+          "title": "Ayat 5",
+          "arabic": "أُوْلَٰٓئِكَ عَلَىٰ هُدٗى مِّن رَّبِّهِمۡۖ وَأُوْلَٰٓئِكَ هُمُ ٱلۡمُفۡلِحُونَ ٥",
+          "latin": "Ulā’ika ‘alā hudan min rabbihim wa ulā’ika humul-mufliḥūn",
+          "translation": "Mereka itu adalah orang-orang yang mendapat petunjuk dari Tuhannya, dan mereka itulah orang-orang yang beruntung"
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Baqarah Ayat 255-257",
+      "repeat": 1,
+      "arabic": "البقرة",
+      "latin": "Al-Baqarah",
+      "translation": "Sapi Betina",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 255 (Ayat Kursi)",
+          "arabic": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ ۚ لَّهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍۢ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ ٢٥٥",
+          "latin": "Allāhu lā ilāha illā huwal-ḥayyu al-qayyūm lā ta’khudhuhū sinatun walā nawm, lahu mā fī as-samāwāti wa mā fī al-arḍ, man dhā alladhī yashfa'u 'indahu illā bi-idhnih ya'lamu mā bayna aydīhim wa mā khalfahum walā yuḥīṭūna bishay'in min 'ilmihī illā bimā shā’, wasi’a kursiyyuhus-samāwāti wal-arḍ, walā ya'ūduhū ḥifẓuhumā, wahuwal-'aliyyul-'aẓīm",
+          "translation": "Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak tidur. Kepunyaan-Nya apa yang di langit dan di bumi. Tiada yang dapat memberi syafaat di sisi Allah tanpa izin-Nya. Allah mengetahui apa-apa yang di hadapan mereka dan di belakang mereka, dan mereka tidak mengetahui apa-apa dari ilmu Allah melainkan apa yang dikehendaki-Nya. Kursi Allah meliputi langit dan bumi. Dan Allah tidak merasa berat memelihara keduanya, dan Allah Maha Tinggi lagi Maha Besar"
+        },
+        {
+          "title": "Ayat 256",
+          "arabic": "لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلۡغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّـٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلۡعُرْوَةِ ٱلۡوُثۡقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ ٢٥٦",
+          "latin": "Lā ikrāha fī ad-dīn qad tabayyana ar-rushdu minal-ghayyi faman yakfur biṭ-ṭāghūti wa yu’min billāhi faqad istamsaka bil-‘urwati al-wuthqā lā infiṣāma lahā, wal-lāhu samī'un ‘alīm",
+          "translation": "Tidak ada paksaan untuk (memasuki) agama (Islam); sesungguhnya telah jelas jalan yang benar daripada yang sesat. Karena itu barangsiapa yang ingkar kepada Thaghut dan beriman kepada Allah, maka sesungguhnya ia telah berpegang kepada tali yang amat kokoh yang tidak akan putus. Dan Allah Maha Mendengar lagi Maha Mengetahui"
+        },
+        {
+          "title": "Ayat 257",
+          "arabic": "ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَـٰتِ إِلَى ٱلنُّورِ ۖ وَٱلَّذِينَ كَفَرُوٓا۟ أَوْلِيَآؤُهُمُ ٱلطَّـٰغُوتُ يُخْرِجُونَهُم مِّنَ ٱلنُّورِ إِلَى ٱلظُّلُمَـٰتِ ۗ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلنَّارِ ۖ هُمْ فِيهَا خَـٰلِدُونَ ٢٥٧",
+          "latin": "Allāhu waliyyu alladhīna āmanū yukhrijuhum mina aẓ-ẓulumāti ilan-nūr, walladhīna kafarū awliyāuhumu aṭ-ṭāghūtu yukhrijūnahum mina an-nūri ilā aẓ-ẓulumāt, ulā’ika aṣḥābu an-nār, hum fīhā khālidūn",
+          "translation": "Allah Pelindung orang-orang yang beriman; Dia mengeluarkan mereka dari kegelapan (kekafiran) kepada cahaya (iman). Dan orang-orang yang kafir, pelindung-pelindungnya ialah setan, yang mengeluarkan mereka dari cahaya kepada kegelapan (kekafiran). Mereka itu adalah penghuni neraka; mereka kekal di dalamnya"
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Baqarah Ayat 284-286",
+      "repeat": 1,
+      "arabic": "البقرة",
+      "latin": "Al-Baqarah",
+      "translation": "Sapi Betina",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 284",
+          "arabic": "لِّلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ وَإِن تُبْدُوا۟ مَا فِىٓ أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ ٱللَّهُ ۖ فَيَغْفِرُ لِمَن يَشَآءُ وَيُعَذِّبُ مَن يَشَآءُ ۗ وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ ٢٨٤",
+          "latin": "Lillāhi mā fī as-samāwāti wa mā fī al-arḍi, wa in tubdū mā fī anfusikum aw tukhfūhu yuḥāsibkum bihillāh, fa-yaghfiru liman yashā'u wa yu‘adhdhibu man yashā'u, wa-Allāhu ‘alā kulli shay'in qadīr.",
+          "translation": "Kepunyaan Allah-lah segala apa yang ada di langit dan apa yang ada di bumi. Dan jika kamu melahirkan apa yang ada di dalam hatimu atau kamu menyembunyikannya, niscaya Allah akan membuat perhitungan dengan kamu tentang perbuatanmu itu. Maka Allah mengampuni siapa yang dikehendaki-Nya dan menyiksa siapa yang dikehendaki-Nya; dan Allah Maha Kuasa atas segala sesuatu."
+        },
+        {
+          "title": "Ayat 285",
+          "arabic": "ءَامَنَ ٱلرَّسُولُ بِمَآ أُنزِلَ إِلَيْهِ مِن رَّبِّهِۦ وَٱلْمُؤْمِنُونَ ۚ كُلٌّ ءَامَنَ بِٱللَّهِ وَمَلَـٰٓئِكَتِهِۦ وَكُتُبِهِۦ وَرُسُلِهِۦ لَا نُفَرِّقُ بَيْنَ أَحَدٍۢ مِّن رُّسُلِهِۦ ۚ وَقَالُوا۟ سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ ٱلْمَصِيرُ ٢٨٥",
+          "latin": "Aamana ar rusulu bimaa unzila ilaihi mir rabbihii wal mu'minuun kullun aamana billahi wa mala-ikatihi wa kutubihi wa rusulihi laa nufarriqu baina ahadim mir rusulihii wa qalu sami'na wa atho'na ghufranaka rabbana wa ilaikal masiir.",
+          "translation": "Rasul telah beriman kepada Al Qur'an yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang yang beriman. Semuanya beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya dan rasul-rasul-Nya. (Mereka mengatakan): 'Kami tidak membeda-bedakan antara seorang pun (dengan yang lain) dari rasul-rasul-Nya', dan mereka mengatakan: 'Kami dengar dan kami taat'. (Mereka berdoa): 'Ampunilah kami ya Tuhan kami dan kepada Engkaulah tempat kembali'."
+        },
+        {
+          "title": "Ayat 286",
+          "arabic": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًۭا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ ٢٨٦",
+          "latin": "Laa yukallifullahu nafsan illaa wus'ahaa lahaa maa kasabat wa 'alaihaa maa iktasabat rabbanaa laa tu'aakhidznaaa in nasiinaa aw akhtho'naa rabbanaa wa laa tahmil 'alainaaa isron kamaa hamaltahuu 'alal ladziina min qablinaa rabbanaa wa laa tuhammilnaa maa laa taaqata lanaa bihii wa'fu 'annaa waghfir lanaa warhamnaa anta maulaanaa fanshurnaa 'alal qawmil kaafiriin.",
+          "translation": "Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya. Ia mendapat pahala (dari kebajikan) yang diusahakannya dan ia mendapat siksa (dari kejahatan) yang dikerjakannya. (Mereka berdoa): 'Ya Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami tersalah. Ya Tuhan kami, janganlah Engkau bebankan kepada kami beban yang berat sebagaimana Engkau bebankan kepada orang-orang yang sebelum kami. Ya Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tak sanggup kami memikulnya. Beri maaflah kami; ampunilah kami; dan rahmatilah kami. Engkaulah Penolong kami, maka tolonglah kami terhadap kaum yang kafir'."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Imran Ayat 1-2",
+      "repeat": 1,
+      "arabic": "آل عمران",
+      "latin": "Ali 'Imran",
+      "translation": "Ali 'Imran",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "الٓمٓ ١",
+          "latin": "Alif Laam Meem",
+          "translation": "Alif Laam Meem"
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ٢",
+          "latin": "Allāhu lā ilāha illā huwal-ḥayyul-qayyụm",
+          "translation": "Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia. Yang hidup kekal lagi terus menerus mengurus makhluk-Nya."
+        }
+      ]
+    },
+    {
+      "title": "Surat Thoha Ayat 111-112",
+      "repeat": 1,
+      "arabic": "طه",
+      "latin": "Taha",
+      "translation": "Taha",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 111",
+          "arabic": "۞ وَعَنَتِ ٱلْوُجُوهُ لِلْحَىِّ ٱلْقَيُّومِ ۖ وَقَدْ خَابَ مَنْ حَمَلَ ظُلْمًۭا ١١١",
+          "latin": "Wa 'anatil-wujụhu lil-ḥayyil-qayyụm, wa qad khāba man ḥamala ẓulmā",
+          "translation": "Dan tunduklah semua muka (dengan berendah diri) kepada Tuhan Yang Hidup Kekal lagi senantiasa mengurus (makhluk-Nya). Dan sesungguhnya telah merugilah orang yang melakukan kezaliman."
+        },
+        {
+          "title": "Ayat 112",
+          "arabic": "وَمَن يَعْمَلْ مِنَ ٱلصَّـٰلِحَـٰتِ وَهُوَ مُؤْمِنٌۭ فَلَا يَخَافُ ظُلْمًۭا وَلَا هَضْمًۭا ١١٢",
+          "latin": "Wa may ya'mal minaṣ-ṣāliḥāti wa huwa mu'minun fa lā yakhāfu ẓulman wa lā haḍmā",
+          "translation": "Dan barangsiapa mengerjakan amal-amal yang saleh dan ia dalam keadaan beriman, maka ia tidak khawatir akan perlakuan yang tidak adil (terhadapnya) dan tidak (pula) akan pengurangan haknya."
+        }
+      ]
+    },
+    {
+      "title": "Surat At-Taubah Ayat 129",
+      "repeat": 1,
+      "arabic": "التوبة",
+      "latin": "At-Taubah",
+      "translation": "Pengampunan",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 129",
+          "arabic": "فَإِن تَوَلَّوْا۟ فَقُلْ حَسْبِىَ ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَهُوَ رَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ ١٢٩",
+          "latin": "Fa in tawallaw fa qul ḥasbiyallāhu lā ilāha illā huw, 'alaihi tawakkalt, wa huwa rabbul-'arsyil-'aẓīm",
+          "translation": "Jika mereka berpaling (dari keimanan), maka katakanlah: \"Cukuplah Allah bagiku; tidak ada Tuhan selain Dia. Hanya kepada-Nya aku bertawakkal dan Dia adalah Tuhan yang memiliki 'Arsy yang agung\"."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Isra Ayat 110 - 111",
+      "repeat": 1,
+      "arabic": "الإسراء",
+      "latin": "Al-Isra",
+      "translation": "Perjalanan Malam",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 110",
+          "arabic": "قُلِ ٱدۡعُواْ ٱللَّهَ أَوِ ٱدۡعُواْ ٱلرَّحۡمَٰنَۖ أَيّٗا مَّا تَدۡعُواْ فَلَهُ ٱلۡأَسۡمَآءُ ٱلۡحُسۡنَىٰۚ وَلَا تَجۡهَرۡ بِصَلَاتِكَ وَلَا تُخَافِتۡ بِهَا وَٱبۡتَغِ بَيۡنَ ذَٰلِكَ سَبِيلٗا ١١٠",
+          "latin": "Quli ud‘ūllāha awi ud‘ūr-rahmān, ayyan mā tad‘ū falahul-asmā‘ul-husnā, walā tajhar bisalātika walā tukhāfit bihā wa ibtagi bayna żālika sabīlā",
+          "translation": "Katakanlah: \"Serulah Allah atau serulah Ar-Rahman. Dengan nama yang mana saja kamu seru, Dia mempunyai asmaa-ul husna (nama-nama yang terbaik). Dan janganlah kamu mengeraskan suaramu dalam mengeraskan shalatmu dan jangan pula merendahkannya, tetapi carilah jalan tengah di antara kedua itu\"."
+        },
+        {
+          "title": "Ayat 111",
+          "arabic": "وَقُلِ ٱلۡحَمۡدُ لِلَّهِ ٱلَّذِي لَمۡ يَتَّخِذۡ وَلَدٗا وَلَمۡ يَكُن لَّهُۥ شَرِيكٞ فِي ٱلۡمُلۡكِ وَلَمۡ يَكُن لَّهُۥ وَلِيّٞ مِّنَ ٱلذُّلِّۖ وَكَبِّرۡهُ تَكۡبِيرَۢا ١١١",
+          "latin": "Wa qulil-ḥamdu lillāhil-ladhī lam yattakhidz waladan wa lam yakun lahu syarīkun fil-mulki wa lam yakun lahu waliyyun minaz-zulli, wa kabbirhu takbīrā",
+          "translation": "Dan katakanlah: \"Segala puji bagi Allah yang tidak mempunyai anak dan tidak mempunyai sekutu dalam kerajaan-Nya dan Dia tidak memerlukan seorang penolongpun dari (keadaan) yang hina; dan agungkanlah Dia dengan sebesar-besar pengagungan\"."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Mu'minun Ayat 115-118",
+      "repeat": 1,
+      "arabic": "المؤمنون",
+      "latin": "Al-Mu'minun",
+      "translation": "Orang-orang yang Beriman",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 115",
+          "arabic": "أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَـٰكُمْ عَبَثًۭا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ ١١٥",
+          "latin": "Afa ḥasibtum annamā khalaqnākum 'abaṡan wa annakum ilainā lā turja'ụn",
+          "translation": "Maka apakah kamu mengira, bahwa sesungguhnya Kami menciptakan kamu secara main-main (saja), dan bahwa kamu tidak akan dikembalikan kepada Kami?"
+        },
+        {
+          "title": "Ayat 116",
+          "arabic": "فَتَعَـٰلَى ٱللَّهُ ٱلْمَلِكُ ٱلْحَقُّ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ رَبُّ ٱلْعَرْشِ ٱلْكَرِيمِ ١١٦",
+          "latin": "Fa ta'ālallāhul-malikul-ḥaqq, lā ilāha illā huwa rabbul-'arsyil-karīm",
+          "translation": "Maka Maha Tinggi Allah, Raja Yang Sebenarnya; tidak ada Tuhan selain Dia, Tuhan (Yang mempunyai) 'Arsy yang mulia."
+        },
+        {
+          "title": "Ayat 117",
+          "arabic": "وَمَن يَدْعُ مَعَ ٱللَّهِ إِلَـٰهًا ءَاخَرَ لَا بُرْهَـٰنَ لَهُۥ بِهِۦ فَإِنَّمَا حِسَابُهُۥ عِندَ رَبِّهِۦٓ ۚ إِنَّهُۥ لَا يُفْلِحُ ٱلْكَـٰفِرُونَ ١١٧",
+          "latin": "Wa may yad'u ma'allāhi ilāhan ākhara lā burhāna lahụ bihī fa innamā ḥisābuhụ 'inda rabbih, innahụ lā yufliḥul-kāfirụn",
+          "translation": "Dan barangsiapa menyembah tuhan yang lain di samping Allah, padahal tidak ada suatu dalilpun baginya tentang itu, maka sesungguhnya perhitungannya di sisi Tuhannya. Sesungguhnya orang-orang yang kafir itu tiada beruntung."
+        },
+        {
+          "title": "Ayat 118",
+          "arabic": "وَقُل رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ ١١٨",
+          "latin": "Wa qur rabbighfir warḥam wa anta khairur-rāḥimīn",
+          "translation": "Dan katakanlah: \"Ya Tuhanku berilah ampun dan berilah rahmat, dan Engkau adalah Pemberi rahmat Yang Paling baik\"."
+        }
+      ]
+    },
+    {
+      "title": "Surat Ar-Rum Ayat 17-26",
+      "repeat": 1,
+      "arabic": "الروم",
+      "latin": "Ar-Rum",
+      "translation": "Bangsa Romawi",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 17",
+          "arabic": "فَسُبْحَـٰنَ ٱللَّهِ حِينَ تُمْسُونَ وَحِينَ تُصْبِحُونَ ١٧",
+          "latin": "Fa subḥāna llāhi ḥīna tumsūna wa ḥīna tuṣbiḥūn",
+          "translation": "Maka bertasbihlah kepada Allah di waktu kamu berada di petang hari dan waktu kamu berada di pagi hari."
+        },
+        {
+          "title": "Ayat 18",
+          "arabic": "وَلَهُ ٱلْحَمْدُ فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَعَشِيًّۭا وَحِينَ تُظْهِرُونَ ١٨",
+          "latin": "Wa lahu l-ḥamdu fī s-samāwāti wa l-arḍi wa ʿashiyyaw wa ḥīna tuẓhirūn",
+          "translation": "Dan bagi-Nya lah segala puji di langit dan di bumi, dan di waktu petang hari serta ketika kamu berada di waktu zuhur."
+        },
+        {
+          "title": "Ayat 19",
+          "arabic": "يُخْرِجُ ٱلْحَىَّ مِنَ ٱلْمَيِّتِ وَيُخْرِجُ ٱلْمَيِّتَ مِنَ ٱلْحَىِّ وَيُحْىِ ٱلْأَرْضَ بَعْدَ مَوْتِهَا ۚ وَكَذَٰلِكَ تُخْرَجُونَ ١٩",
+          "latin": "Yukh’riju l-ḥayya mina l-mayyiti wa yukh’riju l-mayyita mina l-ḥayyi wa yuḥyi l-arḍa baʿda mawtihā, wa kadhālika tukh’rajūn",
+          "translation": "Dia mengeluarkan yang hidup dari yang mati dan mengeluarkan yang mati dari yang hidup, serta menghidupkan bumi setelah matinya. Dan demikian pula kamu akan dikeluarkan (dari kubur)."
+        },
+        {
+          "title": "Ayat 20",
+          "arabic": "وَمِنْ ءَايَـٰتِهِۦٓ أَنْ خَلَقَكُم مِّن تُرَابٍۢ ثُمَّ إِذَآ أَنتُم بَشَرٌۭ تَنتَشِرُونَ ٢٠",
+          "latin": "Wa min āyātihi an khalaqakum min turābin thumma idhā antum basharun tantashirūn",
+          "translation": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan kamu dari tanah, kemudian tiba-tiba kamu menjadi manusia yang berkembang biak."
+        },
+        {
+          "title": "Ayat 21",
+          "arabic": "وَمِنْ ءَايَـٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًۭا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةًۭ وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يَتَفَكَّرُونَ ٢١",
+          "latin": "Wa min āyātihi an khalaqa lakum min anfusikum azwājan litaskunū ilaihā wa jaʿala baynakum mawaddatan wa raḥmah, inna fī dhālika laāyātin liqawmin yatafakkarūn",
+          "translation": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+        },
+        {
+          "title": "Ayat 22",
+          "arabic": "وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّلْعَـٰلِمِينَ ٢٢",
+          "latin": "Wa min āyātihi khalqu s-samāwāti wa l-arḍi wa ikhtilāfu alsinatikum wa alwānikum, inna fī dhālika laāyātin lilʿālamīn",
+          "translation": "Dan di antara tanda-tanda kekuasaan-Nya ialah penciptaan langit dan bumi, serta berlain-lainan bahasamu dan warna kulitmu. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi orang-orang yang mengetahui."
+        },
+        {
+          "title": "Ayat 23",
+          "arabic": "وَمِنْ ءَايَـٰتِهِۦ مَنَامُكُم بِٱلَّيْلِ وَٱلنَّهَارِ وَٱبْتِغَآؤُكُم مِّن فَضْلِهِۦٓ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يَسْمَعُونَ ٢٣",
+          "latin": "Wa min āyātihi manāmukum bi-l-layli wa-n-nahāri wa ibtighā’ukum min faḍlihi, inna fī dhālika laāyātin liqawmin yasmaʿūn",
+          "translation": "Dan di antara tanda-tanda kekuasaan-Nya ialah tidurmu di waktu malam dan siang hari dan usahamu mencari sebagian dari karunia-Nya. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang mendengarkan."
+        },
+        {
+          "title": "Ayat 24",
+          "arabic": "وَمِنْ ءَايَـٰتِهِۦ يُرِيكُمُ ٱلْبَرْقَ خَوْفًۭا وَطَمَعًۭا وَيُنَزِّلُ مِنَ ٱلسَّمَآءِ مَآءًۭ فَيُحْىِۦ بِهِ ٱلْأَرْضَ بَعْدَ مَوْتِهَآ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍۢ لِّقَوْمٍۢ يَعْقِلُونَ ٢٤",
+          "latin": "Wa min āyātihi yurīkum al-barqa khawfan wa ṭamaʿan wa yunazzilu mina s-samā’i mā’an fa-yuḥyī bihī al-arḍa baʿda mawtihā, inna fī dhālika laāyātin liqawmin yaʿqilūn",
+          "translation": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia memperlihatkan kepadamu kilat untuk (menimbulkan) ketakutan dan harapan, dan Dia menurunkan air dari langit, lalu menghidupkan bumi dengan air itu sesudah matinya. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang mempergunakan akalnya."
+        },
+        {
+          "title": "Ayat 25",
+          "arabic": "وَمِنْ ءَايَـٰتِهِۦٓ أَن تَقُومَ ٱلسَّمَآءُ وَٱلْأَرْضُ بِأَمْرِهِۦ ۚ ثُمَّ إِذَا دَعَاكُمْ دَعْوَةًۭ مِّنَ ٱلْأَرْضِ إِذَآ أَنتُمْ تَخْرُجُونَ ٢٥",
+          "latin": "Wa min āyātihi an taqūma s-samā’u wa-l-arḍu bi-amrihī thumma idhā daʿākum daʿwatan mina l-arḍi idhā antum takhrujūn",
+          "translation": "Dan di antara tanda-tanda kekuasaan-Nya ialah tegaknya langit dan bumi dengan perintah-Nya. Kemudian apabila Dia memanggil kamu sekali panggil dari bumi, seketika itu (juga) kamu keluar (dari kubur)."
+        },
+        {
+          "title": "Ayat 26",
+          "arabic": "وَلَهُۥ مَن فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ كُلٌّۭ لَّهُۥ قَـٰنِتُونَ ٢٦",
+          "latin": "Wa lahu man fī s-samāwāti wa-l-arḍi kullun lahu qānitūn",
+          "translation": "Dan milik-Nya lah siapa yang ada di langit dan di bumi. Semua hanya tunduk kepada-Nya."
+        }
+      ]
+    },
+    {
+      "title": "Surat Ghafir Ayat 1-3",
+      "repeat": 1,
+      "arabic": "غافر",
+      "latin": "Ghafir",
+      "translation": "Yang Maha Pengampun",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "حمٓ ١",
+          "latin": "Ḥā Mīm",
+          "translation": "Ha Mim."
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "تَنزِيلُ ٱلْكِتَـٰبِ مِنَ ٱللَّهِ ٱلْعَزِيزِ ٱلْعَلِيمِ ٢",
+          "latin": "Tanzīlu l-kitābi mina llāhi l-ʿazīzi l-ʿalīm",
+          "translation": "Diturunkan Kitab ini (Al-Qur'an) dari Allah Yang Maha Perkasa lagi Maha Mengetahui."
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "غَافِرِ ٱلذَّنبِ وَقَابِلِ ٱلتَّوْبِ شَدِيدِ ٱلْعِقَابِ ذِى ٱلطَّوْلِ ۖ لَآ إِلَـٰهَ إِلَّا هُوَ ۖ إِلَيْهِ ٱلْمَصِيرُ ٣",
+          "latin": "Ghāfiri dh-dhanbi wa qābili t-tawbi shadīdi l-ʿiqābi dhī ṭ-ṭawli lā ilāha illā huwa ilayhi l-maṣīr",
+          "translation": "Yang Mengampuni dosa dan Menerima taubat, yang keras hukuman-Nya, yang mempunyai karunia. Tidak ada Tuhan selain Dia. Hanya kepada-Nya lah (semua makhluk) akan kembali."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Hasyr Ayat 22-24",
+      "repeat": 1,
+      "arabic": "الحشر",
+      "latin": "Al-Hasyr",
+      "translation": "Pengusiran",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 22",
+          "arabic": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ۖ عَـٰلِمُ ٱلْغَيْبِ وَٱلشَّهَـٰدَةِ ۖ هُوَ ٱلرَّحْمَـٰنُ ٱلرَّحِيمُ ٢٢",
+          "latin": "Huwa llāhu lladhī lā ilāha illā huwa ʿālīmu l-ghaybi wa sh-shahādati huwa r-raḥmānu r-raḥīm",
+          "translation": "Dialah Allah, tidak ada Tuhan selain Dia. Yang mengetahui yang ghaib dan yang nyata. Dialah Yang Maha Pengasih lagi Maha Penyayang."
+        },
+        {
+          "title": "Ayat 23",
+          "arabic": "هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْمَلِكُ ٱلْقُدُّوسُ ٱلسَّلَـٰمُ ٱلْمُؤْمِنُ ٱلْمُهَيْمِنُ ٱلْعَزِيزُ ٱلْجَبَّارُ ٱلْمُتَكَبِّرُ ۚ سُبْحَـٰنَ ٱللَّهِ عَمَّا يُشْرِكُونَ ٢٣",
+          "latin": "Huwa llāhu lladhī lā ilāha illā huwa l-malikul-quddūsu s-salāmu l-muʾminu l-muhayminu l-ʿazīzu l-jabbāru l-mutakabbir subḥāna llāhi ʿammā yushrikūn",
+          "translation": "Dialah Allah, tidak ada Tuhan selain Dia. Raja, Yang Maha Suci, Yang Maha Sejahtera, Yang Mengaruniakan Keamanan, Yang Maha Memelihara, Yang Maha Perkasa, Yang Maha Kuasa, Yang Memiliki segala keagungan. Maha Suci Allah dari apa yang mereka persekutukan."
+        },
+        {
+          "title": "Ayat 24",
+          "arabic": "هُوَ ٱللَّهُ ٱلْخَـٰلِقُ ٱلْبَارِئُ ٱلْمُصَوِّرُ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ ۚ يُسَبِّحُ لَهُۥ مَا فِى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ ٢٤",
+          "latin": "Huwa llāhu l-khāliqu l-bāriʾu l-muṣawwir lahu l-asmāʾu l-ḥusnā yusabbiḥu lahu mā fī s-samāwāti wa l-arḍi wa huwa l-ʿazīzu l-ḥakīm",
+          "translation": "Dialah Allah, Yang Menciptakan, Yang Mengadakan, Yang Membentuk rupa, yang memiliki nama-nama yang paling baik. Bertasbih kepada-Nya apa yang di langit dan di bumi. Dan Dialah Yang Maha Perkasa lagi Maha Bijaksana."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Zalzalah",
+      "repeat": 1,
+      "arabic": "الزلزلة",
+      "latin": "Al-Zalzalah",
+      "translation": "Goncangan",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا ١",
+          "latin": "Idhā zulzilati l-arḍu zilzālahā",
+          "translation": "Apabila bumi digoncangkan dengan goncangan yang dahsyat."
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا ٢",
+          "latin": "Wa akhrajati l-arḍu athqālahā",
+          "translation": "Dan bumi telah mengeluarkan beban-beban berat (yang dikandung)nya."
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا ٣",
+          "latin": "Wa qāla l-insānu mā lahā",
+          "translation": "Dan manusia bertanya: 'Mengapa bumi (jadi begini)?'"
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "يَوْمَئِذٍۢ تُحَدِّثُ أَخْبَارَهَا ٤",
+          "latin": "Yawmaʾidhin tuḥaddithu akhbārahā",
+          "translation": "Pada hari itu bumi menceritakan beritanya."
+        },
+        {
+          "title": "Ayat 5",
+          "arabic": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا ٥",
+          "latin": "Biʾanna rabbaka awḥā lahā",
+          "translation": "Karena sesungguhnya Tuhanmu telah memerintahkan (yang sedemikian itu) kepadanya."
+        },
+        {
+          "title": "Ayat 6",
+          "arabic": "يَوْمَئِذٍۢ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًۭا لِّيُرَوْا۟ أَعْمَـٰلَهُمْ ٦",
+          "latin": "Yawmaʾidhin yaṣduru n-nāsu ashtātan liyuraw aʿmālahum",
+          "translation": "Pada hari itu manusia keluar dari kuburnya dalam keadaan yang bermacam-macam, supaya diperlihatkan kepada mereka (balasan) pekerjaan mereka."
+        },
+        {
+          "title": "Ayat 7",
+          "arabic": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًۭا يَرَهُۥ ٧",
+          "latin": "Faman yaʿmal mithqāla dharratin khayran yarah",
+          "translation": "Barangsiapa yang mengerjakan kebaikan sebesar zarrah, niscaya dia akan melihat (balasan)nya."
+        },
+        {
+          "title": "Ayat 8",
+          "arabic": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍۢ شَرًّۭا يَرَهُۥ ٨",
+          "latin": "Wa man yaʿmal mithqāla dharratin sharran yarah",
+          "translation": "Dan barangsiapa yang mengerjakan kejahatan sebesar zarrah, niscaya dia akan melihat (balasan)nya."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Kafirun",
+      "repeat": 1,
+      "arabic": "الكافرون",
+      "latin": "Al-Kafirun",
+      "translation": "Orang-orang Kafir",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ ١",
+          "latin": "Qul yā ayyuhā l-kāfirūn",
+          "translation": "Katakanlah: 'Hai orang-orang kafir.'"
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "لَآ أَعْبُدُ مَا تَعْبُدُونَ ٢",
+          "latin": "Lā aʿbudu mā taʿbudūn",
+          "translation": "Aku tidak akan menyembah apa yang kamu sembah."
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ ٣",
+          "latin": "Wa lā antum ʿābidūna mā aʿbud",
+          "translation": "Dan kamu bukan penyembah Tuhan yang aku sembah."
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "وَلَآ أَنَا۠ عَابِدٌۭ مَّا عَبَدتُّمْ ٤",
+          "latin": "Wa lā anā ʿābidum mā ʿabadtum",
+          "translation": "Dan aku tidak pernah menjadi penyembah apa yang kamu sembah."
+        },
+        {
+          "title": "Ayat 5",
+          "arabic": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ ٥",
+          "latin": "Wa lā antum ʿābidūna mā aʿbud",
+          "translation": "Dan kamu tidak pernah (pula) menjadi penyembah Tuhan yang aku sembah."
+        },
+        {
+          "title": "Ayat 6",
+          "arabic": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ ٦",
+          "latin": "Lakum dīnukum wa liya dīn",
+          "translation": "Untukmu agamamu, dan untukku agamaku."
+        }
+      ]
+    },
+    {
+      "title": "Surat An-Nashr",
+      "repeat": 1,
+      "arabic": "النصر",
+      "latin": "An-Nashr",
+      "translation": "Pertolongan",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ ١",
+          "latin": "Idhā jāʾa naṣru llāhi wa l-fatḥ",
+          "translation": "Apabila telah datang pertolongan Allah dan kemenangan."
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًۭا ٢",
+          "latin": "Wa raʾayta n-nāsa yadkhulūna fī dīni llāhi afwājā",
+          "translation": "Dan kamu lihat manusia masuk agama Allah dengan berbondong-bondong."
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُۚ إِنَّهُۥ كَانَ تَوَّابًۢا ٣",
+          "latin": "Fa sabbiḥ biḥamdi rabbika wa staghfirh innahu kāna tawwābā",
+          "translation": "Maka bertasbihlah dengan memuji Tuhanmu dan mohonlah ampun kepada-Nya. Sesungguhnya Dia adalah Maha Penerima taubat."
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Ikhlās",
+      "repeat": 3,
+      "arabic": "الإخلاص",
+      "latin": "Al-Ikhlās",
+      "translation": "Ikhlas",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "قُلۡ هُوَ ٱللَّهُ أَحَدٌ ١",
+          "latin": "Qul huwa Allāhu aḥad",
+          "translation": "Katakanlah: \"Dia-lah Allah, Yang Maha Esa\""
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "ٱللَّهُ ٱلصَّمَدُ ٢",
+          "latin": "Allāhu ṣ-ṣamad",
+          "translation": "Allah tempat meminta segala sesuatu"
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ ٣",
+          "latin": "Lam yalid wa lam yūlad",
+          "translation": "Dia tidak beranak dan tidak pula diperanakkan"
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ٤",
+          "latin": "Wa lam yakun lahu kufuwan aḥad",
+          "translation": "Dan tidak ada seorang pun yang setara dengan Dia"
+        }
+      ]
+    },
+    {
+      "title": "Surat Al-Falaq",
+      "repeat": 3,
+      "arabic": "الفلق",
+      "latin": "Al-Falaq",
+      "translation": "Waktu Subuh",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ١",
+          "latin": "Qul a‘ūdhu birabbi al-falaq",
+          "translation": "Katakanlah: \"Aku berlindung kepada Tuhan yang menguasai subuh (waktu fajar)\""
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "مِن شَرِّ مَا خَلَقَ ٢",
+          "latin": "Min sharri mā khalaq",
+          "translation": "Dari kejahatan makhluk-Nya"
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ٣",
+          "latin": "Wa min sharri ghāsiqin idhā waqab",
+          "translation": "Dan dari kejahatan malam apabila telah gelap gulita"
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلۡعُقَدِ ٤",
+          "latin": "Wa min sharri an-naffāthāti fī al-‘uqad",
+          "translation": "Dan dari kejahatan wanita-wanita tukang sihir yang meniup pada buhul-buhul (talinya)"
+        },
+        {
+          "title": "Ayat 5",
+          "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ٥",
+          "latin": "Wa min sharri ḥāsidin idhā ḥasad",
+          "translation": "Dan dari kejahatan orang yang dengki apabila ia dengki"
+        }
+      ]
+    },
+    {
+      "title": "Surat An-Nās",
+      "repeat": 3,
+      "arabic": "الناس",
+      "latin": "An-Nās",
+      "translation": "Manusia",
+      "type": "parent",
+      "data": [
+        {
+          "title": "Ayat 1",
+          "arabic": "قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ١",
+          "latin": "Qul a‘ūdhu birabbi an-nās",
+          "translation": "Katakanlah: \"Aku berlindung kepada Tuhan (yang memelihara dan menguasai) manusia\""
+        },
+        {
+          "title": "Ayat 2",
+          "arabic": "مَلِكِ ٱلنَّاسِ ٢",
+          "latin": "Maliki an-nās",
+          "translation": "Raja manusia"
+        },
+        {
+          "title": "Ayat 3",
+          "arabic": "إِلَـٰهِ ٱلنَّاسِ ٣",
+          "latin": "Ilāhi an-nās",
+          "translation": "Sembahan manusia"
+        },
+        {
+          "title": "Ayat 4",
+          "arabic": "مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٤",
+          "latin": "Min sharri al-waswāsi al-khannās",
+          "translation": "Dari kejahatan (bisikan) setan yang biasa bersembunyi"
+        },
+        {
+          "title": "Ayat 5",
+          "arabic": "ٱلَّذِى يُوَسۡوِسُ فِى صُدُورِ ٱلنَّاسِ ٥",
+          "latin": "Alladhī yuwaswisu fī ṣudūri an-nās",
+          "translation": "Yang membisikkan (kejahatan) ke dalam dada manusia"
+        },
+        {
+          "title": "Ayat 6",
+          "arabic": "مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ٦",
+          "latin": "Mina al-jinnati wa an-nās",
+          "translation": "Dari (golongan) jin dan manusia"
+        }
+      ]
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلّهَِ وَلْحَمْدُ لِلّهَِ لاَ شَرِيكَ لَهُ لَا إِلَهَ إِلَّاهُوَ وَإِلَيْهِ النُّشُوْرُ",
+      "latin": "Ash-baḥnā wa ash-baḥal-mulku lillāhi wal-ḥamdulillāhi lā syarīka lahū lā ilāha illāhuwa wa ilaihi an-nusyūr",
+      "translation": "Kami berpagi hari dan berpagi hari pula kerjaan milik Allah. Segala puji bagi Allah, tiada sekutu bagi-Nya, tiada Tuhan melainkan Dia dan kepada-Nya tempat kembali."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "أَصْبَحْنَا عَلَى فِطْرَةِ اْلإِسْلاَمِ وَعَلَى كَلِمَةِ اْلإِخْلاَصِ وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَعَلَى مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ حَنِيْفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ",
+      "latin": "Ash-baḥnā ‘alā fiṭratil-islāmi wa ‘alā kalimatil-ikhlas wa ‘alā dīni nabiyyinā muḥammadin ṣallallāhu ‘alaihi wa sallam wa ‘alā millati abīnā ibrahīma ḥanīfan musliman wa mā kāna minal-musyrikīn",
+      "translation": "Kami berpagi hari dalam keadaan fitrah Islam, dalam kalimat ikhlas, dalam agama Nabi kami Muhammad shallallahu ‘alaihi wa sallam, dalam agama ayah kami Ibrahim yang lurus, seorang muslim, dan tidaklah termasuk orang-orang musyrik."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اللَّهُمَّ إِنِّي أَصْبَحْتُ مِنْكَ فِي نِعْمَةٍ وَعَافِيَةٍ وَسِتْر فَأَتِمَّ عَلَيَّ نِعْمَتَكَ وَعَافِيَتَكَ وَسِتْرَكَ فِي الدُّنْيَا وَالآخِرَة",
+      "latin": "Allāhumma innī ash-baḥtu minka fī ni‘matin wa ‘āfiyatins-sitr fa-atimm ‘alayya ni‘matak wa ‘āfiyatika wa sitraka fīd-dunyā wal-ākhirah",
+      "translation": "Ya Allah, sesungguhnya aku telah memasuki waktu pagi dalam keadaan mendapat nikmat, sehat dan dalam keadaan tertutup. Maka sempurnakanlah atas diriku nikmat, kesehatan dan perlindungan-Mu di dunia dan akhirat."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اللَّهُمَّ مَا أَصْبَحَ بِيْ مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيْكَ لَكَ فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
+      "latin": "Allāhumma mā ash-baha bī min ni‘matin aw bi-ahadin min khalqika faminka waḥdaka lā syarīka laka falaka al-ḥamdu wa laka ash-shukr",
+      "translation": "Ya Allah, apa saja nikmat yang aku rasakan pagi ini atau yang diperoleh oleh salah seorang makhluk-Mu, maka semuanya datang dari-Mu semata, tiada sekutu bagi-Mu. Bagi-Mu segala puji dan syukur."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "يَا رَبِّي لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَلِعَظِيمِ سُلْطَانِكَ",
+      "latin": "Yā rabbī laka al-ḥamdu kamā yanbaghī li jalāli wajhika wa li ‘aẓīmi sulṭānik",
+      "translation": "Ya Tuhanku, bagi-Mu segala puji, sebagaimana semestinya bagi keagungan wajah-Mu dan kebesaran kekuasaan-Mu."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "رَضِيتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ نَبِيًّا وَرَسُولًا",
+      "latin": "Raḍītu billāhi rabban wa bil-islāmi dīnan wa bi-muḥammadin nabiyyan wa rasūlan",
+      "translation": "Aku ridha Allah sebagai Tuhanku, Islam sebagai agamaku, dan Muhammad sebagai Nabi dan Rasul."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+      "latin": "Subḥānallāhi wa biḥamdih ‘adada khalqihī wa riḍā nafsihī wa zinata ‘arsyihī wa mīdāda kalimātihī",
+      "translation": "Maha Suci Allah, aku memuji-Nya sebanyak makhluk-Nya, sebagaimana keridhaan-Nya, seberat timbangan ‘Arsy-Nya dan sebanyak tinta kalimat-Nya."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+      "latin": "Bismillāhil-ladhī lā yaḍurru ma‘a ismihi syai-un fī al-arḍi wa lā fī as-samā’i wa huwa as-samī‘ul-‘alīm",
+      "translation": "Dengan menyebut nama Allah yang bila disebut, segala sesuatu di bumi dan di langit tidak akan berbahaya, dan Dia-lah Yang Maha Mendengar lagi Maha Mengetahui."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُه",
+      "latin": "Allāhumma innā na‘ūdzu bika min an nusyrika bika syai-an na‘lamuhu wa nastaghfiruka limā lā na‘lamuhu",
+      "translation": "Ya Allah, sesungguhnya kami berlindung kepada-Mu dari syirik kepada-Mu, sedangkan kami mengetahuinya, dan kami memohon ampun kepada-Mu atas apa-apa yang tidak kami ketahui."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+      "latin": "A‘ūdhu bikalimātil-lāhit-tāmmāti min syarri mā khalaq",
+      "translation": "Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan makhluk yang diciptakan-Nya."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اَللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الهَمِّ وَالْحَزَنِ وَأَعُوْذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوْذُ بِكَ مِنَ الْجُبْنِ وَالبُخْلِ وَأَعُوْذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ",
+      "latin": "Allāhumma innī a‘ūdzu bika minal-hammil-wal-ḥazan, wa a‘ūdzu bika minal-‘ajzi wal-kasal, wa a‘ūdzu bika minal-jubni wal-bukhl, wa a‘ūdzu bika min ghalabatid-daini wa qahrir-rijāl",
+      "translation": "Ya Allah, aku berlindung kepada-Mu dari kesusahan dan kesedihan, aku berlindung kepada-Mu dari kelemahan dan kemalasan, aku berlindung kepada-Mu dari sifat pengecut dan bakhil, aku berlindung kepada-Mu dari hutang yang menindas dan dari kekuasaan manusia."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اَللَّهُمَّ عَافِنِي فِي بَدَنِي اَللَّهُمَّ عَافِنِي فِي سَمْعِي اَللَّهُمَّ عَافِنِي فِي بَصَرِي",
+      "latin": "Allāhumma ‘āfinī fī badanī, allāhumma ‘āfinī fī sam‘ī, allāhumma ‘āfinī fī baṣarī",
+      "translation": "Ya Allah, berilah aku kesehatan pada badanku, berilah aku kesehatan pada pendengaranku, berilah aku kesehatan pada penglihatanku."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اَللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِوَأَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِلاَ إِلهَ إِلاَّ أَنْتَ",
+      "latin": "Allāhumma innī a‘ūdzu bika minal-kufri wal-faqri, wa a‘ūdzu bika min ‘adzābil-qabr, lā ilāha illā anta",
+      "translation": "Ya Allah, aku berlindung kepada-Mu dari kekufuran dan kefakiran, aku berlindung kepada-Mu dari siksa kubur, tidak ada Tuhan selain Engkau."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اَللّهُمَّ أَنْتَ رَبِّي لَا إلهَ إِلاَّ أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوْءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوْءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوْبَ إِلاَّ أَنْتَ",
+      "latin": "Allāhumma anta rabbī lā ilāha illā anta khalaqtanī wa anā ‘abduka wa anā ‘alā ‘ahdika wa wa‘dika mā astaṭa‘tu a‘ūdzu bika min syarri mā ṣana‘tu abū‘u laka bini‘matika ‘alayya wa abū‘u bidzambī faghfir lī fa innahu lā yaghfirudz-dzunūba illā anta",
+      "translation": "Ya Allah, Engkau adalah Tuhanku, tidak ada Tuhan selain Engkau, Engkau telah menciptakanku dan aku adalah hamba-Mu, aku akan setia pada janji dan perjanjian-Mu selama aku mampu, aku berlindung kepada-Mu dari kejahatan yang aku lakukan, aku mengakui nikmat-Mu yang telah Engkau berikan kepadaku dan aku mengakui dosaku, maka ampunilah aku, karena tidak ada yang dapat mengampuni dosa kecuali Engkau."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إلهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ",
+      "latin": "Astaghfirullāhal-‘aẓīmal-ladhī lā ilāha illā huwal-ḥayyul-qayyūma wa atūbu ilaih",
+      "translation": "Aku memohon ampun kepada Allah yang Maha Agung, tidak ada Tuhan selain Dia, yang Maha Hidup dan Maha Berdiri Sendiri, dan aku bertaubat kepada-Nya."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 10,
+      "type": "single",
+      "arabic": "اَللّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا صَلَّــيْتَ عَـلَى سَيِّدِنَا إِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِنَا إِبْـرَاهِيْمَ وبَارِكْ عَـلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا بَارَكْتَ عَـلَى سَيِّدِنَا إِبْرَاهِيْمَ وَعَــلَى آلِ سَيـِّدِنَا إِبْـرَاهِيْمَ فِي الْعَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ",
+      "latin": "Allāhumma shalli ‘alā sayyidinā muḥammadin wa ‘alā āli sayyidinā muḥammadin kamā shallayta ‘alā sayyidinā ibrahīma wa ‘alā āli sayyidinā ibrahīma wa bārik ‘alā sayyidinā muḥammadin wa ‘alā āli sayyidinā muḥammadin kamā bārakta ‘alā sayyidinā ibrahīma wa ‘alā āli sayyidinā ibrahīma fil-‘ālamīna innaka ḥamīdun majīd",
+      "translation": "Ya Allah, limpahkanlah shalawat kepada junjungan kami Nabi Muhammad dan keluarga junjungan kami Nabi Muhammad, sebagaimana Engkau limpahkan shalawat kepada junjungan kami Nabi Ibrahim dan keluarga junjungan kami Nabi Ibrahim, serta berkahilah kepada junjungan kami Nabi Muhammad dan keluarga junjungan kami Nabi Muhammad, sebagaimana Engkau berkahi kepada junjungan kami Nabi Ibrahim dan keluarga junjungan kami Nabi Ibrahim di seluruh alam, sesungguhnya Engkau Maha Terpuji lagi Maha Mulia."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 100,
+      "type": "single",
+      "arabic": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
+      "latin": "Subḥānallāhi wal-ḥamdulillāhi wa lā ilāha illallāhu wallāhu akbar",
+      "translation": "Maha Suci Allah, segala puji bagi Allah, tidak ada Tuhan selain Allah, dan Allah Maha Besar."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 10,
+      "type": "single",
+      "arabic": "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىْ كُلِّ شَيْءٍ قَدِيْرٌ",
+      "latin": "Lā ilāha illallāhu waḥdahu lā syarīka lahu lahul-mulku wa lahul-ḥamdu wa huwa ‘alā kulli syai-in qadīr",
+      "translation": "Tidak ada Tuhan selain Allah, Yang Maha Esa, tidak ada sekutu bagi-Nya, bagi-Nya kerajaan dan bagi-Nya segala puji, dan Dia Maha Kuasa atas segala sesuatu."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ أَشْهَدُ أَنْ لَّا إلهَ إِلَّا أَنْتَ أَسْتَغْفِرُكَ وَأَتُوْبُ إِلَيْكَ",
+      "latin": "Subḥānaka allāhumma wa biḥamdika asyhadu allā ilāha illā anta astaghfiruka wa atūbu ilaika",
+      "translation": "Maha Suci Engkau, ya Allah, dengan memuji-Mu, aku bersaksi bahwa tidak ada Tuhan selain Engkau, aku memohon ampun kepada-Mu dan bertaubat kepada-Mu."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "اَلَّلهُمَّ صَلِّى عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدِكَ وَنَبِيِّكَ وَرَسُوْلِكَ النَّبِىِّ الْأُمِّىِّ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلِّمْ تَسْلِمًا عَدَدَمَا مَا أَحَاطَ بِهِ عِلْمُكَ وَخَطَّ بِهِ قَلَمُكَ وَأَحْصَاهُ كِتَابُكَ وَارْضَ الَّلهُمَّ عَنْ سَدَاتِنَا أَبِى بَكْرٍ وَعُمَرَ وَعُثْمَانَ وَعَلِيٍّ وَعَنِ الصَّحَابَةِ أَجْمَعِيْنَ وَعَنْ التَّابِعِيْنَ وَتَابِعِيْهِمْ بِإِحْسَانٍ إِلَى يَوْمِ الدِّيْنِ",
+      "latin": "Allāhumma shalli ‘alā sayyidinā muḥammadin ‘abduka wa nabiyyika wa rasūlika n-nabīl-ummiyyi wa ‘alā ālihi wa ṣaḥbihi wa sallim taslīman ‘adadamā aḥaatho bihi ‘ilmuka wa khaṭṭa bihi qalamuka wa ahsāhu kitābuka wa arḍallāhumma ‘an ṣadātinā abī bakrin wa ‘umar wa ‘utsman wa ‘alīyyin",
+      "translation": "Ya Allah, limpahkanlah shalawat kepada junjungan kami Nabi Muhammad, hamba dan Rasul-Mu, Nabi yang ummi, dan kepada keluarga serta sahabatnya, semoga keselamatan tercurah sebanyak ilmu-Mu, sebanyak pena-Mu menulis, sebanyak isi kitab-Mu, dan ridhoilah Engkau kepada para pemimpin kami, Abu Bakar, Umar, Utsman, Ali, kepada seluruh sahabat, kepada tabi’in dan pengikut mereka dengan sebaik-baiknya hingga hari kiamat."
+    },
+    {
+      "title": "Doa Al-Ma'tsurat",
+      "repeat": 3,
+      "type": "single",
+      "arabic": "سُبْحَانَكَ رَبِّكَ رَبِّ الْعِزَّتِ عَمَّا يَصِفُوْنَ وَسَلَّامُ عَلَى الْمُرْسَلِيْنَ وَالْحَمْدُ لِلهِ رَبِّ الْعَالَمِيْنَ",
+      "latin": "Subḥānaka rabbika rabbil-‘izzati ‘ammā yashifūna wa sallāmu ‘alal-mursalīna wal-ḥamdu lillāhi rabbil-‘ālamīn",
+      "translation": "Maha Suci Engkau, Tuhanmu, Tuhan yang memiliki keagungan dari apa yang mereka katakan, dan keselamatan tercurah kepada para Rasul, segala puji bagi Allah, Tuhan semesta alam."
+    }
+  ]
+}

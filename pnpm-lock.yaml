@@ -91,6 +91,15 @@ importers:
         specifier: ^6.0.6
         version: 6.4.3(@types/node@22.20.1)(jiti@2.7.0)
 
+  packages/almatsurat:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+      vitest:
+        specifier: ^2.1.8
+        version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
+
   packages/mushaf/adapters/custom:
     dependencies:
       '@guidelight/mushaf-core':

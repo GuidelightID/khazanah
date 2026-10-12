@@ -1,0 +1,29 @@
+{
+  "source": "https://github.com/aliifam/almatsurat",
+  "commit": "92edd45d7cfa0e5cd1528ccc16015dcb383419a9",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2024 Aliif Arief",
+  "imported_at": "2026-10-12",
+  "files": {
+    "kubro-pagi.json": {
+      "sha256": "56dab1ce600585a8c1bb4318e00ddc217d655a59b4c2db10f9cba952b8d1cf84",
+      "items": 40,
+      "title": "Al-Matsurat Kubro Pagi"
+    },
+    "kubro-petang.json": {
+      "sha256": "b5b3021b982e99789c1f46fab6a46bfc5ba529f542452f7515e1f9727c9f2971",
+      "items": 40,
+      "title": "Al-Matsurat Kubro Petang"
+    },
+    "sugro-pagi.json": {
+      "sha256": "7b70fd3b350b2c41c4ef8aa7160b39d2caaeb7b896fa026f0b38fe4f225d2d6c",
+      "items": 32,
+      "title": "Al-Matsurat Sugro Pagi"
+    },
+    "sugro-petang.json": {
+      "sha256": "dccc9d13b950d186abc8bcfa4edf43f56b5fbddf828bb8befa87d5e8240a36ed",
+      "items": 32,
+      "title": "Al - Matsurat Sugro Petang"
+    }
+  }
+}
