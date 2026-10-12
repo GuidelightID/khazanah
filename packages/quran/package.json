@@ -1,8 +1,9 @@
 {
   "name": "@guidelight/quran",
   "version": "0.1.2",
-  "description": "Indonesian Quran corpus (equran.id / Kemenag) with the Standar Mushaf Indonesia juz table and passage helpers — no UI",
-  "license": "MIT",
+  "private": true,
+  "description": "Indonesian Quran corpus (Kemenag text and translation via EQuran.id) with the Standar Mushaf Indonesia juz table and passage helpers, no UI",
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -24,6 +25,7 @@
   "files": [
     "dist",
     "LICENSE",
+    "NOTICE.md",
     "README.md",
     "CORPUS.md"
   ],
@@ -43,8 +45,7 @@
     "vitest": "^2.1.8"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",

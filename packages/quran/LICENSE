@@ -1,6 +1,18 @@
+This package contains two kinds of material under different terms.
+
+1. CODE — the TypeScript sources, build output, juz boundary table and helper
+   functions written for this package — is released under the MIT License below.
+
+2. DATA — the Quran text, the Indonesian translation, the transliteration and
+   the surah metadata in src/data/ (and dist/data/) — is NOT covered by the MIT
+   License. It is redistributed under its providers' terms, described in
+   NOTICE.md. Do not relicense it as MIT.
+
+-------------------------------------------------------------------------------
+
 MIT License
 
-Copyright (c) 2026 Mushaf contributors
+Copyright (c) 2026 Guidelight and Khazanah contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,11 +31,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-IMPORTANT: This MIT license applies to first-party source code in this
-repository only. Fonts, page geometry IR, Quran text corpora, and tajweed
-annotation datasets may be subject to separate third-party licenses. See
-LICENSES/matrix.md and package NOTICE files. Restricted assets must not be
-relicensed as MIT.

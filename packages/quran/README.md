@@ -3,20 +3,15 @@
 The Indonesian Quran corpus, its juz table, and passage helpers.
 **No UI** — this package ships no components, styles, or fonts.
 
-Used by `guidelight-id-next` for the Al-Qur'an & Tadabbur module.
+Used by [guidelight.id](https://guidelight.id) for the Al-Qur'an & Tadabbur module.
 
-## Why the scope is `@guidelightid`, not `@mushaf`
+## Status and license
 
-Every other package here is named `@guidelight/mushaf-*`. This one is not, and that is not
-an inconsistency waiting to be tidied: **GitHub Packages requires the npm scope
-to match the repository owner**, so anything published from
-`github.com/GuidelightID/…` must be scoped `@guidelightid`.
-
-The constraint cuts both ways — the ten `@guidelight/mushaf-*` packages in this repo
-**cannot** be published to GitHub Packages under their current names; they are
-aimed at public npm (see [`docs/npm-scope.md`](../../docs/npm-scope.md)). If
-they ever move, they follow this package's pattern:
-`@guidelightid/mushaf-<name>`.
+**Not published to npm yet** (`"private": true`). The code is MIT, but the
+Indonesian translation, transliteration and surah metadata come from Kemenag
+via EQuran.id and have no written license for bulk redistribution. See
+[NOTICE.md](./NOTICE.md) for sources, terms and the required attribution, and
+[`LICENSES/matrix.md`](../../LICENSES/matrix.md) for the repo-wide gate.
 
 ## Data source
 
@@ -93,47 +88,19 @@ would ship the whole mushaf to the browser.
 
 ## Installing
 
-This package publishes to **GitHub Packages**, not public npm. Consumers need
-an `.npmrc`:
-
-```
-@guidelightid:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-```
-
-The token is a classic PAT with the `read:packages` scope.
+Not on npm yet (see above). Inside this repository, depend on it with
+`"@guidelight/quran": "workspace:*"`.
 
 ## Releasing
 
-The tag and the `version` field must agree, and CI refuses to publish when they
-do not. The ordering is the easy thing to get wrong: **bump and commit first,
-tag second.**
-
-The safest way is to let npm do both at once, so they cannot disagree:
-
-```bash
-pnpm --filter @guidelight/quran test
-
-cd packages/mushaf-corpus
-npm version patch --tag-version-prefix=mushaf-corpus-v   # bumps, commits, tags
-cd ../..
-git push --follow-tags
-```
-
-Doing it by hand works too, as long as the bump is committed before the tag:
-
-```bash
-# edit "version" in packages/mushaf-corpus/package.json, commit it, then:
-git tag mushaf-corpus-v0.1.1 && git push origin mushaf-corpus-v0.1.1
-```
-
-`publish-mushaf-corpus.yml` verifies the tag matches the package version, runs
-typecheck and tests, then publishes. A version that already exists on the
-registry can never be republished — bump to a new one instead.
+Releases go through [Changesets](../../README.md#releasing) like every other
+package in this repo. Publishing this one additionally requires removing
+`"private": true`, which must only happen once the data terms in NOTICE.md
+are cleared.
 
 ## Regenerating the corpus
 
-This package is the corpus's **only home** — no other repo keeps a copy.
+This package is the corpus's **only source** — other repos consume it, not copy it.
 
 ```bash
 pnpm --filter @guidelight/quran import        # dry run, validate only
@@ -141,8 +108,8 @@ pnpm --filter @guidelight/quran import:write  # write src/data/* + CORPUS.md
 pnpm --filter @guidelight/quran test
 ```
 
-Review the diff to `src/data/*`, bump `version`, then publish. Consumers take
-the corpus from a release, not from this repo.
+Review the diff to `src/data/*` and add a changeset. Consumers take the corpus
+from a release, not from this repo.
 
-Once the new version is installed in `guidelight-id-next`, regenerate its seed
-migration there with `npm run quran:seed`.
+Guidelight regenerates its seed migration from the installed version with
+`pnpm --filter @guidelight/web quran:seed` (in the `guidelight` app repo).
