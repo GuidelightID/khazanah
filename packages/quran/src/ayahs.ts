@@ -3,7 +3,7 @@
  *
  * Deliberately NOT re-exported from `index.ts`: the main entry is used on the
  * client too, and pulling this in there would ship the whole mushaf to the
- * browser. Import `@guidelightid/mushaf-corpus/ayahs` only from server code.
+ * browser. Import `@guidelight/quran/ayahs` only from server code.
  */
 import ayahsData from './data/ayahs.json' with { type: 'json' };
 import { getJuz } from './juz.js';

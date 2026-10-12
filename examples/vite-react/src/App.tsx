@@ -3,9 +3,9 @@ import {
   annotationsPlugin,
   createMemoryAnnotationStore,
   type AnnotationsPlugin,
-} from '@mushaf/annotations';
-import { createHostedMadinahAdapter } from '@mushaf/adapter-kfgqpc';
-import { fixtureAdapter, type MushafAdapter, type WordIR, type WordKey } from '@mushaf/core';
+} from '@guidelight/mushaf-annotations';
+import { createHostedMadinahAdapter } from '@guidelight/mushaf-adapter-kfgqpc';
+import { fixtureAdapter, type MushafAdapter, type WordIR, type WordKey } from '@guidelight/mushaf-core';
 import {
   QuranPage,
   QuranProvider,
@@ -14,8 +14,8 @@ import {
   useAnnotations,
   useSearch,
   useSelection,
-} from '@mushaf/react';
-import { tajweedPlugin } from '@mushaf/tajwid';
+} from '@guidelight/mushaf-react';
+import { tajweedPlugin } from '@guidelight/mushaf-tajwid';
 import { createDemoAudioPlugin, demoTimingsForVerse } from './demoAudio';
 
 type Mode = 'page' | 'viewer' | 'reader' | 'search' | 'audio' | 'notes';
@@ -195,7 +195,7 @@ function AudioDemo({
   return (
     <>
       <p className="muted">
-        <code>@mushaf/audio</code> demo with synthetic word timings.
+        <code>@guidelight/mushaf-audio</code> demo with synthetic word timings.
       </p>
       <div className="toolbar">
         <button type="button" onClick={playDemo}>
@@ -229,7 +229,7 @@ function NotesDemo() {
   return (
     <>
       <p className="muted">
-        <code>@mushaf/annotations</code> + <code>useAnnotations</code>. Add a note on ayah 1:1;
+        <code>@guidelight/mushaf-annotations</code> + <code>useAnnotations</code>. Add a note on ayah 1:1;
         underline highlight appears on the page.
       </p>
       <div className="toolbar">
@@ -321,7 +321,7 @@ export function App() {
         const res = await fetch('/mushaf/pages.manifest.json');
         if (!cancelled) {
           setHostedOk(res.ok);
-          if (!res.ok) setHostedError('Run: pnpm --filter @mushaf/example-vite-react pull-data');
+          if (!res.ok) setHostedError('Run: pnpm --filter @guidelight/example-vite-react pull-data');
         }
       } catch {
         if (!cancelled) {

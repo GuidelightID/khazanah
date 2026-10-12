@@ -9,7 +9,7 @@ import {
   type CSSProperties,
   type ReactNode,
 } from 'react';
-import type { MushafPageIR } from '@mushaf/core';
+import type { MushafPageIR } from '@guidelight/mushaf-core';
 import { useQuran } from './hooks.js';
 import { QuranPage, type QuranPageProps } from './QuranPage.js';
 

@@ -1,6 +1,6 @@
-import { audioPlugin, type WordTiming } from '@mushaf/audio';
-import type { VerseKey } from '@mushaf/core';
-import { fixturePage1 } from '@mushaf/core';
+import { audioPlugin, type WordTiming } from '@guidelight/mushaf-audio';
+import type { VerseKey } from '@guidelight/mushaf-core';
+import { fixturePage1 } from '@guidelight/mushaf-core';
 
 /** Build fake sequential timings from fixture page words (demo only). */
 export function demoTimingsForVerse(verseKey: VerseKey): WordTiming[] {

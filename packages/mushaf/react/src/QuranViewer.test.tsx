@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { render, waitFor } from '@testing-library/react';
-import { fixtureAdapter } from '@mushaf/core';
+import { fixtureAdapter } from '@guidelight/mushaf-core';
 import { QuranProvider } from './context.js';
 import { QuranViewer } from './QuranViewer.js';
 

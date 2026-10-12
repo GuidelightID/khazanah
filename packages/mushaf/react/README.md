@@ -1,10 +1,10 @@
-# `@mushaf/react`
+# `@guidelight/mushaf-react`
 
 React bindings for Mushaf: `QuranProvider`, `QuranPage`, and hooks.
 
 ```tsx
-import { QuranProvider, QuranPage, QuranViewer } from '@mushaf/react';
-import { fixtureAdapter } from '@mushaf/core';
+import { QuranProvider, QuranPage, QuranViewer } from '@guidelight/mushaf-react';
+import { fixtureAdapter } from '@guidelight/mushaf-core';
 
 export function App() {
   return (

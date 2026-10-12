@@ -1,4 +1,4 @@
-# `@mushaf/cli`
+# `@guidelight/mushaf-cli`
 
 Dual-distribution helper for Mushaf assets (ADR-013).
 
@@ -15,8 +15,8 @@ Restricted sources (`kfgqpc`, full QF corpus republish) remain **disabled** unti
 Then point an adapter at the output:
 
 ```ts
-import { createHostedAdapter } from '@mushaf/adapter-custom';
-// or: import { createHostedMadinahAdapter } from '@mushaf/adapter-kfgqpc';
+import { createHostedAdapter } from '@guidelight/mushaf-adapter-custom';
+// or: import { createHostedMadinahAdapter } from '@guidelight/mushaf-adapter-kfgqpc';
 
 const adapter = createHostedAdapter({ baseUrl: '/mushaf' });
 ```

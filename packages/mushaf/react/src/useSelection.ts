@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useMemo, useState } from 'react';
-import type { SelectionState, VerseKey, WordKey } from '@mushaf/core';
+import type { SelectionState, VerseKey, WordKey } from '@guidelight/mushaf-core';
 import { useQuranContext } from './context.js';
 import { usePage } from './hooks.js';
 

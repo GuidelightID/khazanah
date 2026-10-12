@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fixturePage1, type MushafPageIR } from '@mushaf/core';
+import { fixturePage1, type MushafPageIR } from '@guidelight/mushaf-core';
 import { collectTajweedHighlights, tajweedPlugin } from './plugin.js';
 
 describe('tajweedPlugin', () => {

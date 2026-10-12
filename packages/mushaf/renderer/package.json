@@ -1,5 +1,5 @@
 {
-  "name": "@mushaf/renderer",
+  "name": "@guidelight/mushaf-renderer",
   "version": "0.0.0",
   "description": "Mushaf paint pipeline and rendering backends (HTML/SVG/Canvas)",
   "license": "MIT",
@@ -27,16 +27,21 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "peerDependencies": {
-    "@mushaf/core": ">=0.0.0"
+    "@guidelight/mushaf-core": ">=0.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "@mushaf/core": "workspace:*",
+    "@guidelight/mushaf-core": "workspace:*",
     "jsdom": "^25.0.1",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/mushaf/renderer"
   }
 }

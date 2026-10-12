@@ -1,4 +1,4 @@
-# NOTICE — @mushaf/fonts
+# NOTICE — @guidelight/mushaf-fonts
 
 This package intentionally does **not** redistribute King Fahd Complex (KFGQPC)
 or QPC page-specific fonts unless a future release adds an OFL/open-licensed face

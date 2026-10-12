@@ -4,7 +4,7 @@ This table is the **normative gate** for redistributing fonts, page IR, Quran te
 
 | Source | SPDX / name | URL | Text | Geometry IR | Fonts | `allowsNpmRedistribution` | `allowsModification` | Package strategy | Legal check |
 |--------|-------------|-----|------|-------------|-------|---------------------------|----------------------|------------------|-------------|
-| Synthetic fixtures | MIT | in-repo | yes | yes | n/a | yes | yes | `@mushaf/core` fixtures | ✅ |
+| Synthetic fixtures | MIT | in-repo | yes | yes | n/a | yes | yes | `@guidelight/mushaf-core` fixtures | ✅ |
 | Quran Foundation API-derived cache | per QF ToS | api docs | via API | via API | n/a | **no** (local cache only) | limited | adapter + app cache | ⬜ counsel |
 | QPC / KFGQPC fonts | vendor | vendor site | n/a | n/a | yes | **often no** | often no | CLI pull only | ⬜ counsel |
 | Community open IR (TBD) | TBD | TBD | TBD | TBD | TBD | per row | per row | npm or CLI | ⬜ |

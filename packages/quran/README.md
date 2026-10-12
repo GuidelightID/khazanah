@@ -1,4 +1,4 @@
-# @guidelightid/mushaf-corpus
+# @guidelight/quran
 
 The Indonesian Quran corpus, its juz table, and passage helpers.
 **No UI** — this package ships no components, styles, or fonts.
@@ -7,12 +7,12 @@ Used by `guidelight-id-next` for the Al-Qur'an & Tadabbur module.
 
 ## Why the scope is `@guidelightid`, not `@mushaf`
 
-Every other package here is named `@mushaf/*`. This one is not, and that is not
+Every other package here is named `@guidelight/mushaf-*`. This one is not, and that is not
 an inconsistency waiting to be tidied: **GitHub Packages requires the npm scope
 to match the repository owner**, so anything published from
 `github.com/GuidelightID/…` must be scoped `@guidelightid`.
 
-The constraint cuts both ways — the ten `@mushaf/*` packages in this repo
+The constraint cuts both ways — the ten `@guidelight/mushaf-*` packages in this repo
 **cannot** be published to GitHub Packages under their current names; they are
 aimed at public npm (see [`docs/npm-scope.md`](../../docs/npm-scope.md)). If
 they ever move, they follow this package's pattern:
@@ -44,10 +44,10 @@ covering all 6236 ayahs exactly once.
 
 ```ts
 // Client-safe (~87 KB): surah catalog, juz table, types, helpers.
-import { getSurah, getJuzList, parseAyahRange } from '@guidelightid/mushaf-corpus';
+import { getSurah, getJuzList, parseAyahRange } from '@guidelight/quran';
 
 // Server only (~3.9 MB): the verse text.
-import { getPassageAyahs, getJuzAyahs } from '@guidelightid/mushaf-corpus/ayahs';
+import { getPassageAyahs, getJuzAyahs } from '@guidelight/quran/ayahs';
 ```
 
 Verse text is deliberately absent from the main entry. Pulling it in there
@@ -112,7 +112,7 @@ tag second.**
 The safest way is to let npm do both at once, so they cannot disagree:
 
 ```bash
-pnpm --filter @guidelightid/mushaf-corpus test
+pnpm --filter @guidelight/quran test
 
 cd packages/mushaf-corpus
 npm version patch --tag-version-prefix=mushaf-corpus-v   # bumps, commits, tags
@@ -136,9 +136,9 @@ registry can never be republished — bump to a new one instead.
 This package is the corpus's **only home** — no other repo keeps a copy.
 
 ```bash
-pnpm --filter @guidelightid/mushaf-corpus import        # dry run, validate only
-pnpm --filter @guidelightid/mushaf-corpus import:write  # write src/data/* + CORPUS.md
-pnpm --filter @guidelightid/mushaf-corpus test
+pnpm --filter @guidelight/quran import        # dry run, validate only
+pnpm --filter @guidelight/quran import:write  # write src/data/* + CORPUS.md
+pnpm --filter @guidelight/quran test
 ```
 
 Review the diff to `src/data/*`, bump `version`, then publish. Consumers take

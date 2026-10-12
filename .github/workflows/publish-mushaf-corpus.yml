@@ -1,10 +1,10 @@
-# Publishes @guidelightid/mushaf-corpus to GitHub Packages.
+# Publishes @guidelight/quran to GitHub Packages.
 #
 # Triggered by a `mushaf-corpus-v*` tag (e.g. mushaf-corpus-v0.1.0), not by every
 # push to main: this repo holds many packages, and this one's version should only
 # move deliberately. The default GITHUB_TOKEN is enough — no PAT needed — as long
 # as the job has `packages: write`.
-name: Publish @guidelightid/mushaf-corpus
+name: Publish @guidelight/quran
 
 on:
   push:
@@ -35,9 +35,9 @@ jobs:
 
       # Quality gate: this package carries Quran text, so its tests must be green
       # before anything ships.
-      - run: pnpm --filter @guidelightid/mushaf-corpus typecheck
-      - run: pnpm --filter @guidelightid/mushaf-corpus test
-      - run: pnpm --filter @guidelightid/mushaf-corpus build
+      - run: pnpm --filter @guidelight/quran typecheck
+      - run: pnpm --filter @guidelight/quran test
+      - run: pnpm --filter @guidelight/quran build
 
       - name: Ensure the package version matches the tag
         run: |
@@ -60,6 +60,6 @@ jobs:
           fi
 
       - name: Publish
-        run: pnpm --filter @guidelightid/mushaf-corpus publish --no-git-checks
+        run: pnpm --filter @guidelight/quran publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

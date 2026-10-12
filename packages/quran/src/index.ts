@@ -1,7 +1,7 @@
 /**
  * Client-safe entry: the surah catalog (~87 KB), the juz table, types, and
  * passage helpers. The full verse text lives in
- * `@guidelightid/mushaf-corpus/ayahs` and is kept separate so it never reaches
+ * `@guidelight/quran/ayahs` and is kept separate so it never reaches
  * the browser.
  */
 export type { PassageSelection, QuranAyah, QuranSurah } from './types.js';

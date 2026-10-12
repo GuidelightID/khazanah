@@ -16,9 +16,9 @@ GOTL uses these for **memorization progress / daily page ranges**, not mushaf re
 Replace both with a single `MushafAdapter`:
 
 ```ts
-import { createQuranFoundationAdapter } from '@mushaf/adapter-quran-foundation';
+import { createQuranFoundationAdapter } from '@guidelight/mushaf-adapter-quran-foundation';
 // or hosted offline after data pull:
-// import { createHostedMadinahAdapter } from '@mushaf/adapter-kfgqpc';
+// import { createHostedMadinahAdapter } from '@guidelight/mushaf-adapter-kfgqpc';
 
 const adapter = createQuranFoundationAdapter();
 
@@ -46,12 +46,12 @@ catalog.surahs.map((s) => ({
 
 ```bash
 # from monorepo (fixture demo)
-pnpm --filter @mushaf/cli build
+pnpm --filter @guidelight/mushaf-cli build
 node packages/cli/dist/cli.js data pull --source fixture --out ./public/mushaf
 ```
 
 ```ts
-import { createHostedMadinahAdapter } from '@mushaf/adapter-kfgqpc';
+import { createHostedMadinahAdapter } from '@guidelight/mushaf-adapter-kfgqpc';
 
 const adapter = createHostedMadinahAdapter({ baseUrl: '/mushaf' });
 // catalog.json + verse-index.json served from public/mushaf
@@ -67,7 +67,7 @@ Implemented in Guidelight GOTL:
 | Today focus / murojaah timeline | “Baca mushaf” opens page + highlights range |
 
 ```tsx
-import { QuranProvider, QuranPage } from '@mushaf/react';
+import { QuranProvider, QuranPage } from '@guidelight/mushaf-react';
 
 <QuranProvider adapter={adapter}>
   <QuranPage page={page} highlightedAyahs={['2:255']} />
@@ -88,8 +88,8 @@ Phase A is implemented in `guidelight-id-next`:
 Deps (local monorepo during development):
 
 ```json
-"@mushaf/core": "file:../mushaf/packages/core",
-"@mushaf/adapter-quran-foundation": "file:../mushaf/packages/adapters/quran-foundation"
+"@guidelight/mushaf-core": "file:../mushaf/packages/core",
+"@guidelight/mushaf-adapter-quran-foundation": "file:../mushaf/packages/adapters/quran-foundation"
 ```
 
 ## Acceptance criteria (Phase A)
@@ -97,7 +97,7 @@ Deps (local monorepo during development):
 - [x] Surah list from Mushaf catalog (114 surahs from QF API)
 - [x] Ayah→page via `adapter.getPageForVerse` (cached)
 - [x] No direct alquran.cloud / hand-rolled quran.com glue in hooks
-- [x] Does **not** require `@mushaf/react` for Phase A
+- [x] Does **not** require `@guidelight/mushaf-react` for Phase A
 - [x] Offline catalog + verse-index bundled in Guidelight (`src/data/mushaf`, regenerate with `npm run mushaf:generate-offline`)
 
 ## Non-goals

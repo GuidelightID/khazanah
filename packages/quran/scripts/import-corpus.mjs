@@ -1,4 +1,4 @@
-// Corpus importer for @guidelightid/mushaf-corpus — equran.id is the single
+// Corpus importer for @guidelight/quran — equran.id is the single
 // canonical source.
 //
 // Usage: node scripts/import-corpus.mjs [--write]

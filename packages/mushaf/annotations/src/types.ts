@@ -1,4 +1,4 @@
-import type { HighlightTarget } from '@mushaf/core';
+import type { HighlightTarget } from '@guidelight/mushaf-core';
 
 export interface Annotation {
   id: string;

@@ -1,8 +1,8 @@
 import {
   createHostedAdapter,
   type HostedAdapterOptions,
-} from '@mushaf/adapter-custom';
-import type { MushafAdapter } from '@mushaf/core';
+} from '@guidelight/mushaf-adapter-custom';
+import type { MushafAdapter } from '@guidelight/mushaf-core';
 
 export type HostedMadinahAdapterOptions = Omit<
   HostedAdapterOptions,
@@ -37,4 +37,4 @@ export function createHostedMadinahAdapter(
   });
 }
 
-export type { HostedAdapterOptions } from '@mushaf/adapter-custom';
+export type { HostedAdapterOptions } from '@guidelight/mushaf-adapter-custom';

@@ -1,4 +1,4 @@
-import type { VerseKey } from '@mushaf/core';
+import type { VerseKey } from '@guidelight/mushaf-core';
 
 export interface TanzilVerse {
   verseKey: VerseKey;

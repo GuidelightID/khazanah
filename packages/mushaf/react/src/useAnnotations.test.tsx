@@ -1,8 +1,8 @@
 import { describe, expect, it, afterEach } from 'vitest';
 import { renderHook, waitFor, act, cleanup } from '@testing-library/react';
 import type { ReactNode } from 'react';
-import { fixtureAdapter } from '@mushaf/core';
-import { annotationsPlugin, createMemoryAnnotationStore } from '@mushaf/annotations';
+import { fixtureAdapter } from '@guidelight/mushaf-core';
+import { annotationsPlugin, createMemoryAnnotationStore } from '@guidelight/mushaf-annotations';
 import { QuranProvider } from './context.js';
 import { useAnnotations } from './useAnnotations.js';
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fixturePage1, computeViewMatrix } from '@mushaf/core';
+import { fixturePage1, computeViewMatrix } from '@guidelight/mushaf-core';
 import { renderPageToStaticMarkup } from './html-markup.js';
 import type { RenderFrame } from './types.js';
 

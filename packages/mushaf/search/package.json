@@ -1,5 +1,5 @@
 {
-  "name": "@mushaf/search",
+  "name": "@guidelight/mushaf-search",
   "version": "0.0.0",
   "description": "Offline Quran search engine for Mushaf (MiniSearch + Arabic normalization)",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@mushaf/core": "workspace:*",
+    "@guidelight/mushaf-core": "workspace:*",
     "minisearch": "^7.1.1"
   },
   "devDependencies": {
@@ -37,5 +37,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "module": "./dist/index.js"
+  "module": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/mushaf/search"
+  }
 }

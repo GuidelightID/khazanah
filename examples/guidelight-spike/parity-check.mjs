@@ -5,7 +5,7 @@
  *
  * Requires network. Exit 0 if all keys resolve.
  */
-import { createQuranFoundationAdapter } from '../../packages/adapters/quran-foundation/dist/index.js';
+import { createQuranFoundationAdapter } from '../../packages/mushaf/adapters/quran-foundation/dist/index.js';
 
 const keys = ['1:1', '2:255', '18:1', '114:6'];
 

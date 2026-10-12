@@ -1,10 +1,10 @@
-# `@mushaf/search`
+# `@guidelight/mushaf-search`
 
-Offline search over a `SearchCorpus` using [MiniSearch](https://lucaong.github.io/minisearch/), with Arabic normalization from `@mushaf/core`.
+Offline search over a `SearchCorpus` using [MiniSearch](https://lucaong.github.io/minisearch/), with Arabic normalization from `@guidelight/mushaf-core`.
 
 ```ts
-import { createSearchEngine, corpusFromPages } from '@mushaf/search';
-import { fixturePages, fixtureCatalog } from '@mushaf/core';
+import { createSearchEngine, corpusFromPages } from '@guidelight/mushaf-search';
+import { fixturePages, fixtureCatalog } from '@guidelight/mushaf-core';
 
 const engine = createSearchEngine();
 const corpus = corpusFromPages(Object.values(fixturePages), {

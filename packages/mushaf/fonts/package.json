@@ -1,5 +1,5 @@
 {
-  "name": "@mushaf/fonts",
+  "name": "@guidelight/mushaf-fonts",
   "version": "0.0.0",
   "description": "Open Arabic font CSS helpers for Mushaf (no restricted KFGQPC fonts)",
   "license": "MIT",
@@ -35,5 +35,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/mushaf/fonts"
   }
 }

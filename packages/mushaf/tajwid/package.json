@@ -1,5 +1,5 @@
 {
-  "name": "@mushaf/tajwid",
+  "name": "@guidelight/mushaf-tajwid",
   "version": "0.0.0",
   "description": "Tajweed coloring plugin for Mushaf",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@mushaf/core": "workspace:*"
+    "@guidelight/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
@@ -33,5 +33,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/mushaf/tajwid"
   }
 }

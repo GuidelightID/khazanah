@@ -1,5 +1,5 @@
 {
-  "name": "@mushaf/adapter-tanzil",
+  "name": "@guidelight/mushaf-adapter-tanzil",
   "version": "0.0.0",
   "description": "Text-flow Tanzil-style adapter (not layout-faithful Madinah)",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@mushaf/core": "workspace:*"
+    "@guidelight/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
@@ -33,5 +33,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/mushaf/adapters/tanzil"
   }
 }

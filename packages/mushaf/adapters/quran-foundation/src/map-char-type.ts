@@ -1,4 +1,4 @@
-import type { CharType } from '@mushaf/core';
+import type { CharType } from '@guidelight/mushaf-core';
 
 export function mapCharType(name: string | undefined): CharType {
   if (!name) return 'word';

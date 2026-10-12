@@ -4,7 +4,7 @@ import {
   type MushafCatalog,
   type MushafPageIR,
   type VerseKey,
-} from '@mushaf/core';
+} from '@guidelight/mushaf-core';
 import { mapChaptersToCatalog } from './map-catalog.js';
 import { mapVersesToPageIR } from './map-page.js';
 import type {

@@ -1,5 +1,5 @@
 {
-  "name": "@guidelightid/mushaf-corpus",
+  "name": "@guidelight/quran",
   "version": "0.1.2",
   "description": "Indonesian Quran corpus (equran.id / Kemenag) with the Standar Mushaf Indonesia juz table and passage helpers — no UI",
   "license": "MIT",
@@ -48,8 +48,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuidelightID/mushaf.git",
-    "directory": "packages/mushaf-corpus"
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/quran"
   },
   "keywords": [
     "quran",

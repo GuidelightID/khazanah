@@ -38,36 +38,36 @@ importers:
 
   examples/guidelight-spike:
     dependencies:
-      '@mushaf/adapter-quran-foundation':
+      '@guidelight/mushaf-adapter-quran-foundation':
         specifier: workspace:*
-        version: link:../../packages/adapters/quran-foundation
-      '@mushaf/core':
+        version: link:../../packages/mushaf/adapters/quran-foundation
+      '@guidelight/mushaf-core':
         specifier: workspace:*
-        version: link:../../packages/core
+        version: link:../../packages/mushaf/core
 
   examples/vite-react:
     dependencies:
-      '@mushaf/adapter-custom':
+      '@guidelight/mushaf-adapter-custom':
         specifier: workspace:*
-        version: link:../../packages/adapters/custom
-      '@mushaf/adapter-kfgqpc':
+        version: link:../../packages/mushaf/adapters/custom
+      '@guidelight/mushaf-adapter-kfgqpc':
         specifier: workspace:*
-        version: link:../../packages/adapters/kfgqpc
-      '@mushaf/annotations':
+        version: link:../../packages/mushaf/adapters/kfgqpc
+      '@guidelight/mushaf-annotations':
         specifier: workspace:*
-        version: link:../../packages/annotations
-      '@mushaf/audio':
+        version: link:../../packages/mushaf/annotations
+      '@guidelight/mushaf-audio':
         specifier: workspace:*
-        version: link:../../packages/audio
-      '@mushaf/core':
+        version: link:../../packages/mushaf/audio
+      '@guidelight/mushaf-core':
         specifier: workspace:*
-        version: link:../../packages/core
-      '@mushaf/react':
+        version: link:../../packages/mushaf/core
+      '@guidelight/mushaf-react':
         specifier: workspace:*
-        version: link:../../packages/react
-      '@mushaf/tajwid':
+        version: link:../../packages/mushaf/react
+      '@guidelight/mushaf-tajwid':
         specifier: workspace:*
-        version: link:../../packages/tajwid
+        version: link:../../packages/mushaf/tajwid
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -91,9 +91,9 @@ importers:
         specifier: ^6.0.6
         version: 6.4.3(@types/node@22.20.1)(jiti@2.7.0)
 
-  packages/adapters/custom:
+  packages/mushaf/adapters/custom:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../../core
     devDependencies:
@@ -104,12 +104,12 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/adapters/kfgqpc:
+  packages/mushaf/adapters/kfgqpc:
     dependencies:
-      '@mushaf/adapter-custom':
+      '@guidelight/mushaf-adapter-custom':
         specifier: workspace:*
         version: link:../custom
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../../core
     devDependencies:
@@ -120,9 +120,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/adapters/quran-foundation:
+  packages/mushaf/adapters/quran-foundation:
     devDependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../../core
       typescript:
@@ -132,9 +132,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/adapters/tanzil:
+  packages/mushaf/adapters/tanzil:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../../core
     devDependencies:
@@ -145,9 +145,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/annotations:
+  packages/mushaf/annotations:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -158,9 +158,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/audio:
+  packages/mushaf/audio:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -171,9 +171,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/cli:
+  packages/mushaf/cli:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
@@ -184,7 +184,7 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/core:
+  packages/mushaf/core:
     devDependencies:
       typescript:
         specifier: ^5.7.2
@@ -193,7 +193,7 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/fonts:
+  packages/mushaf/fonts:
     devDependencies:
       typescript:
         specifier: ^5.7.2
@@ -202,7 +202,7 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/mushaf-corpus:
+  packages/quran:
     devDependencies:
       typescript:
         specifier: ^5.7.2
@@ -211,7 +211,7 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/next:
+  packages/mushaf/next:
     dependencies:
       next:
         specifier: '>=13.0.0'
@@ -233,19 +233,19 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/react:
+  packages/mushaf/react:
     dependencies:
-      '@mushaf/search':
+      '@guidelight/mushaf-search':
         specifier: workspace:*
         version: link:../search
     devDependencies:
-      '@mushaf/annotations':
+      '@guidelight/mushaf-annotations':
         specifier: workspace:*
         version: link:../annotations
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
-      '@mushaf/renderer':
+      '@guidelight/mushaf-renderer':
         specifier: workspace:*
         version: link:../renderer
       '@testing-library/react':
@@ -273,9 +273,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/renderer:
+  packages/mushaf/renderer:
     devDependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
       jsdom:
@@ -288,9 +288,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/search:
+  packages/mushaf/search:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
       minisearch:
@@ -304,9 +304,9 @@ importers:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.20.1)(jsdom@25.0.1)
 
-  packages/tajwid:
+  packages/mushaf/tajwid:
     dependencies:
-      '@mushaf/core':
+      '@guidelight/mushaf-core':
         specifier: workspace:*
         version: link:../core
     devDependencies:

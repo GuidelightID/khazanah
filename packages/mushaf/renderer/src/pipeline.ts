@@ -4,7 +4,7 @@ import {
   type MushafPageIR,
   type QuranPaintMode,
   type SelectionState,
-} from '@mushaf/core';
+} from '@guidelight/mushaf-core';
 import type { RenderFrame, RendererBackend } from './types.js';
 
 export interface ComposeFrameInput {
