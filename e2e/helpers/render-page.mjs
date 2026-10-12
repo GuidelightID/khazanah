@@ -1,6 +1,6 @@
 /**
  * Helper for Playwright — imports built packages via absolute file URLs.
- * Run after: pnpm --filter @guidelight.id/mushaf-core build && pnpm --filter @guidelight.id/mushaf-renderer build
+ * Run after: pnpm --filter @guidelightid/mushaf-core build && pnpm --filter @guidelightid/mushaf-renderer build
  *
  * Fonts: system stack only (no network) so CI/Linux baselines stay offline-stable.
  */

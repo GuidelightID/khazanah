@@ -1,4 +1,4 @@
-# Publishes the public @guidelight.id/* packages to npmjs.com.
+# Publishes the public @guidelightid/* packages to npmjs.com.
 #
 # On every push to main:
 #   - pending changesets  -> opens/updates a "chore: release packages" PR that

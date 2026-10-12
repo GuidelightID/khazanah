@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import type { MushafPageIR, SurahMeta, VerseKey, WordIR, WordKey } from '@guidelight.id/mushaf-core';
+import type { MushafPageIR, SurahMeta, VerseKey, WordIR, WordKey } from '@guidelightid/mushaf-core';
 import { useQuranContext } from './context.js';
 
 export function useQuran() {

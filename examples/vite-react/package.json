@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/example-vite-react",
+  "name": "@guidelightid/example-vite-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,13 +11,13 @@
     "pull-data": "node ../../packages/mushaf/cli/dist/cli.js data pull --source fixture --out ./public/mushaf"
   },
   "dependencies": {
-    "@guidelight.id/mushaf-adapter-custom": "workspace:*",
-    "@guidelight.id/mushaf-adapter-kfgqpc": "workspace:*",
-    "@guidelight.id/mushaf-annotations": "workspace:*",
-    "@guidelight.id/mushaf-audio": "workspace:*",
-    "@guidelight.id/mushaf-core": "workspace:*",
-    "@guidelight.id/mushaf-react": "workspace:*",
-    "@guidelight.id/mushaf-tajwid": "workspace:*",
+    "@guidelightid/mushaf-adapter-custom": "workspace:*",
+    "@guidelightid/mushaf-adapter-kfgqpc": "workspace:*",
+    "@guidelightid/mushaf-annotations": "workspace:*",
+    "@guidelightid/mushaf-audio": "workspace:*",
+    "@guidelightid/mushaf-core": "workspace:*",
+    "@guidelightid/mushaf-react": "workspace:*",
+    "@guidelightid/mushaf-tajwid": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

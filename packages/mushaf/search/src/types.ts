@@ -1,4 +1,4 @@
-import type { SearchCorpus, SearchOptions, SearchResult, VerseKey } from '@guidelight.id/mushaf-core';
+import type { SearchCorpus, SearchOptions, SearchResult, VerseKey } from '@guidelightid/mushaf-core';
 
 export type { SearchCorpus, SearchOptions, SearchResult, VerseKey };
 

@@ -9,7 +9,7 @@ What it ships, all first-party (MIT):
   translated or authored content;
 - the Standar Mushaf Indonesia juz boundary table and the helper functions.
 
-## Content loaded through `@guidelight.id/quran/equran`
+## Content loaded through `@guidelightid/quran/equran`
 
 `createEquranSource()` lets your app fetch verse text, the Indonesian
 translation, transliteration and surah descriptions from **EQuran.id** through

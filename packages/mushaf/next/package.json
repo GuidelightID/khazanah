@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-next",
+  "name": "@guidelightid/mushaf-next",
   "version": "0.0.0",
   "private": true,
   "description": "Next.js helpers for Mushaf (font links, config notes)",

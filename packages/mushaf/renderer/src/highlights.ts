@@ -1,4 +1,4 @@
-import type { Highlight, MushafPageIR, WordKey } from '@guidelight.id/mushaf-core';
+import type { Highlight, MushafPageIR, WordKey } from '@guidelightid/mushaf-core';
 import type { WordStyle } from './types.js';
 
 /** Expand highlight targets to word keys on a single page. */

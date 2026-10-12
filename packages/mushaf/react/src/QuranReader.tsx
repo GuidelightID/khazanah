@@ -8,7 +8,7 @@ import {
   type CSSProperties,
   type ReactNode,
 } from 'react';
-import type { VerseKey } from '@guidelight.id/mushaf-core';
+import type { VerseKey } from '@guidelightid/mushaf-core';
 import { useQuran } from './hooks.js';
 import { QuranViewer, type QuranViewerProps } from './QuranViewer.js';
 
@@ -48,7 +48,7 @@ const DEFAULT_LABELS = {
 
 /**
  * Opinionated reader shell: chrome + virtualized QuranViewer.
- * Tree-shakeable via `@guidelight.id/mushaf-react/reader` or main export.
+ * Tree-shakeable via `@guidelightid/mushaf-react/reader` or main export.
  */
 export function QuranReader({
   initialPage = 1,

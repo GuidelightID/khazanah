@@ -2,7 +2,7 @@
  * The 114 surahs as plain facts: number, URL slug, Latin and Arabic name, ayah
  * count, and place of revelation. First-party table (MIT); it carries no
  * translation or description, which consumers load from a data source such as
- * `@guidelight.id/quran/equran`.
+ * `@guidelightid/quran/equran`.
  */
 export type SurahIndexRow = readonly [
   number: number,

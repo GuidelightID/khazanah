@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fixtureCatalog, fixturePages } from '@guidelight.id/mushaf-core';
+import { fixtureCatalog, fixturePages } from '@guidelightid/mushaf-core';
 import { corpusFromPages } from './corpus.js';
 import { createSearchEngine } from './engine.js';
 

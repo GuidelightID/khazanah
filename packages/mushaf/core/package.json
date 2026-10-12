@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-core",
+  "name": "@guidelightid/mushaf-core",
   "version": "0.0.0",
   "private": true,
   "description": "Core types, IR, runtime, adapters, and pure utilities for Mushaf",

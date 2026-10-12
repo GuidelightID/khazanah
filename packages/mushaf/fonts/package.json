@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-fonts",
+  "name": "@guidelightid/mushaf-fonts",
   "version": "0.0.0",
   "private": true,
   "description": "Open Arabic font CSS helpers for Mushaf (no restricted KFGQPC fonts)",

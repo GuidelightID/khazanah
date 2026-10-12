@@ -5,7 +5,7 @@ import {
   type MushafPluginContext,
   type VerseKey,
   type WordKey,
-} from '@guidelight.id/mushaf-core';
+} from '@guidelightid/mushaf-core';
 import { wordAtTime, type WordTiming } from './timings.js';
 
 export interface AudioPluginOptions {

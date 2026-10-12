@@ -1,6 +1,6 @@
 [
   {
-    "name": "@guidelight.id/mushaf-core (dist index)",
+    "name": "@guidelightid/mushaf-core (dist index)",
     "path": "packages/mushaf/core/dist/index.js",
     "limit": "25 kB",
     "gzip": true

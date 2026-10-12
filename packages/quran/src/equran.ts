@@ -9,7 +9,7 @@
  *
  * ```ts
  * import { EQuran } from 'equran';
- * import { createEquranSource } from '@guidelight.id/quran/equran';
+ * import { createEquranSource } from '@guidelightid/quran/equran';
  *
  * const quran = createEquranSource(new EQuran());
  * const ayahs = await quran.getPassageAyahs({ surah_id: 2, start_ayah: 255, end_ayah: 255 });

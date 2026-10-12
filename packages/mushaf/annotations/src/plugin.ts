@@ -3,7 +3,7 @@ import {
   type Highlight,
   type MushafPlugin,
   type MushafPluginContext,
-} from '@guidelight.id/mushaf-core';
+} from '@guidelightid/mushaf-core';
 import type { Annotation, AnnotationInput, AnnotationStore } from './types.js';
 import { createMemoryAnnotationStore } from './store.js';
 

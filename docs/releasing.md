@@ -1,12 +1,12 @@
 # Releasing to npm
 
-Public packages publish to **npmjs.com** under the **`@guidelight.id`** scope
-(npm organization `guidelight.id`). Releases use Changesets for versions and
+Public packages publish to **npmjs.com** under the **`@guidelightid`** scope
+(npm organization `guidelightid`). Releases use Changesets for versions and
 changelogs, and **npm trusted publishing** (OIDC from GitHub Actions) to
 publish: no npm token is stored anywhere. Provenance is added automatically.
 
-Currently published: `@guidelight.id/almatsurat`, `@guidelight.id/quran`.
-The `@guidelight.id/mushaf-*` renderer packages are `"private": true` until the
+Currently published: `@guidelightid/almatsurat`, `@guidelightid/quran`.
+The `@guidelightid/mushaf-*` renderer packages are `"private": true` until the
 renderer leaves its 0.0.x scaffolding (they also depend on each other through
 `workspace:*`, which `npm publish` does not rewrite).
 
@@ -15,7 +15,7 @@ renderer leaves its 0.0.x scaffolding (they also depend on each other through
 ### 1. npm account and organization
 - Enable **two-factor authentication** on your npm account
   (Account → Two-Factor Authentication, "Authorization and writes").
-- Organization **`guidelight.id`** exists; members who may publish need the
+- Organization **`guidelightid`** exists; members who may publish need the
   *developer* or *owner* role.
 
 ### 2. First publish of a new package (manual, from a laptop)
@@ -71,7 +71,7 @@ Repository Settings → Actions → General → *Workflow permissions*: enable
 ## What never publishes
 
 Packages with `"private": true`: the examples and, for now, the
-`@guidelight.id/mushaf-*` renderer. A content package whose source is not ✅ in
+`@guidelightid/mushaf-*` renderer. A content package whose source is not ✅ in
 `LICENSES/matrix.md` must also stay private. To publish the renderer later:
 replace its `workspace:*` dependencies with real version ranges (or switch the
 publish script to `pnpm publish`), remove `"private": true`, and do the

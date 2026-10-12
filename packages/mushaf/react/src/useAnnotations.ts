@@ -1,10 +1,10 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import type { HighlightTarget } from '@guidelight.id/mushaf-core';
+import type { HighlightTarget } from '@guidelightid/mushaf-core';
 import { useQuranContext } from './context.js';
 
-/** Duck-typed API from @guidelight.id/mushaf-annotations (avoid hard package cycle) */
+/** Duck-typed API from @guidelightid/mushaf-annotations (avoid hard package cycle) */
 export interface AnnotationRecord {
   id: string;
   target: HighlightTarget;
@@ -41,7 +41,7 @@ function findApi(plugins: Array<{ name: string; api?: unknown }>): AnnotationsAp
 }
 
 /**
- * React binding for `@guidelight.id/mushaf-annotations` when registered on QuranProvider.
+ * React binding for `@guidelightid/mushaf-annotations` when registered on QuranProvider.
  * Returns null api if the plugin is not installed.
  */
 export function useAnnotations(): {

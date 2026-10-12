@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fixtureCatalog, fixturePages, type PageManifest } from '@guidelight.id/mushaf-core';
+import { fixtureCatalog, fixturePages, type PageManifest } from '@guidelightid/mushaf-core';
 import { createHostedAdapter } from './hosted.js';
 
 function makeFetch(files: Record<string, unknown>): typeof fetch {

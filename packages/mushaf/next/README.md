@@ -1,10 +1,10 @@
-# `@guidelight.id/mushaf-next`
+# `@guidelightid/mushaf-next`
 
 Lightweight Next.js helpers for Mushaf (no hard dependency on `next` at build time).
 
 ```tsx
 // app/layout.tsx or a page
-import { MushafFontLinks, mushafCspDirectives } from '@guidelight.id/mushaf-next';
+import { MushafFontLinks, mushafCspDirectives } from '@guidelightid/mushaf-next';
 
 export default function Layout({ children }) {
   return (
@@ -22,9 +22,9 @@ SSR pattern (App Router):
 
 ```tsx
 // app/quran/[page]/page.tsx
-import { QuranProvider, QuranPage } from '@guidelight.id/mushaf-react';
-import { createHostedMadinahAdapter } from '@guidelight.id/mushaf-adapter-kfgqpc';
-import { MushafFontLinks } from '@guidelight.id/mushaf-next';
+import { QuranProvider, QuranPage } from '@guidelightid/mushaf-react';
+import { createHostedMadinahAdapter } from '@guidelightid/mushaf-adapter-kfgqpc';
+import { MushafFontLinks } from '@guidelightid/mushaf-next';
 
 const adapter = createHostedMadinahAdapter({
   baseUrl: process.env.MUSHAF_DATA_BASE ?? '/mushaf',

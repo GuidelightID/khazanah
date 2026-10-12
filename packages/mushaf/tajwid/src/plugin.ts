@@ -4,7 +4,7 @@ import {
   type MushafPageIR,
   type MushafPlugin,
   type WordKey,
-} from '@guidelight.id/mushaf-core';
+} from '@guidelightid/mushaf-core';
 import { SCHEMES, type TajweedScheme } from './schemes.js';
 
 export interface TajweedPluginOptions {

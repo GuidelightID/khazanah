@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-tajwid",
+  "name": "@guidelightid/mushaf-tajwid",
   "version": "0.0.0",
   "private": true,
   "description": "Tajweed coloring plugin for Mushaf",
@@ -27,7 +27,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight.id/mushaf-core": "workspace:*"
+    "@guidelightid/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

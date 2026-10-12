@@ -1,4 +1,4 @@
-# `@guidelight.id/mushaf-adapter-quran-foundation`
+# `@guidelightid/mushaf-adapter-quran-foundation`
 
 Maps [Quran.com API v4](https://api.quran.com/api/v4) (Quran Foundation) resources to `MushafPageIR`.
 
@@ -11,7 +11,7 @@ Maps [Quran.com API v4](https://api.quran.com/api/v4) (Quran Foundation) resourc
 ## Usage
 
 ```ts
-import { createQuranFoundationAdapter } from '@guidelight.id/mushaf-adapter-quran-foundation';
+import { createQuranFoundationAdapter } from '@guidelightid/mushaf-adapter-quran-foundation';
 
 const adapter = createQuranFoundationAdapter({
   // optional: baseUrl, fetchImpl, language

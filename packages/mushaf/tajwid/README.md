@@ -1,10 +1,10 @@
-# `@guidelight.id/mushaf-tajwid`
+# `@guidelightid/mushaf-tajwid`
 
 Tajweed coloring plugin for Mushaf (`mode="tajweed"` sugar expects this or a compatible plugin).
 
 ```ts
-import { tajweedPlugin } from '@guidelight.id/mushaf-tajwid';
-import { QuranProvider } from '@guidelight.id/mushaf-react';
+import { tajweedPlugin } from '@guidelightid/mushaf-tajwid';
+import { QuranProvider } from '@guidelightid/mushaf-react';
 
 <QuranProvider adapter={adapter} plugins={[tajweedPlugin({ scheme: 'default' })]}>
   <QuranPage page={1} mode="tajweed" />

@@ -1,4 +1,4 @@
-import type { MushafCatalog, SurahMeta } from '@guidelight.id/mushaf-core';
+import type { MushafCatalog, SurahMeta } from '@guidelightid/mushaf-core';
 import type { QfChapter } from './types.js';
 
 export function mapChaptersToCatalog(chapters: QfChapter[]): MushafCatalog {

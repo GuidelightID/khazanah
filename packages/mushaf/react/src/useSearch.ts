@@ -1,12 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { SearchOptions, SearchResult } from '@guidelight.id/mushaf-core';
+import type { SearchOptions, SearchResult } from '@guidelightid/mushaf-core';
 import {
   corpusFromPages,
   createSearchEngine,
   type SearchEngine,
-} from '@guidelight.id/mushaf-search';
+} from '@guidelightid/mushaf-search';
 import { useQuranContext } from './context.js';
 
 export interface UseSearchOptions {

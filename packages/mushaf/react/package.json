@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-react",
+  "name": "@guidelightid/mushaf-react",
   "version": "0.0.0",
   "private": true,
   "description": "React components and hooks for Mushaf",
@@ -37,18 +37,18 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight.id/mushaf-search": "workspace:*"
+    "@guidelightid/mushaf-search": "workspace:*"
   },
   "peerDependencies": {
-    "@guidelight.id/mushaf-core": ">=0.0.0",
-    "@guidelight.id/mushaf-renderer": ">=0.0.0",
+    "@guidelightid/mushaf-core": ">=0.0.0",
+    "@guidelightid/mushaf-renderer": ">=0.0.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
-    "@guidelight.id/mushaf-core": "workspace:*",
-    "@guidelight.id/mushaf-renderer": "workspace:*",
-    "@guidelight.id/mushaf-annotations": "workspace:*",
+    "@guidelightid/mushaf-core": "workspace:*",
+    "@guidelightid/mushaf-renderer": "workspace:*",
+    "@guidelightid/mushaf-annotations": "workspace:*",
     "@testing-library/react": "^16.1.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

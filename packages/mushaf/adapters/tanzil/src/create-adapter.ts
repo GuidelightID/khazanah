@@ -3,7 +3,7 @@ import {
   type MushafAdapter,
   type MushafCatalog,
   type VerseKey,
-} from '@guidelight.id/mushaf-core';
+} from '@guidelightid/mushaf-core';
 import { assignPages, layoutVersesOnPage } from './layout.js';
 import type { TanzilCorpus } from './types.js';
 import { sampleTanzilCorpus } from './sample-corpus.js';

@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-adapter-tanzil",
+  "name": "@guidelightid/mushaf-adapter-tanzil",
   "version": "0.0.0",
   "private": true,
   "description": "Text-flow Tanzil-style adapter (not layout-faithful Madinah)",
@@ -27,7 +27,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight.id/mushaf-core": "workspace:*"
+    "@guidelightid/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

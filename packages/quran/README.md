@@ -1,4 +1,4 @@
-# @guidelight.id/quran
+# @guidelightid/quran
 
 Quran structure and helpers for apps built for Indonesian readers:
 
@@ -15,14 +15,14 @@ so it is small, client-safe, and MIT.
 Used by [guidelight.id](https://guidelight.id) for the Al-Qur'an & Tadabbur module.
 
 ```bash
-npm install @guidelight.id/quran
-npm install equran   # only if you use @guidelight.id/quran/equran
+npm install @guidelightid/quran
+npm install equran   # only if you use @guidelightid/quran/equran
 ```
 
 ## Structure and helpers (sync, no network)
 
 ```ts
-import { getSurah, getJuz, juzOfAyah, parseAyahRange, passageLabel } from '@guidelight.id/quran';
+import { getSurah, getJuz, juzOfAyah, parseAyahRange, passageLabel } from '@guidelightid/quran';
 
 getSurah('al-kahf');            // { number: 18, name_latin: 'Al-Kahf', total_ayahs: 110, ... }
 juzOfAyah(36, 22);              // 23 (Standar Mushaf Indonesia; Madinah would say 22)
@@ -49,7 +49,7 @@ passageLabel({ surah_id: 96, start_ayah: 1, end_ayah: 5 }); // "QS. Al-'Alaq: 1â
 
 ```ts
 import { EQuran } from 'equran';
-import { createEquranSource } from '@guidelight.id/quran/equran';
+import { createEquranSource } from '@guidelightid/quran/equran';
 
 const quran = createEquranSource(new EQuran());
 

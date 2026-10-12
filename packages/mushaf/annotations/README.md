@@ -1,9 +1,9 @@
-# `@guidelight.id/mushaf-annotations`
+# `@guidelightid/mushaf-annotations`
 
 User notes / bookmarks as a Mushaf plugin. Highlights use the **props** tier by default so notes sit above tajweed/audio ambient colors when desired.
 
 ```ts
-import { annotationsPlugin, createMemoryAnnotationStore } from '@guidelight.id/mushaf-annotations';
+import { annotationsPlugin, createMemoryAnnotationStore } from '@guidelightid/mushaf-annotations';
 
 const store = createMemoryAnnotationStore();
 const plugin = annotationsPlugin({ store });

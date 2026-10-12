@@ -1,4 +1,4 @@
-# Mushaf renderer — `@guidelight.id/mushaf-*`
+# Mushaf renderer — `@guidelightid/mushaf-*`
 
 Layout-faithful **Madinah** mushaf page rendering for React & Next.js:
 TypeScript-first, offline-capable, SSR-friendly, adapter-driven. The aim is to
@@ -15,16 +15,16 @@ Part of [Khazanah](../../README.md).
 
 | Capability | Package / API |
 |------------|----------------|
-| Page IR, runtime, hit-test, validation | `@guidelight.id/mushaf-core` |
-| HTML paint + SSR markup | `@guidelight.id/mushaf-renderer` |
-| `QuranPage`, `QuranViewer`, `QuranReader`, hooks | `@guidelight.id/mushaf-react` |
-| Offline search | `@guidelight.id/mushaf-search` + `useSearch` |
-| Tajweed / audio / annotations plugins | `@guidelight.id/mushaf-tajwid`, `@guidelight.id/mushaf-audio`, `@guidelight.id/mushaf-annotations` |
-| Open Arabic font CSS helpers | `@guidelight.id/mushaf-fonts` |
-| Hosted data (`data pull` → `/mushaf`) | `@guidelight.id/mushaf-cli`, `@guidelight.id/mushaf-adapter-custom`, `@guidelight.id/mushaf-adapter-kfgqpc` |
-| Quran.com API adapter (approx layout) | `@guidelight.id/mushaf-adapter-quran-foundation` |
-| Text-flow (not plate-faithful) | `@guidelight.id/mushaf-adapter-tanzil` |
-| Next font/CSP helpers | `@guidelight.id/mushaf-next` |
+| Page IR, runtime, hit-test, validation | `@guidelightid/mushaf-core` |
+| HTML paint + SSR markup | `@guidelightid/mushaf-renderer` |
+| `QuranPage`, `QuranViewer`, `QuranReader`, hooks | `@guidelightid/mushaf-react` |
+| Offline search | `@guidelightid/mushaf-search` + `useSearch` |
+| Tajweed / audio / annotations plugins | `@guidelightid/mushaf-tajwid`, `@guidelightid/mushaf-audio`, `@guidelightid/mushaf-annotations` |
+| Open Arabic font CSS helpers | `@guidelightid/mushaf-fonts` |
+| Hosted data (`data pull` → `/mushaf`) | `@guidelightid/mushaf-cli`, `@guidelightid/mushaf-adapter-custom`, `@guidelightid/mushaf-adapter-kfgqpc` |
+| Quran.com API adapter (approx layout) | `@guidelightid/mushaf-adapter-quran-foundation` |
+| Text-flow (not plate-faithful) | `@guidelightid/mushaf-adapter-tanzil` |
+| Next font/CSP helpers | `@guidelightid/mushaf-next` |
 | Guidelight catalog spike notes | [`examples/guidelight-spike`](../../examples/guidelight-spike) |
 
 ## Quick start
@@ -41,8 +41,8 @@ Requires **Node ≥ 20** and **pnpm 9**.
 ### 2. Run the Vite demo
 
 ```bash
-pnpm --filter @guidelight.id/example-vite-react pull-data   # optional hosted pack
-pnpm --filter @guidelight.id/example-vite-react dev
+pnpm --filter @guidelightid/example-vite-react pull-data   # optional hosted pack
+pnpm --filter @guidelightid/example-vite-react dev
 ```
 
 Demo modes: **QuranPage** · **Viewer** · **Reader** · **Search** · **Audio** · **Notes**  
@@ -51,8 +51,8 @@ Adapters: in-memory fixture · hosted `/mushaf` pack.
 ### 3. Minimal consumer code
 
 ```tsx
-import { QuranProvider, QuranPage } from '@guidelight.id/mushaf-react';
-import { fixtureAdapter } from '@guidelight.id/mushaf-core';
+import { QuranProvider, QuranPage } from '@guidelightid/mushaf-react';
+import { fixtureAdapter } from '@guidelightid/mushaf-core';
 // or: createHostedMadinahAdapter({ baseUrl: '/mushaf' })
 
 export function Reader() {
@@ -67,13 +67,13 @@ export function Reader() {
 ### 4. Offline pack (dual distribution)
 
 ```bash
-pnpm --filter @guidelight.id/mushaf-cli build
+pnpm --filter @guidelightid/mushaf-cli build
 node packages/mushaf/cli/dist/cli.js data sources
 node packages/mushaf/cli/dist/cli.js data pull --source fixture --out ./public/mushaf
 ```
 
 ```ts
-import { createHostedMadinahAdapter } from '@guidelight.id/mushaf-adapter-kfgqpc';
+import { createHostedMadinahAdapter } from '@guidelightid/mushaf-adapter-kfgqpc';
 
 const adapter = createHostedMadinahAdapter({ baseUrl: '/mushaf' });
 ```
@@ -83,8 +83,8 @@ Restricted sources (`kfgqpc` real plates) stay **disabled** until `LICENSES/matr
 ### 5. Next.js (App Router sketch)
 
 ```tsx
-import { MushafFontLinks } from '@guidelight.id/mushaf-next';
-import { QuranProvider, QuranPage } from '@guidelight.id/mushaf-react';
+import { MushafFontLinks } from '@guidelightid/mushaf-next';
+import { QuranProvider, QuranPage } from '@guidelightid/mushaf-react';
 
 // Server: const initialData = await adapter.getPage(page)
 // Client island:
@@ -100,20 +100,20 @@ import { QuranProvider, QuranPage } from '@guidelight.id/mushaf-react';
 
 | Package | Description |
 |---------|-------------|
-| `@guidelight.id/mushaf-core` | Types, IR, runtime, adapters, hit-test |
-| `@guidelight.id/mushaf-renderer` | HTML (default) paint pipeline |
-| `@guidelight.id/mushaf-react` | Components & hooks (`./reader` entry) |
-| `@guidelight.id/mushaf-next` | Font links + CSP helpers |
-| `@guidelight.id/mushaf-cli` | `mushaf data pull` / `data sources` |
-| `@guidelight.id/mushaf-search` | MiniSearch + Arabic normalize |
-| `@guidelight.id/mushaf-tajwid` | Tajweed highlight plugin |
-| `@guidelight.id/mushaf-audio` | Audio word highlight plugin |
-| `@guidelight.id/mushaf-annotations` | Notes / bookmark highlights |
-| `@guidelight.id/mushaf-fonts` | Open Arabic CSS stack (no restricted page fonts) |
-| `@guidelight.id/mushaf-adapter-custom` | Hosted PageLoader adapter |
-| `@guidelight.id/mushaf-adapter-kfgqpc` | Hosted Madinah pack adapter |
-| `@guidelight.id/mushaf-adapter-quran-foundation` | API v4 → IR (approx) |
-| `@guidelight.id/mushaf-adapter-tanzil` | Text-flow fallback |
+| `@guidelightid/mushaf-core` | Types, IR, runtime, adapters, hit-test |
+| `@guidelightid/mushaf-renderer` | HTML (default) paint pipeline |
+| `@guidelightid/mushaf-react` | Components & hooks (`./reader` entry) |
+| `@guidelightid/mushaf-next` | Font links + CSP helpers |
+| `@guidelightid/mushaf-cli` | `mushaf data pull` / `data sources` |
+| `@guidelightid/mushaf-search` | MiniSearch + Arabic normalize |
+| `@guidelightid/mushaf-tajwid` | Tajweed highlight plugin |
+| `@guidelightid/mushaf-audio` | Audio word highlight plugin |
+| `@guidelightid/mushaf-annotations` | Notes / bookmark highlights |
+| `@guidelightid/mushaf-fonts` | Open Arabic CSS stack (no restricted page fonts) |
+| `@guidelightid/mushaf-adapter-custom` | Hosted PageLoader adapter |
+| `@guidelightid/mushaf-adapter-kfgqpc` | Hosted Madinah pack adapter |
+| `@guidelightid/mushaf-adapter-quran-foundation` | API v4 → IR (approx) |
+| `@guidelightid/mushaf-adapter-tanzil` | Text-flow fallback |
 
 ## Visual regression (Playwright)
 

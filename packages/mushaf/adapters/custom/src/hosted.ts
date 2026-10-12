@@ -6,7 +6,7 @@ import {
   type MushafCatalog,
   type PageLoaderOptions,
   type VerseKey,
-} from '@guidelight.id/mushaf-core';
+} from '@guidelightid/mushaf-core';
 
 export interface HostedAdapterOptions extends PageLoaderOptions {
   id?: string;

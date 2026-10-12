@@ -1,5 +1,5 @@
 {
-  "name": "@guidelight.id/mushaf-cli",
+  "name": "@guidelightid/mushaf-cli",
   "version": "0.0.0",
   "private": true,
   "description": "CLI for Mushaf data pull and license NOTICE generation (ADR-013)",
@@ -21,7 +21,7 @@
     "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@guidelight.id/mushaf-core": "workspace:*"
+    "@guidelightid/mushaf-core": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

@@ -5,7 +5,7 @@ import {
   type SearchCorpusVerse,
   type SurahMeta,
   type VerseKey,
-} from '@guidelight.id/mushaf-core';
+} from '@guidelightid/mushaf-core';
 
 export interface CorpusFromPagesOptions {
   locale?: string;

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { renderHook, waitFor, act } from '@testing-library/react';
 import type { ReactNode } from 'react';
-import { fixtureAdapter } from '@guidelight.id/mushaf-core';
+import { fixtureAdapter } from '@guidelightid/mushaf-core';
 import { QuranProvider } from './context.js';
 import { useSelection } from './useSelection.js';
 
