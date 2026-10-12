@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Mushaf contributors
+Copyright (c) 2026 Guidelight and Khazanah contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,8 @@ SOFTWARE.
 ---
 
 IMPORTANT: This MIT license applies to first-party source code in this
-repository only. Fonts, page geometry IR, Quran text corpora, and tajweed
-annotation datasets may be subject to separate third-party licenses. See
+repository only. Fonts, page geometry IR, Quran text corpora and translations,
+dzikir/doa collections, and tajweed annotation datasets may be subject to
+separate third-party licenses. See
 LICENSES/matrix.md and package NOTICE files. Restricted assets must not be
 relicensed as MIT.

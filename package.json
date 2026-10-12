@@ -1,9 +1,9 @@
 {
-  "name": "mushaf",
+  "name": "khazanah",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "Layout-faithful Madinah Mushaf renderer for React & Next.js",
+  "description": "Islamic content packages for JavaScript: Quran, Al-Ma'tsurat, doa, and a layout-faithful Mushaf renderer",
   "license": "MIT",
   "packageManager": "pnpm@9.15.0",
   "engines": {
@@ -11,19 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuidelightID/mushaf.git"
+    "url": "git+https://github.com/GuidelightID/khazanah.git"
   },
   "bugs": {
-    "url": "https://github.com/GuidelightID/mushaf/issues"
+    "url": "https://github.com/GuidelightID/khazanah/issues"
   },
-  "homepage": "https://github.com/GuidelightID/mushaf#readme",
+  "homepage": "https://github.com/GuidelightID/khazanah#readme",
   "keywords": [
     "quran",
     "mushaf",
-    "react",
-    "nextjs",
+    "almatsurat",
+    "dzikir",
+    "doa",
+    "islamic",
     "arabic",
-    "renderer"
+    "react",
+    "nextjs"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -31,15 +34,16 @@
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
-    "test:e2e": "pnpm --filter @mushaf/core build && pnpm --filter @mushaf/renderer build && playwright test",
-    "test:e2e:update": "pnpm --filter @mushaf/core build && pnpm --filter @mushaf/renderer build && playwright test --update-snapshots",
+    "test:e2e": "pnpm --filter @guidelightid/mushaf-core build && pnpm --filter @guidelightid/mushaf-renderer build && playwright test",
+    "test:e2e:update": "pnpm --filter @guidelightid/mushaf-core build && pnpm --filter @guidelightid/mushaf-renderer build && playwright test --update-snapshots",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,mjs,cjs,json,md,yml,yaml}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,mjs,cjs,json,md,yml,yaml}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish",
-    "size": "size-limit"
+    "release": "pnpm build && node scripts/publish.mjs",
+    "size": "size-limit",
+    "release:dry-run": "pnpm build && node scripts/publish.mjs --dry-run"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.11",

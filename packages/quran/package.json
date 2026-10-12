@@ -1,0 +1,59 @@
+{
+  "name": "@guidelightid/quran",
+  "version": "0.2.0",
+  "description": "Quran structure and helpers: 114-surah index, Standar Mushaf Indonesia juz table, passage parsing and labels, plus an EQuran.id adapter for verse text and translation",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./equran": {
+      "types": "./dist/equran.d.ts",
+      "import": "./dist/equran.js",
+      "default": "./dist/equran.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/quran"
+  },
+  "keywords": [
+    "quran",
+    "al-quran",
+    "juz",
+    "mushaf-standar-indonesia",
+    "kemenag",
+    "equran",
+    "indonesia"
+  ]
+}

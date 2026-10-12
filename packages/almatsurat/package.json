@@ -1,0 +1,54 @@
+{
+  "name": "@guidelightid/almatsurat",
+  "version": "0.1.0",
+  "description": "Dzikir Al-Ma'tsurat (Imam Hasan Al-Banna): sugro & kubro, pagi & petang, with Arabic text, transliteration and Indonesian translation",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./provenance": "./dist/data/provenance.json",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuidelightID/khazanah.git",
+    "directory": "packages/almatsurat"
+  },
+  "keywords": [
+    "almatsurat",
+    "al-matsurat",
+    "dzikir",
+    "dzikir-pagi-petang",
+    "doa",
+    "islamic",
+    "indonesia"
+  ]
+}

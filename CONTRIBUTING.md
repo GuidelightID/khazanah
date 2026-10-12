@@ -1,4 +1,4 @@
-# Contributing to Mushaf
+# Contributing to Khazanah
 
 Thanks for your interest in contributing.
 
@@ -16,7 +16,7 @@ pnpm test
 pnpm build
 ```
 
-## Package boundaries
+## Package boundaries (Mushaf renderer, `packages/mushaf/*`)
 
 | Package | May depend on |
 |---------|----------------|
@@ -38,7 +38,14 @@ Do not put React in `core` or `renderer`.
 
 ## Licensing
 
-- Do **not** commit restricted fonts or full Madinah corpora without a green row in `LICENSES/matrix.md`.
+- Do **not** commit restricted fonts, full Madinah corpora, or any third-party
+  text (Quran translations, dzikir/doa collections) without a row in
+  `LICENSES/matrix.md`. A package whose source is not ✅ there stays
+  `"private": true`.
+- Content packages keep `LICENSE`, `NOTICE.md` (source, terms, attribution) and
+  `src/data/provenance.json` up to date. See "Adding a content package" in the
+  README.
+- Text or translation corrections: cite the source you corrected against.
 - Synthetic fixtures are fine under MIT.
 
 ## Pull requests

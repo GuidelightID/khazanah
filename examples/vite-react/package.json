@@ -1,5 +1,5 @@
 {
-  "name": "@mushaf/example-vite-react",
+  "name": "@guidelightid/example-vite-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,16 +8,16 @@
     "build": "tsc -p tsconfig.json && vite build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "preview": "vite preview",
-    "pull-data": "node ../../packages/cli/dist/cli.js data pull --source fixture --out ./public/mushaf"
+    "pull-data": "node ../../packages/mushaf/cli/dist/cli.js data pull --source fixture --out ./public/mushaf"
   },
   "dependencies": {
-    "@mushaf/adapter-custom": "workspace:*",
-    "@mushaf/adapter-kfgqpc": "workspace:*",
-    "@mushaf/annotations": "workspace:*",
-    "@mushaf/audio": "workspace:*",
-    "@mushaf/core": "workspace:*",
-    "@mushaf/react": "workspace:*",
-    "@mushaf/tajwid": "workspace:*",
+    "@guidelightid/mushaf-adapter-custom": "workspace:*",
+    "@guidelightid/mushaf-adapter-kfgqpc": "workspace:*",
+    "@guidelightid/mushaf-annotations": "workspace:*",
+    "@guidelightid/mushaf-audio": "workspace:*",
+    "@guidelightid/mushaf-core": "workspace:*",
+    "@guidelightid/mushaf-react": "workspace:*",
+    "@guidelightid/mushaf-tajwid": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

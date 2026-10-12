@@ -1,3 +1,5 @@
 # Changesets
 
-Run `pnpm changeset` after meaningful package changes. CI/release will version and publish `0.x` tags from this early in the project (PR-03).
+Run `pnpm changeset` in any PR that changes a publishable package. The Release
+workflow turns pending changesets into a release PR and publishes to npm when it
+is merged. See [docs/releasing.md](../docs/releasing.md).

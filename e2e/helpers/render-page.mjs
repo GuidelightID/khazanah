@@ -1,6 +1,6 @@
 /**
  * Helper for Playwright — imports built packages via absolute file URLs.
- * Run after: pnpm --filter @mushaf/core build && pnpm --filter @mushaf/renderer build
+ * Run after: pnpm --filter @guidelightid/mushaf-core build && pnpm --filter @guidelightid/mushaf-renderer build
  *
  * Fonts: system stack only (no network) so CI/Linux baselines stay offline-stable.
  */
@@ -8,9 +8,9 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const root = process.cwd();
-const coreUrl = pathToFileURL(path.join(root, 'packages/core/dist/index.js')).href;
+const coreUrl = pathToFileURL(path.join(root, 'packages/mushaf/core/dist/index.js')).href;
 const rendererUrl = pathToFileURL(
-  path.join(root, 'packages/renderer/dist/index.js'),
+  path.join(root, 'packages/mushaf/renderer/dist/index.js'),
 ).href;
 
 const { fixturePages } = await import(coreUrl);
